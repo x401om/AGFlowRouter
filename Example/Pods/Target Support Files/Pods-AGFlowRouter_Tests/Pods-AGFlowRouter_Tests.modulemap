@@ -1,0 +1,6 @@
+framework module Pods_AGFlowRouter_Tests {
+  umbrella header "Pods-AGFlowRouter_Tests-umbrella.h"
+
+  export *
+  module * { export * }
+}

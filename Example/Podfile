@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'AGFlowRouter_Example' do
+  pod 'AGFlowRouter', :path => '../'
+
+  target 'AGFlowRouter_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end

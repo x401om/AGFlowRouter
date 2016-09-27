@@ -1,0 +1,22 @@
+{
+  "name": "AGFlowRouter",
+  "version": "0.1.0",
+  "summary": "A short description of AGFlowRouter.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/<GITHUB_USERNAME>/AGFlowRouter",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "Aleksey Goncharov": "x401om@gmail.com"
+  },
+  "source": {
+    "git": "https://github.com/<GITHUB_USERNAME>/AGFlowRouter.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "AGFlowRouter/Classes/**/*"
+}
