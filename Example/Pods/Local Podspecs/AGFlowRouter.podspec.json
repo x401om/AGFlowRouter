@@ -1,9 +1,9 @@
 {
   "name": "AGFlowRouter",
   "version": "0.1.0",
-  "summary": "A short description of AGFlowRouter.",
-  "description": "TODO: Add long description of the pod here.",
-  "homepage": "https://github.com/<GITHUB_USERNAME>/AGFlowRouter",
+  "summary": "Library, that allows you to manage you screens without any pain =)",
+  "description": "Library, that allows you to manage you screens without any pain =)\nTry it using\npod 'AGFlowRouter'",
+  "homepage": "https://github.com/x401om/AGFlowRouter",
   "license": {
     "type": "MIT",
     "file": "LICENSE"
@@ -12,11 +12,12 @@
     "Aleksey Goncharov": "x401om@gmail.com"
   },
   "source": {
-    "git": "https://github.com/<GITHUB_USERNAME>/AGFlowRouter.git",
+    "git": "https://github.com/x401om/AGFlowRouter.git",
     "tag": "0.1.0"
   },
   "platforms": {
     "ios": "8.0"
   },
-  "source_files": "AGFlowRouter/Classes/**/*"
+  "source_files": "AGFlowRouter/Classes/**/*",
+  "frameworks": "UIKit"
 }

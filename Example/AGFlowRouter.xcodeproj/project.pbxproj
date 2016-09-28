@@ -34,11 +34,10 @@
 		7407C3751D9ABFD300E2D486 /* AGTreeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7407C35B1D9ABFD300E2D486 /* AGTreeViewController.m */; };
 		7407C3761D9ABFD300E2D486 /* AGInfoBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 7407C35E1D9ABFD300E2D486 /* AGInfoBar.m */; };
 		7407C3771D9ABFD300E2D486 /* AGInfoBar.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7407C35F1D9ABFD300E2D486 /* AGInfoBar.xib */; };
-		7407C3781D9ABFD300E2D486 /* AGDefaultDismissTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 7407C3621D9ABFD300E2D486 /* AGDefaultDismissTransition.m */; };
-		7407C3791D9ABFD300E2D486 /* AGDefaultPresentTrasition.m in Sources */ = {isa = PBXBuildFile; fileRef = 7407C3641D9ABFD300E2D486 /* AGDefaultPresentTrasition.m */; };
 		7407C37A1D9ABFD300E2D486 /* AGPopoverDismissTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 7407C3661D9ABFD300E2D486 /* AGPopoverDismissTransition.m */; };
 		7407C37B1D9ABFD300E2D486 /* AGPopoverPresentTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 7407C3681D9ABFD300E2D486 /* AGPopoverPresentTransition.m */; };
 		7407C37D1D9AC12C00E2D486 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7407C37C1D9AC12C00E2D486 /* LaunchScreen.storyboard */; };
+		7459BCD61D9BE76F00854152 /* AGPushViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7459BCD51D9BE76F00854152 /* AGPushViewController.m */; };
 		873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 873B8AEA1B1F5CCA007FD442 /* Main.storyboard */; };
 		984C1522929A3A249BCBA9C8 /* Pods_AGFlowRouter_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A824204B2F3310A91CDCAD8 /* Pods_AGFlowRouter_Example.framework */; };
 		EAF286A8391F5C917407EA6E /* Pods_AGFlowRouter_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1557468BAE10EB60A0A57798 /* Pods_AGFlowRouter_Tests.framework */; };
@@ -106,15 +105,13 @@
 		7407C35D1D9ABFD300E2D486 /* AGInfoBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGInfoBar.h; sourceTree = "<group>"; };
 		7407C35E1D9ABFD300E2D486 /* AGInfoBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGInfoBar.m; sourceTree = "<group>"; };
 		7407C35F1D9ABFD300E2D486 /* AGInfoBar.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AGInfoBar.xib; sourceTree = "<group>"; };
-		7407C3611D9ABFD300E2D486 /* AGDefaultDismissTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGDefaultDismissTransition.h; sourceTree = "<group>"; };
-		7407C3621D9ABFD300E2D486 /* AGDefaultDismissTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGDefaultDismissTransition.m; sourceTree = "<group>"; };
-		7407C3631D9ABFD300E2D486 /* AGDefaultPresentTrasition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGDefaultPresentTrasition.h; sourceTree = "<group>"; };
-		7407C3641D9ABFD300E2D486 /* AGDefaultPresentTrasition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGDefaultPresentTrasition.m; sourceTree = "<group>"; };
 		7407C3651D9ABFD300E2D486 /* AGPopoverDismissTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGPopoverDismissTransition.h; sourceTree = "<group>"; };
 		7407C3661D9ABFD300E2D486 /* AGPopoverDismissTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGPopoverDismissTransition.m; sourceTree = "<group>"; };
 		7407C3671D9ABFD300E2D486 /* AGPopoverPresentTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGPopoverPresentTransition.h; sourceTree = "<group>"; };
 		7407C3681D9ABFD300E2D486 /* AGPopoverPresentTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGPopoverPresentTransition.m; sourceTree = "<group>"; };
 		7407C37C1D9AC12C00E2D486 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		7459BCD41D9BE76F00854152 /* AGPushViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGPushViewController.h; sourceTree = "<group>"; };
+		7459BCD51D9BE76F00854152 /* AGPushViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGPushViewController.m; sourceTree = "<group>"; };
 		873B8AEA1B1F5CCA007FD442 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		990B0F7272F07953E0E10B14 /* Pods-AGFlowRouter_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AGFlowRouter_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-AGFlowRouter_Example/Pods-AGFlowRouter_Example.release.xcconfig"; sourceTree = "<group>"; };
 		A3CBD4BF65A4799D7F95D2E8 /* Pods-AGFlowRouter_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AGFlowRouter_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AGFlowRouter_Example/Pods-AGFlowRouter_Example.debug.xcconfig"; sourceTree = "<group>"; };
@@ -284,6 +281,8 @@
 				7407C3591D9ABFD300E2D486 /* AGTaskViewController.m */,
 				7407C35A1D9ABFD300E2D486 /* AGTreeViewController.h */,
 				7407C35B1D9ABFD300E2D486 /* AGTreeViewController.m */,
+				7459BCD41D9BE76F00854152 /* AGPushViewController.h */,
+				7459BCD51D9BE76F00854152 /* AGPushViewController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -301,10 +300,6 @@
 		7407C3601D9ABFD300E2D486 /* Transitions */ = {
 			isa = PBXGroup;
 			children = (
-				7407C3611D9ABFD300E2D486 /* AGDefaultDismissTransition.h */,
-				7407C3621D9ABFD300E2D486 /* AGDefaultDismissTransition.m */,
-				7407C3631D9ABFD300E2D486 /* AGDefaultPresentTrasition.h */,
-				7407C3641D9ABFD300E2D486 /* AGDefaultPresentTrasition.m */,
 				7407C3651D9ABFD300E2D486 /* AGPopoverDismissTransition.h */,
 				7407C3661D9ABFD300E2D486 /* AGPopoverDismissTransition.m */,
 				7407C3671D9ABFD300E2D486 /* AGPopoverPresentTransition.h */,
@@ -375,7 +370,7 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = AG;
-				LastUpgradeCheck = 0720;
+				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = "Aleksey Goncharov";
 				TargetAttributes = {
 					6003F589195388D20070C39A = {
@@ -527,6 +522,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7459BCD61D9BE76F00854152 /* AGPushViewController.m in Sources */,
 				7407C3731D9ABFD300E2D486 /* AGProfileViewController.m in Sources */,
 				7407C3711D9ABFD300E2D486 /* AGFeedViewController.m in Sources */,
 				7407C3751D9ABFD300E2D486 /* AGTreeViewController.m in Sources */,
@@ -539,12 +535,10 @@
 				6003F59E195388D20070C39A /* AGAppDelegate.m in Sources */,
 				7407C3721D9ABFD300E2D486 /* AGLeaderboardViewController.m in Sources */,
 				7407C3701D9ABFD300E2D486 /* AGControllersFabric.m in Sources */,
-				7407C3781D9ABFD300E2D486 /* AGDefaultDismissTransition.m in Sources */,
 				7407C3691D9ABFD300E2D486 /* AGTabBar.m in Sources */,
 				7407C3761D9ABFD300E2D486 /* AGInfoBar.m in Sources */,
 				7407C36D1D9ABFD300E2D486 /* AGTabBarItemFlipAnimator.m in Sources */,
 				6003F59A195388D20070C39A /* main.m in Sources */,
-				7407C3791D9ABFD300E2D486 /* AGDefaultPresentTrasition.m in Sources */,
 				7407C37A1D9ABFD300E2D486 /* AGPopoverDismissTransition.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -620,7 +614,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -653,7 +647,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;

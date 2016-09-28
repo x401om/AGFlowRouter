@@ -1,5 +1,9 @@
 #import <UIKit/UIKit.h>
 
+#import "AGDefaultDismissTransition.h"
+#import "AGDefaultPopTransition.h"
+#import "AGDefaultPresentTrasition.h"
+#import "AGDefaultPushTransition.h"
 #import "AGFlowBar.h"
 #import "AGFlowController.h"
 #import "AGFlowRouter.h"

@@ -6,7 +6,7 @@
 //  Copyright © 2016 Easy Ten LLC. All rights reserved.
 //
 
-#import "AGFlowController.h"
+@import AGFlowRouter;
 
 @interface AGTreeViewController : UIViewController<AGFlowController>
 

@@ -47,6 +47,10 @@
   [[AGFlowRouter sharedRouter] registerControllerCreationBlock:^UIViewController<AGFlowController> *(NSString *identifier, id userInfo) {
     return [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:identifier];
   } forIdentifier:@"LeaderboardController"];
+  
+  [[AGFlowRouter sharedRouter] registerControllerCreationBlock:^UIViewController<AGFlowController> *(NSString *identifier, id userInfo) {
+    return [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:identifier];
+  } forIdentifier:@"PushController"];
 }
 
 @end

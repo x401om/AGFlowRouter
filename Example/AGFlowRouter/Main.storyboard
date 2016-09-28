@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Y2U-FG-lmI">
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -16,7 +15,7 @@
                         <viewControllerLayoutGuide type="bottom" id="hPq-HT-HEx"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Brg-cp-h1p">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Profile" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="egc-P9-sMN">
@@ -46,7 +45,7 @@
                         <viewControllerLayoutGuide type="bottom" id="Ppu-4g-Z7q"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="ZND-9g-ABN">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Leaderboard" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vKk-Dv-rfD">
@@ -76,7 +75,7 @@
                         <viewControllerLayoutGuide type="bottom" id="Ocr-sh-tDj"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="VlF-cc-2xS">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FRA-W4-UEn">
@@ -99,6 +98,16 @@
                                     <action selector="applePressed:" destination="Y2U-FG-lmI" eventType="touchUpInside" id="ENX-BA-NbM"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cnd-4g-ozg">
+                                <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="0.30090902450000001" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="hVU-VN-5ds"/>
+                                </constraints>
+                                <state key="normal" title="Show Push"/>
+                                <connections>
+                                    <action selector="pushPressed:" destination="Y2U-FG-lmI" eventType="touchUpInside" id="mQu-Zd-HMm"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -107,7 +116,10 @@
                             <constraint firstItem="zOR-my-ctq" firstAttribute="top" secondItem="FRA-W4-UEn" secondAttribute="bottom" constant="30" id="RK4-mL-6xB"/>
                             <constraint firstItem="FRA-W4-UEn" firstAttribute="leading" secondItem="VlF-cc-2xS" secondAttribute="leading" constant="20" id="VBC-n9-Ul4"/>
                             <constraint firstAttribute="trailing" secondItem="FRA-W4-UEn" secondAttribute="trailing" constant="20" id="Vdo-hB-i9N"/>
+                            <constraint firstAttribute="trailing" secondItem="Cnd-4g-ozg" secondAttribute="trailing" constant="20" id="eHX-Be-SMZ"/>
                             <constraint firstItem="FRA-W4-UEn" firstAttribute="top" secondItem="NnV-rh-riL" secondAttribute="bottom" constant="70" id="fv5-Ze-KNb"/>
+                            <constraint firstItem="Cnd-4g-ozg" firstAttribute="top" secondItem="zOR-my-ctq" secondAttribute="bottom" constant="30" id="gcO-hM-U7c"/>
+                            <constraint firstItem="Cnd-4g-ozg" firstAttribute="leading" secondItem="VlF-cc-2xS" secondAttribute="leading" constant="20" id="yGU-Ur-2c1"/>
                         </constraints>
                     </view>
                     <nil key="simulatedStatusBarMetrics"/>
@@ -125,7 +137,7 @@
                         <viewControllerLayoutGuide type="bottom" id="jCi-vG-zdC"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="dG4-yr-KJC">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="APO-eP-vpD">
@@ -174,7 +186,7 @@
                         <viewControllerLayoutGuide type="bottom" id="yOb-Cr-J8U"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="QAd-N7-tor">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <visualEffectView hidden="YES" opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sOP-VW-4M7">
@@ -242,7 +254,7 @@
                         <viewControllerLayoutGuide type="bottom" id="cfD-L3-FVK"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Bcm-Vg-uX3">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <visualEffectView hidden="YES" opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="57J-q5-YI8">
@@ -300,6 +312,42 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ArV-kt-iwS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="765" y="-634"/>
+        </scene>
+        <!--Push View Controller-->
+        <scene sceneID="RmI-Ht-XKj">
+            <objects>
+                <viewController storyboardIdentifier="PushController" id="m7y-vv-lXF" customClass="AGPushViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Fbc-Qh-IIK"/>
+                        <viewControllerLayoutGuide type="bottom" id="Rug-XZ-NFO"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Gae-Uf-A8O">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4jX-kw-vPP">
+                                <color key="backgroundColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="0.29232987729999999" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="36" id="ECm-xu-3tX"/>
+                                    <constraint firstAttribute="width" constant="52" id="dvo-t2-LMv"/>
+                                </constraints>
+                                <state key="normal" title="Close"/>
+                                <connections>
+                                    <action selector="popButtonPressed:" destination="m7y-vv-lXF" eventType="touchUpInside" id="6WX-cj-Z45"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="4jX-kw-vPP" firstAttribute="leading" secondItem="Gae-Uf-A8O" secondAttribute="leading" id="0lD-Q7-DEm"/>
+                            <constraint firstItem="4jX-kw-vPP" firstAttribute="top" secondItem="Fbc-Qh-IIK" secondAttribute="bottom" constant="29" id="YgH-Ez-Pg4"/>
+                        </constraints>
+                    </view>
+                    <nil key="simulatedStatusBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gly-VG-ZjG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="8" y="67"/>
         </scene>
     </scenes>
 </document>

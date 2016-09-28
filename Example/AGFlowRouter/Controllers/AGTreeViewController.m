@@ -6,12 +6,9 @@
 //  Copyright © 2016 Easy Ten LLC. All rights reserved.
 //
 
-#import "AGFlowRouter.h"
 
 #import "AGTreeViewController.h"
 
-#import "AGDefaultPresentTrasition.h"
-#import "AGDefaultDismissTransition.h"
 #import "AGPopoverPresentTransition.h"
 
 @interface AGTreeViewController ()
@@ -28,6 +25,9 @@
 }
 - (IBAction)applePressed:(UIButton *)sender {
   [[AGFlowRouter sharedRouter] presentControllerId:@"TaskController" userInfo:nil transition:[AGPopoverPresentTransition new]];
+}
+- (IBAction)pushPressed:(UIButton *)sender {
+  [[AGFlowRouter sharedRouter] presentControllerId:@"PushController" userInfo:nil transition:[AGDefaultPushTransition new]];
 }
 
 #pragma mark - AGFlowController
