@@ -6,9 +6,11 @@
 //  Copyright © 2016 Easy Ten LLC. All rights reserved.
 //
 
-@import AGFlowRouter;
+#import "AGFlowController.h"
 
 @class AGPopoverController;
+
+NS_ASSUME_NONNULL_BEGIN
 
 @protocol AGPopoverContent <NSObject>
 
@@ -38,3 +40,5 @@
 @property (nonatomic, strong) UIVisualEffect *visualEffect;
 
 @end
+
+NS_ASSUME_NONNULL_END

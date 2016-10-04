@@ -35,12 +35,12 @@ pod 'AGFlowRouter'
   s.ios.deployment_target = '8.0'
 
   s.source_files = 'AGFlowRouter/Classes/**/*'
-  
+
   # s.resource_bundles = {
   #   'AGFlowRouter' => ['AGFlowRouter/Assets/*.png']
   # }
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
   s.frameworks = 'UIKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
+  s.dependency 'PureLayout', '= 3.0.2'
 end

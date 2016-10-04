@@ -34,8 +34,6 @@
 		7407C3751D9ABFD300E2D486 /* AGTreeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7407C35B1D9ABFD300E2D486 /* AGTreeViewController.m */; };
 		7407C3761D9ABFD300E2D486 /* AGInfoBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 7407C35E1D9ABFD300E2D486 /* AGInfoBar.m */; };
 		7407C3771D9ABFD300E2D486 /* AGInfoBar.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7407C35F1D9ABFD300E2D486 /* AGInfoBar.xib */; };
-		7407C37A1D9ABFD300E2D486 /* AGPopoverDismissTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 7407C3661D9ABFD300E2D486 /* AGPopoverDismissTransition.m */; };
-		7407C37B1D9ABFD300E2D486 /* AGPopoverPresentTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 7407C3681D9ABFD300E2D486 /* AGPopoverPresentTransition.m */; };
 		7407C37D1D9AC12C00E2D486 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7407C37C1D9AC12C00E2D486 /* LaunchScreen.storyboard */; };
 		7459BCD61D9BE76F00854152 /* AGPushViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7459BCD51D9BE76F00854152 /* AGPushViewController.m */; };
 		873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 873B8AEA1B1F5CCA007FD442 /* Main.storyboard */; };
@@ -105,10 +103,6 @@
 		7407C35D1D9ABFD300E2D486 /* AGInfoBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGInfoBar.h; sourceTree = "<group>"; };
 		7407C35E1D9ABFD300E2D486 /* AGInfoBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGInfoBar.m; sourceTree = "<group>"; };
 		7407C35F1D9ABFD300E2D486 /* AGInfoBar.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AGInfoBar.xib; sourceTree = "<group>"; };
-		7407C3651D9ABFD300E2D486 /* AGPopoverDismissTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGPopoverDismissTransition.h; sourceTree = "<group>"; };
-		7407C3661D9ABFD300E2D486 /* AGPopoverDismissTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGPopoverDismissTransition.m; sourceTree = "<group>"; };
-		7407C3671D9ABFD300E2D486 /* AGPopoverPresentTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGPopoverPresentTransition.h; sourceTree = "<group>"; };
-		7407C3681D9ABFD300E2D486 /* AGPopoverPresentTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGPopoverPresentTransition.m; sourceTree = "<group>"; };
 		7407C37C1D9AC12C00E2D486 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7459BCD41D9BE76F00854152 /* AGPushViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGPushViewController.h; sourceTree = "<group>"; };
 		7459BCD51D9BE76F00854152 /* AGPushViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGPushViewController.m; sourceTree = "<group>"; };
@@ -189,7 +183,6 @@
 				7407C33F1D9ABFD300E2D486 /* AGTabBar */,
 				7407C34D1D9ABFD300E2D486 /* Controllers */,
 				7407C35C1D9ABFD300E2D486 /* PermanentViews */,
-				7407C3601D9ABFD300E2D486 /* Transitions */,
 				6003F5A8195388D20070C39A /* Images.xcassets */,
 				6003F594195388D20070C39A /* Supporting Files */,
 			);
@@ -295,17 +288,6 @@
 				7407C35F1D9ABFD300E2D486 /* AGInfoBar.xib */,
 			);
 			path = PermanentViews;
-			sourceTree = "<group>";
-		};
-		7407C3601D9ABFD300E2D486 /* Transitions */ = {
-			isa = PBXGroup;
-			children = (
-				7407C3651D9ABFD300E2D486 /* AGPopoverDismissTransition.h */,
-				7407C3661D9ABFD300E2D486 /* AGPopoverDismissTransition.m */,
-				7407C3671D9ABFD300E2D486 /* AGPopoverPresentTransition.h */,
-				7407C3681D9ABFD300E2D486 /* AGPopoverPresentTransition.m */,
-			);
-			path = Transitions;
 			sourceTree = "<group>";
 		};
 		7A7D148BFFE17618C99D370B /* Pods */ = {
@@ -531,7 +513,6 @@
 				7407C36C1D9ABFD300E2D486 /* AGTabBarItemBounceAnimator.m in Sources */,
 				7407C36B1D9ABFD300E2D486 /* AGTabBarItem.m in Sources */,
 				7407C36E1D9ABFD300E2D486 /* AGTabBarItemRotationAnimator.m in Sources */,
-				7407C37B1D9ABFD300E2D486 /* AGPopoverPresentTransition.m in Sources */,
 				6003F59E195388D20070C39A /* AGAppDelegate.m in Sources */,
 				7407C3721D9ABFD300E2D486 /* AGLeaderboardViewController.m in Sources */,
 				7407C3701D9ABFD300E2D486 /* AGControllersFabric.m in Sources */,
@@ -539,7 +520,6 @@
 				7407C3761D9ABFD300E2D486 /* AGInfoBar.m in Sources */,
 				7407C36D1D9ABFD300E2D486 /* AGTabBarItemFlipAnimator.m in Sources */,
 				6003F59A195388D20070C39A /* main.m in Sources */,
-				7407C37A1D9ABFD300E2D486 /* AGPopoverDismissTransition.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
