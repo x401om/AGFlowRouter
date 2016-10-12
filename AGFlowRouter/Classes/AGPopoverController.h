@@ -8,6 +8,7 @@
 
 #import "AGPopoverContent.h"
 #import "AGFlowController.h"
+#import "AGFlowTransition.h"
 
 @class AGPopoverController;
 
@@ -18,6 +19,9 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong) UIViewController<AGPopoverContent, AGFlowController> *contentController;
 @property (nonatomic, strong) UIImage *windowSnapshot;
 @property (nonatomic, strong) UIVisualEffect *visualEffect;
+
+- (id<AGFlowTransition>)presentTransition;
+- (id<AGFlowTransition>)dismissTransition;
 
 @end
 

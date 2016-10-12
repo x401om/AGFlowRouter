@@ -10,4 +10,6 @@
 
 @interface AGPopoverPresentTransition : NSObject<AGFlowTransition>
 
+- (instancetype)initWithVisualEffect:(UIVisualEffect *)visualEffect;
+
 @end

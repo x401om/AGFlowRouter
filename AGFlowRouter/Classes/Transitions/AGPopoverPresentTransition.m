@@ -8,7 +8,21 @@
 
 #import "AGPopoverPresentTransition.h"
 
+@interface AGPopoverPresentTransition ()
+
+@property (nonatomic, strong) UIVisualEffect *visualEffect;
+
+@end
+
 @implementation AGPopoverPresentTransition
+
+- (instancetype)initWithVisualEffect:(UIVisualEffect *)visualEffect {
+  self = [super init];
+  if (self) {
+    _visualEffect = visualEffect;
+  }
+  return self;
+}
 
 - (void)performTrasitionForController:(UIViewController *)viewController
                    previousController:(UIViewController *)previousController
@@ -28,8 +42,9 @@
   viewController.view.layer.zPosition = 0.5f;
   [window addSubview:viewController.view];
   
+  __weak typeof(self) weakSelf = self;
   [UIView animateWithDuration:0.3f animations:^{
-    blurView.effect = [UIBlurEffect effectWithStyle:UIBlurEffectStyleDark];
+    blurView.effect = weakSelf.visualEffect;
   }];
   
   [UIView animateWithDuration:0.3f

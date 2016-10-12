@@ -9,6 +9,8 @@
 @import PureLayout;
 
 #import "AGPopoverController.h"
+#import "AGPopoverPresentTransition.h"
+#import "AGPopoverDismissTransition.h"
 
 @interface AGPopoverController ()
 
@@ -18,6 +20,14 @@
 @end
 
 @implementation AGPopoverController
+
+- (id<AGFlowTransition>)presentTransition {
+  return [[AGPopoverPresentTransition alloc] initWithVisualEffect:self.visualEffect];
+}
+
+- (id<AGFlowTransition>)dismissTransition {
+  return [[AGPopoverDismissTransition alloc] initWithVisualEffect:self.visualEffect];
+}
 
 - (BOOL)prefersStatusBarHidden {
   return [self.contentController prefersStatusBarHidden];

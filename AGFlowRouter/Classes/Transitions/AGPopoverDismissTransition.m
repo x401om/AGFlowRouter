@@ -8,7 +8,21 @@
 
 #import "AGPopoverDismissTransition.h"
 
+@interface AGPopoverDismissTransition ()
+
+@property (nonatomic, strong) UIVisualEffect *visualEffect;
+
+@end
+
 @implementation AGPopoverDismissTransition
+
+- (instancetype)initWithVisualEffect:(UIVisualEffect *)visualEffect {
+  self = [super init];
+  if (self) {
+    _visualEffect = visualEffect;
+  }
+  return self;
+}
 
 - (void)performTrasitionForController:(UIViewController *)viewController
                    previousController:(UIViewController *)previousController
@@ -20,7 +34,7 @@
   viewController.view.frame = frame;
   [window insertSubview:viewController.view belowSubview:previousController.view];
   
-  UIVisualEffectView *blurView = [[UIVisualEffectView alloc] initWithEffect:[UIBlurEffect effectWithStyle:UIBlurEffectStyleDark]];
+  UIVisualEffectView *blurView = [[UIVisualEffectView alloc] initWithEffect:self.visualEffect];
   blurView.frame = frame;
   blurView.layer.zPosition = 0.5f;
   [window insertSubview:blurView belowSubview:previousController.view];

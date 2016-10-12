@@ -10,8 +10,6 @@
 #import "AGFlowTransitionManager.h"
 
 #import "AGPopoverController.h"
-#import "AGPopoverPresentTransition.h"
-#import "AGPopoverDismissTransition.h"
 #import "UIView+AGSnaphot.h"
 
 @interface AGFlowRouter ()
@@ -23,6 +21,7 @@
 @property (nonatomic, strong) NSMutableArray *flowBars;
 
 @property (nonatomic, strong) UIViewController<AGFlowController> *underlyingController;
+@property (nonatomic, strong) AGPopoverController *currentPopover;
 
 @end
 
@@ -77,6 +76,7 @@
 
 - (void)presentController:(UIViewController<AGFlowController> *)controller transition:(id<AGFlowTransition>)transition {
   self.underlyingController = nil;
+  self.currentPopover = nil;
   [self.transitionManager presentViewController:controller
                                      transition:transition];
 }
@@ -99,7 +99,9 @@
   popoverController.visualEffect = [UIBlurEffect effectWithStyle:UIBlurEffectStyleDark];
   popoverController.windowSnapshot = [self.transitionManager.window snapshotImage];
   
-  [self presentController:popoverController transition:[AGPopoverPresentTransition new]];
+  [self.transitionManager presentViewController:popoverController
+                                     transition:[popoverController presentTransition]];
+  self.currentPopover = popoverController;
 }
 
 - (void)presentInPopoverControllerId:(NSString *)identifier
@@ -115,8 +117,9 @@
 
 - (void)dismissCurrentPopoverController {
   if (self.underlyingController) {
-   [self presentController:self.underlyingController transition:[AGPopoverDismissTransition new]];
+   [self presentController:self.underlyingController transition:[self.currentPopover dismissTransition]];
     self.underlyingController = nil;
+    self.currentPopover = nil;
   }
 }
 
