@@ -108,7 +108,7 @@
                             userInfo:(nullable id)userInfo {
   AGFlowRouterCreationBlock creationBlock = self.creationBlocks[identifier];
   if (creationBlock) {
-    UIViewController<AGFlowController> *vc = creationBlock(identifier, userInfo);
+    UIViewController<AGFlowController, AGPopoverContent> *vc = creationBlock(identifier, userInfo);
     if (vc) {
       [self presentInPopoverController:vc];
     }
