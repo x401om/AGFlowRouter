@@ -19,6 +19,10 @@
 
 @implementation AGPopoverController
 
+- (BOOL)prefersStatusBarHidden {
+  return [self.contentController prefersStatusBarHidden];
+}
+
 - (void)viewDidLoad {
   [super viewDidLoad];
   

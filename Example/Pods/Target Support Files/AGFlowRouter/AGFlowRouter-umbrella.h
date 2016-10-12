@@ -6,6 +6,7 @@
 #import "UIView+AGSnaphot.h"
 #import "AGFlowBar.h"
 #import "AGFlowController.h"
+#import "AGPopoverContent.h"
 #import "AGDefaultDismissTransition.h"
 #import "AGDefaultPopTransition.h"
 #import "AGDefaultPresentTrasition.h"

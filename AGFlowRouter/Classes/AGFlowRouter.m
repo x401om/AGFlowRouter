@@ -9,6 +9,11 @@
 #import "AGFlowRouter.h"
 #import "AGFlowTransitionManager.h"
 
+#import "AGPopoverController.h"
+#import "AGPopoverPresentTransition.h"
+#import "AGPopoverDismissTransition.h"
+#import "UIView+AGSnaphot.h"
+
 @interface AGFlowRouter ()
 
 @property (nonatomic, strong) AGFlowTransitionManager *transitionManager;
@@ -16,6 +21,8 @@
 @property (nonatomic, strong) NSMutableDictionary<NSString *, AGFlowRouterCreationBlock> *creationBlocks;
 @property (nonatomic, strong) AGFlowRouterRootCreationBlock rootControllerCreation;
 @property (nonatomic, strong) NSMutableArray *flowBars;
+
+@property (nonatomic, strong) UIViewController<AGFlowController> *underlyingController;
 
 @end
 
@@ -68,10 +75,49 @@
   self.creationBlocks[identifier] = creationBlock;
 }
 
+- (void)presentController:(UIViewController<AGFlowController> *)controller transition:(id<AGFlowTransition>)transition {
+  self.underlyingController = nil;
+  [self.transitionManager presentViewController:controller
+                                     transition:transition];
+}
+
 - (void)presentControllerId:(NSString *)identifier userInfo:(id)userInfo transition:(id<AGFlowTransition>)transition {
   AGFlowRouterCreationBlock creationBlock = self.creationBlocks[identifier];
-  [self.transitionManager presentViewController:creationBlock(identifier, userInfo)
-                                     transition:transition];
+  if (creationBlock) {
+    UIViewController<AGFlowController> *vc = creationBlock(identifier, userInfo);
+    if (vc) {
+      [self presentController:vc transition:transition];
+    }
+  }
+}
+
+- (void)presentInPopoverController:(UIViewController<AGFlowController, AGPopoverContent> *)controller {
+  self.underlyingController = self.transitionManager.rootViewController;
+
+  AGPopoverController *popoverController = [AGPopoverController new];
+  popoverController.contentController = controller;
+  popoverController.visualEffect = [UIBlurEffect effectWithStyle:UIBlurEffectStyleDark];
+  popoverController.windowSnapshot = [self.transitionManager.window snapshotImage];
+  
+  [self presentController:popoverController transition:[AGPopoverPresentTransition new]];
+}
+
+- (void)presentInPopoverControllerId:(NSString *)identifier
+                            userInfo:(nullable id)userInfo {
+  AGFlowRouterCreationBlock creationBlock = self.creationBlocks[identifier];
+  if (creationBlock) {
+    UIViewController<AGFlowController> *vc = creationBlock(identifier, userInfo);
+    if (vc) {
+      [self presentInPopoverController:vc];
+    }
+  }
+}
+
+- (void)dismissCurrentPopoverController {
+  if (self.underlyingController) {
+   [self presentController:self.underlyingController transition:[AGPopoverDismissTransition new]];
+    self.underlyingController = nil;
+  }
 }
 
 

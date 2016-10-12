@@ -14,6 +14,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface AGFlowTransitionManager : NSObject
 
+@property (nonatomic, strong, readonly) UIWindow *window;
+@property (nonatomic, strong, readonly) UIViewController<AGFlowController> *rootViewController;
+
 - (instancetype)initWithRootViewController:(UIViewController<AGFlowController> *)rootViewController
                                     window:(UIWindow *)window;
 

@@ -6,6 +6,7 @@
 //  Copyright © 2016 Easy Ten LLC. All rights reserved.
 //
 
+#import "AGPopoverContent.h"
 #import "AGFlowTransition.h"
 #import "AGFlowController.h"
 
@@ -25,9 +26,16 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)registerControllerCreationBlock:(AGFlowRouterCreationBlock)creationBlock
                           forIdentifier:(NSString *)identifier;
 
+- (void)presentController:(UIViewController<AGFlowController> *)controller
+               transition:(nullable id<AGFlowTransition>)transition;
 - (void)presentControllerId:(NSString *)identifier
                    userInfo:(nullable id)userInfo
                  transition:(nullable id<AGFlowTransition>)transition;
+
+- (void)presentInPopoverController:(UIViewController<AGFlowController, AGPopoverContent> *)controller;
+- (void)presentInPopoverControllerId:(NSString *)identifier
+                            userInfo:(nullable id)userInfo;
+- (void)dismissCurrentPopoverController;
 
 @end
 

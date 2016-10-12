@@ -23,12 +23,19 @@
 
 @implementation AGTaskViewController
 
+- (void)viewDidLoad {
+  [super viewDidLoad];
+  
+  self.view.layer.cornerRadius = 20.0f;
+  self.view.clipsToBounds = YES;
+}
+
 - (BOOL)prefersStatusBarHidden {
   return YES;
 }
 - (IBAction)closePressed:(UIButton *)sender {
-
-  [[AGFlowRouter sharedRouter] presentControllerId:@"TreeController" userInfo:nil transition:[AGPopoverDismissTransition new]];
+  [[AGFlowRouter sharedRouter] dismissCurrentPopoverController];
+//  [[AGFlowRouter sharedRouter] presentControllerId:@"TreeController" userInfo:nil transition:[AGPopoverDismissTransition new]];
 }
 
 #pragma mark - AGFlowController
@@ -49,6 +56,16 @@
 
 - (BOOL)prefersHideFlowBarWithIdentifier:(NSString *)identifier {
   return YES;
+}
+
+#pragma mark - AGPopoverContent
+
+- (CGSize)sizeForContentInPopoverController:(AGPopoverController *)popoverController {
+  return CGSizeMake(300.0f, 300.0f);
+}
+
+- (void)popoverControllerDidTapBackground:(AGPopoverController *)popoverController {
+  [[AGFlowRouter sharedRouter] dismissCurrentPopoverController];
 }
 
 @end

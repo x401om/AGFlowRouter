@@ -6,8 +6,9 @@
 //  Copyright © 2016 Easy Ten LLC. All rights reserved.
 //
 
+#import "AGPopoverContent.h"
 #import "AGFlowController.h"
 
-@interface AGTaskViewController : UIViewController<AGFlowController>
+@interface AGTaskViewController : UIViewController<AGFlowController, AGPopoverContent>
 
 @end
