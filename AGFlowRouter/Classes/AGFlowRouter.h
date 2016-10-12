@@ -33,8 +33,10 @@ NS_ASSUME_NONNULL_BEGIN
                  transition:(nullable id<AGFlowTransition>)transition;
 
 - (void)presentInPopoverController:(UIViewController<AGFlowController, AGPopoverContent> *)controller;
+
 - (void)presentInPopoverControllerId:(NSString *)identifier
                             userInfo:(nullable id)userInfo;
+
 - (void)dismissCurrentPopoverController;
 
 @end
