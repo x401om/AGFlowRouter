@@ -201,11 +201,25 @@
                                     <action selector="closePressed:" destination="S45-Va-KeQ" eventType="touchUpInside" id="RSQ-Sq-sLD"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FTz-Ur-cVx">
+                                <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="0.30090902450000001" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="Oxi-Ax-W8J"/>
+                                </constraints>
+                                <state key="normal" title="Show another Popover"/>
+                                <connections>
+                                    <action selector="applePressed:" destination="Y2U-FG-lmI" eventType="touchUpInside" id="kYr-HI-537"/>
+                                    <action selector="showPopoverPressed:" destination="S45-Va-KeQ" eventType="touchUpInside" id="hOb-pi-nnI"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="6PZ-pj-vta" firstAttribute="leading" secondItem="QAd-N7-tor" secondAttribute="leadingMargin" id="7fw-a7-TOX"/>
+                            <constraint firstItem="FTz-Ur-cVx" firstAttribute="leading" secondItem="QAd-N7-tor" secondAttribute="leading" constant="20" id="88j-9s-biO"/>
+                            <constraint firstItem="FTz-Ur-cVx" firstAttribute="centerY" secondItem="QAd-N7-tor" secondAttribute="centerY" id="Fbt-aq-Xxb"/>
                             <constraint firstItem="6PZ-pj-vta" firstAttribute="top" secondItem="AUb-59-ptY" secondAttribute="bottom" constant="10" id="bDX-Jc-CVM"/>
+                            <constraint firstAttribute="trailing" secondItem="FTz-Ur-cVx" secondAttribute="trailing" constant="20" id="dDf-ld-eLo"/>
                         </constraints>
                     </view>
                     <nil key="simulatedStatusBarMetrics"/>

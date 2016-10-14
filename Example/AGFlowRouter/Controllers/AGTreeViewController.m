@@ -25,7 +25,6 @@
 }
 - (IBAction)applePressed:(UIButton *)sender {
   [[AGFlowRouter sharedRouter] presentInPopoverControllerId:@"TaskController" userInfo:nil];
-//  [[AGFlowRouter sharedRouter] presentControllerId:@"TaskController" userInfo:nil transition:[AGPopoverPresentTransition new]];
 }
 - (IBAction)pushPressed:(UIButton *)sender {
   [[AGFlowRouter sharedRouter] presentControllerId:@"PushController" userInfo:nil transition:[AGDefaultPushTransition new]];

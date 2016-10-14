@@ -8,52 +8,55 @@
 
 /* Begin PBXBuildFile section */
 		076DF50014E9587A1497F904B5D37194 /* Pods-AGFlowRouter_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = BA31A25BB6E3A39A8E533DE71C0D5FC2 /* Pods-AGFlowRouter_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		080C630A1E5FB32566087C6DCCE824C3 /* AGFlowRouter.h in Headers */ = {isa = PBXBuildFile; fileRef = C50C1D02CB047BFAF25CDCE84C83861B /* AGFlowRouter.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		09DE98DAD0A60C6EF8D87530201DF506 /* PureLayout.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97A8E6F2390013F549A6646FD4BA7E2A /* PureLayout.framework */; };
-		0DDABCCF1F3613445666F069C0A83788 /* PureLayout+Internal.h in Headers */ = {isa = PBXBuildFile; fileRef = AA654F86E857710B01965E96AC15F25C /* PureLayout+Internal.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		13C630855DC15EA99749B66E1D0CF8A3 /* AGFlowTransitionManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 9F81E8E15312AC6F7AE9FB188FD0B8E5 /* AGFlowTransitionManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		143731F4571827C315F60150441795BF /* NSLayoutConstraint+PureLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = 2F7D472071E15F7DC98E66B5980E1549 /* NSLayoutConstraint+PureLayout.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		28E1CBC33A0306621951867A35AA1831 /* AGFlowRouter-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C16220AFD1B6F99FA7A0896216AA4AF6 /* AGFlowRouter-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		339376CA897C08CAADBDA38CA41DE40A /* AGFlowTransition.h in Headers */ = {isa = PBXBuildFile; fileRef = EB24B971C609AED92B3181AB0F3FE4E3 /* AGFlowTransition.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		374F769E527FEBBEB25B27F9B1502582 /* AGFlowTransitionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A26D6329F6F64448FC76C7B3E2F1FDF2 /* AGFlowTransitionManager.m */; };
-		3D392F4E5EFD0867CA0BD32E182727D9 /* PureLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = 261FA9EFC65F5CA2F5CE7AF0D3ACE209 /* PureLayout.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		40E076082FF8590BCC2CAE4105A90FFD /* AGDefaultPresentTrasition.m in Sources */ = {isa = PBXBuildFile; fileRef = FE2548EF2CF79FDD80FEDA092B0DCE12 /* AGDefaultPresentTrasition.m */; };
-		42406EFF1FDBDAACC534341E496D7017 /* AGDefaultPresentTrasition.h in Headers */ = {isa = PBXBuildFile; fileRef = 0ABDD2D6248B62747D3893D41B4F866B /* AGDefaultPresentTrasition.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		46DAACFA78AC9E6444A6B0170B27CF62 /* AGPopoverDismissTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FED7AF4B40BE7621C5B55A64561658A /* AGPopoverDismissTransition.m */; };
-		49E7141038C04F84E8EAD71331465669 /* AGDefaultDismissTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = E763DA9A889A0EFA4681E7AE5C8D7CF2 /* AGDefaultDismissTransition.m */; };
-		4C046AB2546A6BD7CE9C5B710C155C52 /* UIView+AGSnaphot.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A98987BC209CAB76A2EA3C5202D0FDC /* UIView+AGSnaphot.m */; };
-		61EE3996A56E28E7E2B65487CEE6E8FF /* AGFlowController.h in Headers */ = {isa = PBXBuildFile; fileRef = C6111F0570DBFDAC15A7F6004573846E /* AGFlowController.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		63109C642294A23F28C7E2F80C9C2BA0 /* AGPopoverPresentTransition.h in Headers */ = {isa = PBXBuildFile; fileRef = 5812F4778D0A1D7338D5B5DDA0757E67 /* AGPopoverPresentTransition.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		097808B19DF3C725F929F2EB47FE0398 /* AGPopoverDismissTransition.h in Headers */ = {isa = PBXBuildFile; fileRef = 1BBFD771E8427C70190330E943D9F103 /* AGPopoverDismissTransition.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0B36752837410F72EDEE5184DE604E17 /* AGDefaultPopTransition.h in Headers */ = {isa = PBXBuildFile; fileRef = 50544499AD2455836E57B1A2FEA48FD3 /* AGDefaultPopTransition.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0BD80128687863068747DD3F3286D7BA /* AGDefaultDismissTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = EBA3794CC75B4BA48E29A1430C355B96 /* AGDefaultDismissTransition.m */; };
+		0E2C3DC00FA8E96ACBF3337AF8CC6EC1 /* AGDefaultDismissTransition.h in Headers */ = {isa = PBXBuildFile; fileRef = 78E7B60584FEA5B381C49AC6DE2815E8 /* AGDefaultDismissTransition.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0E3E8FD7EE96345888F11ED3BFDE4CDD /* AGFlowTransitionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 17A5BF527A88F77FA02BA5D04F6CB9A8 /* AGFlowTransitionManager.m */; };
+		11B7474B06072F5AC5BF9E3F23289547 /* AGPopoverController.m in Sources */ = {isa = PBXBuildFile; fileRef = 88094CA89108DB3EE7B751B3ACA1E887 /* AGPopoverController.m */; };
+		2912D67F87B8ECC0614844AC39D4548F /* AGFlowRouter-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B9B7FE2DE68DC6E02B39565738613DFB /* AGFlowRouter-dummy.m */; };
+		29BEB179D68936BFEE39A62400A32F5C /* PureLayout-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 808D9E17BE044F47037C6ABD6F65EE32 /* PureLayout-dummy.m */; };
+		3CD8B7D2B89F28016BBD735B62A67E7D /* NSLayoutConstraint+PureLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 62FD488738DACC6BD28A4B8007AC9E22 /* NSLayoutConstraint+PureLayout.m */; };
+		418A98E1995193BACC962EDC8FA9F9C9 /* PureLayout-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 6EFEA95188E08BEB23065B2AB052E7BC /* PureLayout-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4F889BD824B625E1E78100F893F4BDC0 /* PureLayout+Internal.h in Headers */ = {isa = PBXBuildFile; fileRef = AA654F86E857710B01965E96AC15F25C /* PureLayout+Internal.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		57B169A153FE656EE9E0CAA4BF2D4F61 /* AGFlowRouter.h in Headers */ = {isa = PBXBuildFile; fileRef = DCF1CDA9D3040F1BAD69F29A59438CFB /* AGFlowRouter.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5BC65D71A6420177EA5C92C7BF756A8F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D9D195422A09205D5062E1F9506F1C7 /* Foundation.framework */; };
+		6073F9853963D495A18A5DE08E264DF8 /* NSArray+PureLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = D87500AA33CA4A933595B88AD6CA26C8 /* NSArray+PureLayout.m */; };
 		636AF8A3897D8700E5E79A7C3A9D01D3 /* Pods-AGFlowRouter_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A6B42649759238FF3FB7787F0FD150C3 /* Pods-AGFlowRouter_Example-dummy.m */; };
-		63DAA6ED9D383CE4F600EC6C683B6241 /* NSArray+PureLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = D87500AA33CA4A933595B88AD6CA26C8 /* NSArray+PureLayout.m */; };
-		653C2848EEC14DA12BAF52C4EBBC9D8A /* AGDefaultPopTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C13A35B96FB43AFE5347025066C8D58 /* AGDefaultPopTransition.m */; };
+		65DEDB58C2CC7F5A47473BC0AFB70A0B /* AGDefaultPushTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E293A0BC08A4581A3FAF8F6079B331 /* AGDefaultPushTransition.m */; };
+		65EB3C3084094521051E136047712957 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 269E684E2A098B81FC437326735AAC83 /* UIKit.framework */; };
 		669EEC644AE4CE131C85778993404380 /* Pods-AGFlowRouter_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = FEE4F003FB3823D8526A5B681329D75A /* Pods-AGFlowRouter_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		6994F1DEFA23220E6A0FD59F43C1B99C /* AGPopoverController.m in Sources */ = {isa = PBXBuildFile; fileRef = FE6CB1D64E53DE1F8C7FB730BC601EBF /* AGPopoverController.m */; };
-		6C2AAD6F67A5B296DCC4C749EC9E15DE /* AGPopoverController.h in Headers */ = {isa = PBXBuildFile; fileRef = FA232C8F56D797110CF76A54A252E8A7 /* AGPopoverController.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		760E9277182BCDC9ECFED63D87B0BF9D /* AGFlowBar.h in Headers */ = {isa = PBXBuildFile; fileRef = 35ED9C9A6537F0742A77E7F8DC8AF7F9 /* AGFlowBar.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		77EECF91246E39F7A58CB5930A7CB2A5 /* AGDefaultPushTransition.h in Headers */ = {isa = PBXBuildFile; fileRef = 9B1E5C1E0334190F50CE8927ACA53CB8 /* AGDefaultPushTransition.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		7B3F580DEC74CE02407010981AB91638 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 269E684E2A098B81FC437326735AAC83 /* UIKit.framework */; };
-		855C6722B660EE7F66C0365E2CEBA5F0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D9D195422A09205D5062E1F9506F1C7 /* Foundation.framework */; };
-		8611F1ACC41292EA39D493AAFCD0FEB3 /* AGPopoverContent.h in Headers */ = {isa = PBXBuildFile; fileRef = FCC1E6E286033C968E9A550B14D48021 /* AGPopoverContent.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		921BF7FA67876BEFF831738BD0E6DB6C /* PureLayout-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 808D9E17BE044F47037C6ABD6F65EE32 /* PureLayout-dummy.m */; };
-		98E94C6D9B2DFA1843E5FF65072AB45F /* NSArray+PureLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = 256CB866D56B919DA6C9ABF2C32B4D37 /* NSArray+PureLayout.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		686FE7F136720DDA43B868662284E5F6 /* AGFlowTransitionManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 7B4D33D81A34130CD478D05C9049A0C1 /* AGFlowTransitionManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		73DB7A522CE129AF22B6A1B94F424078 /* UIView+AGSnaphot.h in Headers */ = {isa = PBXBuildFile; fileRef = 69541F8A1435CA5BF81209D740EF0218 /* UIView+AGSnaphot.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7556487C6F3B12695DA9D33FDF2BDD7A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D9D195422A09205D5062E1F9506F1C7 /* Foundation.framework */; };
+		797EB0CF8271C050B1A17DA57B3728BE /* AGFlowBar.h in Headers */ = {isa = PBXBuildFile; fileRef = 39D8695039A5CA5624EBC681A6928AFD /* AGFlowBar.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7BA5AD69BC76465FAB286E1EB5E8DCEE /* AGPopoverDismissTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = D15A51DA66016D2FE6DEE1B69668ECF1 /* AGPopoverDismissTransition.m */; };
+		865515D2D5770259D3FA532B26C4754D /* NSLayoutConstraint+PureLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = 2F7D472071E15F7DC98E66B5980E1549 /* NSLayoutConstraint+PureLayout.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		90F22B393CBE02A4BE1C29582F199BA6 /* AGFlowRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AE15C6AC105E4A581C0756C84EDB149 /* AGFlowRouter.m */; };
+		922B450497B0D4AE78F3C0B5292674B7 /* AGFlowRouter-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C16220AFD1B6F99FA7A0896216AA4AF6 /* AGFlowRouter-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		963739840A695209C51B4F8FA280F7F1 /* AGPopoverController.h in Headers */ = {isa = PBXBuildFile; fileRef = CBBA22BF402E3DFC2AEBADD7B5FF0319 /* AGPopoverController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		967B298AF5BC51D18FB719472DBC3109 /* AGPopoverToPopoverTransition.h in Headers */ = {isa = PBXBuildFile; fileRef = 0E5FA91051816046650AB60D75727C36 /* AGPopoverToPopoverTransition.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		974DE4F2A596253C7495D7C39A9037AD /* NSArray+PureLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = 256CB866D56B919DA6C9ABF2C32B4D37 /* NSArray+PureLayout.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		98F89C017070A6842504D7D629E66144 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D9D195422A09205D5062E1F9506F1C7 /* Foundation.framework */; };
 		9BD31093AD445E31A433B6559F503586 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D9D195422A09205D5062E1F9506F1C7 /* Foundation.framework */; };
-		9C06971B57F000943898DBEC7F53FF9B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D9D195422A09205D5062E1F9506F1C7 /* Foundation.framework */; };
-		9DF99B7A2F42CCEBC7C206A7C7DD8BB0 /* NSLayoutConstraint+PureLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 62FD488738DACC6BD28A4B8007AC9E22 /* NSLayoutConstraint+PureLayout.m */; };
-		A6292DF223581946CECA887F6B279556 /* ALView+PureLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = F3D3F05D324772E907DB1D4DA2C89AA2 /* ALView+PureLayout.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		A65B159CB5CB0BF77C853AAA9819411E /* AGDefaultPopTransition.h in Headers */ = {isa = PBXBuildFile; fileRef = ADF88869394D7DECEFDCE90AA798D1BC /* AGDefaultPopTransition.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		AA543010B0C17ED245BA4391FBBC4DFE /* AGFlowRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = 40145E889F3F8AA21F50D402C52FEE6C /* AGFlowRouter.m */; };
-		B518BBC50074C5F25CD69EAE0C879473 /* AGDefaultDismissTransition.h in Headers */ = {isa = PBXBuildFile; fileRef = DE44A0EE0E4D01CCF88F0A4F98553416 /* AGDefaultDismissTransition.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		B576659B3E275055CDD7DA7E461E2FED /* UIView+AGSnaphot.h in Headers */ = {isa = PBXBuildFile; fileRef = 7B888AD90899EB93A32DB1AD674A2ED8 /* UIView+AGSnaphot.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		BA1998AECA3AE92FBBBA04045EF56DEF /* AGPopoverDismissTransition.h in Headers */ = {isa = PBXBuildFile; fileRef = F238377699E87DD1F2964CDCF0CB89C5 /* AGPopoverDismissTransition.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		BCC38084E4DF1F6A7510304ED6057899 /* PureLayout-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 6EFEA95188E08BEB23065B2AB052E7BC /* PureLayout-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		C0DEE3CE42A0A52838D1087863DEA3FB /* AGDefaultPushTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 154165EB33C6CA9F43FD803EF3475D9A /* AGDefaultPushTransition.m */; };
+		A634389E869E19F1E8F8736065C90D38 /* PureLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = 261FA9EFC65F5CA2F5CE7AF0D3ACE209 /* PureLayout.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A84900F22E883136645BFD33C470A7A8 /* AGPopoverPresentTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 7132DA47D76E50F1520B1CAFBA5A05EB /* AGPopoverPresentTransition.m */; };
+		AA4022FA4FA4DFA72156DFA94CD3FC08 /* AGFlowTransition.h in Headers */ = {isa = PBXBuildFile; fileRef = A251BD1A0466127C8F7DA13B92A450B5 /* AGFlowTransition.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		ACF158205E4C075E8BE61711F2619CB4 /* ALView+PureLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = F3D3F05D324772E907DB1D4DA2C89AA2 /* ALView+PureLayout.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B21FF7D829C5AC4A971BEA3541A3CFF1 /* AGFlowController.h in Headers */ = {isa = PBXBuildFile; fileRef = 3150C90CDAC6A075CEAD9A6FD7AB96DD /* AGFlowController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B60ECDE694D8B3971801BC7F84011B38 /* AGPopoverReplacementAnimation.h in Headers */ = {isa = PBXBuildFile; fileRef = 574D200D2D4B5276046B631FCDF1BD39 /* AGPopoverReplacementAnimation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B96C449138066021D5B8579C43206A5E /* PureLayout.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97A8E6F2390013F549A6646FD4BA7E2A /* PureLayout.framework */; };
+		BF3810194DD988432D774AFC0AAE3790 /* AGPopoverContent.h in Headers */ = {isa = PBXBuildFile; fileRef = AE5E7B2E435F498FBA6303C266526B19 /* AGPopoverContent.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C5E5C7CE9BC7F7FDAE183A27E0C390D0 /* AGDefaultPushTransition.h in Headers */ = {isa = PBXBuildFile; fileRef = E3CB35E8F1D426C872FD5B939D93F4E5 /* AGDefaultPushTransition.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C992E6AB2D3E424C45E69C3264683483 /* ALView+PureLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F6990C47F02B6691DD4DA9D4504A36B /* ALView+PureLayout.m */; };
 		CAC030277E632A97F3ECF7D67CDCF5AB /* Pods-AGFlowRouter_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 166DB75C045D1CE0F88593B5335E664B /* Pods-AGFlowRouter_Tests-dummy.m */; };
-		D62E7216A3EAD8A9186B92D91E8FA5FB /* PureLayoutDefines.h in Headers */ = {isa = PBXBuildFile; fileRef = 5B859CA7D3A83073EE3A0EFE2138F31B /* PureLayoutDefines.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E256740EE83892F0E7AE0BCF1D1A295D /* AGPopoverPresentTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E10BC7A597AA4843ED9B7E58E3286C2 /* AGPopoverPresentTransition.m */; };
-		EF4C034F4B13CCC153073C2244BD6DFD /* AGFlowRouter-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B9B7FE2DE68DC6E02B39565738613DFB /* AGFlowRouter-dummy.m */; };
-		F604E2612C3BCBDD89819D00FFD79905 /* ALView+PureLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F6990C47F02B6691DD4DA9D4504A36B /* ALView+PureLayout.m */; };
+		CB23FAC6E315C8D388A74A22176DD180 /* AGPopoverToPopoverTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F8D94D33BA4160F5EE5EB7F3D0EA579 /* AGPopoverToPopoverTransition.m */; };
+		DA4FDD071CEC35BB0B2E3C9FB4ACA6A5 /* AGDefaultPresentTrasition.m in Sources */ = {isa = PBXBuildFile; fileRef = B9246836A85BB8B5681A724FE1F5689A /* AGDefaultPresentTrasition.m */; };
+		E8471D187200F4761EB6B7402B808417 /* UIView+AGSnaphot.m in Sources */ = {isa = PBXBuildFile; fileRef = AAFC906239124ED8CB7A4ABCDADF80FD /* UIView+AGSnaphot.m */; };
+		EFEFBCF4F4AAD1446BE96308DFCB6F61 /* AGDefaultPopTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = A05F523D88FA451D90E97B60479BE664 /* AGDefaultPopTransition.m */; };
+		F884F1A13FD22E6B51E567C00B270688 /* PureLayoutDefines.h in Headers */ = {isa = PBXBuildFile; fileRef = 5B859CA7D3A83073EE3A0EFE2138F31B /* PureLayoutDefines.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FA7C8E5C3464BEA52431C94680320B44 /* AGPopoverPresentTransition.h in Headers */ = {isa = PBXBuildFile; fileRef = 937178B13C9AB0A9963577BB31434968 /* AGPopoverPresentTransition.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FD73A709937CA79E3D710900FC52A3DE /* AGDefaultPresentTrasition.h in Headers */ = {isa = PBXBuildFile; fileRef = BF519F785A458DBAE6D42D2DC0DFA6FB /* AGDefaultPresentTrasition.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,109 +64,112 @@
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = BA062B2E37122A7FCEC1B2A861E5310D;
+			remoteGlobalIDString = 2FFD62AB28392084B9E9C0A942349D8E;
 			remoteInfo = AGFlowRouter;
 		};
-		1EA5DC659C692849201C7A90A47136CA /* PBXContainerItemProxy */ = {
+		1CF07CB753483BDD831B111D28B7D21E /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 4697118C6DD5E73BF860AE0C103AE2E0;
+			remoteGlobalIDString = 989349171A0EDC7574690BA79B64945D;
 			remoteInfo = PureLayout;
 		};
 		F71215D22A1F054BF17BB09B46900C83 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 4697118C6DD5E73BF860AE0C103AE2E0;
+			remoteGlobalIDString = 989349171A0EDC7574690BA79B64945D;
 			remoteInfo = PureLayout;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		01B056FE48A821CA3D3818E32A4CFEDF /* PureLayout.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = PureLayout.xcconfig; sourceTree = "<group>"; };
-		0ABDD2D6248B62747D3893D41B4F866B /* AGDefaultPresentTrasition.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = AGDefaultPresentTrasition.h; sourceTree = "<group>"; };
+		04E293A0BC08A4581A3FAF8F6079B331 /* AGDefaultPushTransition.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = AGDefaultPushTransition.m; sourceTree = "<group>"; };
 		0B96EABB8A38F5C2DDA518928B045A62 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0E5FA91051816046650AB60D75727C36 /* AGPopoverToPopoverTransition.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = AGPopoverToPopoverTransition.h; sourceTree = "<group>"; };
 		1431F11D34A12A6F46B8DBD77B5B2020 /* Pods-AGFlowRouter_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-AGFlowRouter_Tests.modulemap"; sourceTree = "<group>"; };
-		154165EB33C6CA9F43FD803EF3475D9A /* AGDefaultPushTransition.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = AGDefaultPushTransition.m; sourceTree = "<group>"; };
 		166DB75C045D1CE0F88593B5335E664B /* Pods-AGFlowRouter_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-AGFlowRouter_Tests-dummy.m"; sourceTree = "<group>"; };
+		17A5BF527A88F77FA02BA5D04F6CB9A8 /* AGFlowTransitionManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = AGFlowTransitionManager.m; sourceTree = "<group>"; };
+		1BBFD771E8427C70190330E943D9F103 /* AGPopoverDismissTransition.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = AGPopoverDismissTransition.h; sourceTree = "<group>"; };
 		249938C44B3C707521E098F2C5086AD9 /* PureLayout.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = PureLayout.modulemap; sourceTree = "<group>"; };
 		25429EECFF267D47BC0D762B193291C4 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		256CB866D56B919DA6C9ABF2C32B4D37 /* NSArray+PureLayout.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSArray+PureLayout.h"; path = "PureLayout/PureLayout/NSArray+PureLayout.h"; sourceTree = "<group>"; };
 		261FA9EFC65F5CA2F5CE7AF0D3ACE209 /* PureLayout.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PureLayout.h; path = PureLayout/PureLayout/PureLayout.h; sourceTree = "<group>"; };
 		269E684E2A098B81FC437326735AAC83 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
-		2A98987BC209CAB76A2EA3C5202D0FDC /* UIView+AGSnaphot.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UIView+AGSnaphot.m"; sourceTree = "<group>"; };
 		2D48B4695F5AC16704400ECFC0702C93 /* AGFlowRouter.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = AGFlowRouter.modulemap; sourceTree = "<group>"; };
 		2F7D472071E15F7DC98E66B5980E1549 /* NSLayoutConstraint+PureLayout.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSLayoutConstraint+PureLayout.h"; path = "PureLayout/PureLayout/NSLayoutConstraint+PureLayout.h"; sourceTree = "<group>"; };
-		2FED7AF4B40BE7621C5B55A64561658A /* AGPopoverDismissTransition.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = AGPopoverDismissTransition.m; sourceTree = "<group>"; };
-		35ED9C9A6537F0742A77E7F8DC8AF7F9 /* AGFlowBar.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = AGFlowBar.h; sourceTree = "<group>"; };
+		3150C90CDAC6A075CEAD9A6FD7AB96DD /* AGFlowController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = AGFlowController.h; sourceTree = "<group>"; };
+		39D8695039A5CA5624EBC681A6928AFD /* AGFlowBar.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = AGFlowBar.h; sourceTree = "<group>"; };
 		3A3533AFB43D369FA57E68B186CD01EA /* Pods-AGFlowRouter_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-AGFlowRouter_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
 		3D8C4719E5D8A14FC3334E370E8913C6 /* AGFlowRouter-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "AGFlowRouter-prefix.pch"; sourceTree = "<group>"; };
 		3F6990C47F02B6691DD4DA9D4504A36B /* ALView+PureLayout.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "ALView+PureLayout.m"; path = "PureLayout/PureLayout/ALView+PureLayout.m"; sourceTree = "<group>"; };
-		40145E889F3F8AA21F50D402C52FEE6C /* AGFlowRouter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = AGFlowRouter.m; sourceTree = "<group>"; };
-		4C13A35B96FB43AFE5347025066C8D58 /* AGDefaultPopTransition.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = AGDefaultPopTransition.m; sourceTree = "<group>"; };
 		4D9D195422A09205D5062E1F9506F1C7 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		50544499AD2455836E57B1A2FEA48FD3 /* AGDefaultPopTransition.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = AGDefaultPopTransition.h; sourceTree = "<group>"; };
 		571DA5357D9E981EAF2F2C06C5D0BDFE /* Pods-AGFlowRouter_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-AGFlowRouter_Example-resources.sh"; sourceTree = "<group>"; };
-		5812F4778D0A1D7338D5B5DDA0757E67 /* AGPopoverPresentTransition.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = AGPopoverPresentTransition.h; sourceTree = "<group>"; };
+		574D200D2D4B5276046B631FCDF1BD39 /* AGPopoverReplacementAnimation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = AGPopoverReplacementAnimation.h; sourceTree = "<group>"; };
 		5B859CA7D3A83073EE3A0EFE2138F31B /* PureLayoutDefines.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PureLayoutDefines.h; path = PureLayout/PureLayout/PureLayoutDefines.h; sourceTree = "<group>"; };
 		62FD488738DACC6BD28A4B8007AC9E22 /* NSLayoutConstraint+PureLayout.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSLayoutConstraint+PureLayout.m"; path = "PureLayout/PureLayout/NSLayoutConstraint+PureLayout.m"; sourceTree = "<group>"; };
 		6323E423E8659D30F1395F7CF1179146 /* AGFlowRouter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AGFlowRouter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		69541F8A1435CA5BF81209D740EF0218 /* UIView+AGSnaphot.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UIView+AGSnaphot.h"; sourceTree = "<group>"; };
 		6D986837FA46C6AB4A8D72FCAA1B4454 /* PureLayout-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PureLayout-prefix.pch"; sourceTree = "<group>"; };
 		6EFEA95188E08BEB23065B2AB052E7BC /* PureLayout-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PureLayout-umbrella.h"; sourceTree = "<group>"; };
 		6F06EF925E4A7426C1FA60D885167D34 /* Pods_AGFlowRouter_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AGFlowRouter_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7132DA47D76E50F1520B1CAFBA5A05EB /* AGPopoverPresentTransition.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = AGPopoverPresentTransition.m; sourceTree = "<group>"; };
 		75472AA747928FD37245D0C56C493C51 /* Pods-AGFlowRouter_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-AGFlowRouter_Example-acknowledgements.plist"; sourceTree = "<group>"; };
+		78E7B60584FEA5B381C49AC6DE2815E8 /* AGDefaultDismissTransition.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = AGDefaultDismissTransition.h; sourceTree = "<group>"; };
+		7B4D33D81A34130CD478D05C9049A0C1 /* AGFlowTransitionManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = AGFlowTransitionManager.h; sourceTree = "<group>"; };
 		7B6BB72090142232BACA87CBB23F9A38 /* Pods-AGFlowRouter_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-AGFlowRouter_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		7B888AD90899EB93A32DB1AD674A2ED8 /* UIView+AGSnaphot.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UIView+AGSnaphot.h"; sourceTree = "<group>"; };
-		7E10BC7A597AA4843ED9B7E58E3286C2 /* AGPopoverPresentTransition.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = AGPopoverPresentTransition.m; sourceTree = "<group>"; };
+		7F8D94D33BA4160F5EE5EB7F3D0EA579 /* AGPopoverToPopoverTransition.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = AGPopoverToPopoverTransition.m; sourceTree = "<group>"; };
 		808D9E17BE044F47037C6ABD6F65EE32 /* PureLayout-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "PureLayout-dummy.m"; sourceTree = "<group>"; };
 		842E5F8BA5CBCA1AE238F5AD834013B1 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		88094CA89108DB3EE7B751B3ACA1E887 /* AGPopoverController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = AGPopoverController.m; sourceTree = "<group>"; };
 		88103CB88E4F7BA4C10ABE59C255FF6C /* Pods-AGFlowRouter_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-AGFlowRouter_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
 		88CC6695D62F711AF8EF55B6A3BF858D /* Pods-AGFlowRouter_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-AGFlowRouter_Example.modulemap"; sourceTree = "<group>"; };
+		8AE15C6AC105E4A581C0756C84EDB149 /* AGFlowRouter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = AGFlowRouter.m; sourceTree = "<group>"; };
+		937178B13C9AB0A9963577BB31434968 /* AGPopoverPresentTransition.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = AGPopoverPresentTransition.h; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		97A8E6F2390013F549A6646FD4BA7E2A /* PureLayout.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PureLayout.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		97C6B1B6936CE0B1496E2CDF091C82A1 /* Pods-AGFlowRouter_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-AGFlowRouter_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		9B1E5C1E0334190F50CE8927ACA53CB8 /* AGDefaultPushTransition.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = AGDefaultPushTransition.h; sourceTree = "<group>"; };
-		9F81E8E15312AC6F7AE9FB188FD0B8E5 /* AGFlowTransitionManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = AGFlowTransitionManager.h; sourceTree = "<group>"; };
-		A26D6329F6F64448FC76C7B3E2F1FDF2 /* AGFlowTransitionManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = AGFlowTransitionManager.m; sourceTree = "<group>"; };
+		A05F523D88FA451D90E97B60479BE664 /* AGDefaultPopTransition.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = AGDefaultPopTransition.m; sourceTree = "<group>"; };
+		A251BD1A0466127C8F7DA13B92A450B5 /* AGFlowTransition.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = AGFlowTransition.h; sourceTree = "<group>"; };
 		A342D9506A2DFB4A78857FBFB003E55A /* Pods-AGFlowRouter_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-AGFlowRouter_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		A6B42649759238FF3FB7787F0FD150C3 /* Pods-AGFlowRouter_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-AGFlowRouter_Example-dummy.m"; sourceTree = "<group>"; };
 		AA654F86E857710B01965E96AC15F25C /* PureLayout+Internal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "PureLayout+Internal.h"; path = "PureLayout/PureLayout/PureLayout+Internal.h"; sourceTree = "<group>"; };
-		ADF88869394D7DECEFDCE90AA798D1BC /* AGDefaultPopTransition.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = AGDefaultPopTransition.h; sourceTree = "<group>"; };
+		AAFC906239124ED8CB7A4ABCDADF80FD /* UIView+AGSnaphot.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UIView+AGSnaphot.m"; sourceTree = "<group>"; };
+		AE5E7B2E435F498FBA6303C266526B19 /* AGPopoverContent.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = AGPopoverContent.h; sourceTree = "<group>"; };
 		AEF8C6FFE104A6D413E1D3727179B73C /* Pods_AGFlowRouter_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AGFlowRouter_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2C41593E9BD115CAE1CA0217114986F /* Pods-AGFlowRouter_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-AGFlowRouter_Tests-resources.sh"; sourceTree = "<group>"; };
+		B9246836A85BB8B5681A724FE1F5689A /* AGDefaultPresentTrasition.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = AGDefaultPresentTrasition.m; sourceTree = "<group>"; };
 		B9B7FE2DE68DC6E02B39565738613DFB /* AGFlowRouter-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "AGFlowRouter-dummy.m"; sourceTree = "<group>"; };
 		BA31A25BB6E3A39A8E533DE71C0D5FC2 /* Pods-AGFlowRouter_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-AGFlowRouter_Example-umbrella.h"; sourceTree = "<group>"; };
+		BF519F785A458DBAE6D42D2DC0DFA6FB /* AGDefaultPresentTrasition.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = AGDefaultPresentTrasition.h; sourceTree = "<group>"; };
 		C16220AFD1B6F99FA7A0896216AA4AF6 /* AGFlowRouter-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "AGFlowRouter-umbrella.h"; sourceTree = "<group>"; };
-		C50C1D02CB047BFAF25CDCE84C83861B /* AGFlowRouter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = AGFlowRouter.h; sourceTree = "<group>"; };
-		C6111F0570DBFDAC15A7F6004573846E /* AGFlowController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = AGFlowController.h; sourceTree = "<group>"; };
+		CBBA22BF402E3DFC2AEBADD7B5FF0319 /* AGPopoverController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = AGPopoverController.h; sourceTree = "<group>"; };
 		D138468DB5DDD3DE23C9F4CF8AC7CCA8 /* Pods-AGFlowRouter_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-AGFlowRouter_Example-frameworks.sh"; sourceTree = "<group>"; };
+		D15A51DA66016D2FE6DEE1B69668ECF1 /* AGPopoverDismissTransition.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = AGPopoverDismissTransition.m; sourceTree = "<group>"; };
 		D87500AA33CA4A933595B88AD6CA26C8 /* NSArray+PureLayout.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSArray+PureLayout.m"; path = "PureLayout/PureLayout/NSArray+PureLayout.m"; sourceTree = "<group>"; };
 		DC48A19E2AA264922693A9C30BC30743 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		DE44A0EE0E4D01CCF88F0A4F98553416 /* AGDefaultDismissTransition.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = AGDefaultDismissTransition.h; sourceTree = "<group>"; };
-		E763DA9A889A0EFA4681E7AE5C8D7CF2 /* AGDefaultDismissTransition.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = AGDefaultDismissTransition.m; sourceTree = "<group>"; };
+		DCF1CDA9D3040F1BAD69F29A59438CFB /* AGFlowRouter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = AGFlowRouter.h; sourceTree = "<group>"; };
+		E3CB35E8F1D426C872FD5B939D93F4E5 /* AGDefaultPushTransition.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = AGDefaultPushTransition.h; sourceTree = "<group>"; };
 		E8F25EF5B4B15B0B610B9E329C1EFB99 /* Pods-AGFlowRouter_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-AGFlowRouter_Tests-frameworks.sh"; sourceTree = "<group>"; };
 		EA74483B1DE6B5503FC1A2899892BCBB /* Pods-AGFlowRouter_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-AGFlowRouter_Example.release.xcconfig"; sourceTree = "<group>"; };
 		EAE15973412A976F7A1651D14BC4A371 /* Pods-AGFlowRouter_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-AGFlowRouter_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		EB24B971C609AED92B3181AB0F3FE4E3 /* AGFlowTransition.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = AGFlowTransition.h; sourceTree = "<group>"; };
 		EB9FE64AF53340B312933FA6C7EBD6F3 /* AGFlowRouter.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = AGFlowRouter.xcconfig; sourceTree = "<group>"; };
-		F238377699E87DD1F2964CDCF0CB89C5 /* AGPopoverDismissTransition.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = AGPopoverDismissTransition.h; sourceTree = "<group>"; };
+		EBA3794CC75B4BA48E29A1430C355B96 /* AGDefaultDismissTransition.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = AGDefaultDismissTransition.m; sourceTree = "<group>"; };
 		F3D3F05D324772E907DB1D4DA2C89AA2 /* ALView+PureLayout.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "ALView+PureLayout.h"; path = "PureLayout/PureLayout/ALView+PureLayout.h"; sourceTree = "<group>"; };
 		F8D03CDA2521430838C449F81A219FC5 /* PureLayout.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PureLayout.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		FA232C8F56D797110CF76A54A252E8A7 /* AGPopoverController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = AGPopoverController.h; sourceTree = "<group>"; };
-		FCC1E6E286033C968E9A550B14D48021 /* AGPopoverContent.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = AGPopoverContent.h; sourceTree = "<group>"; };
-		FE2548EF2CF79FDD80FEDA092B0DCE12 /* AGDefaultPresentTrasition.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = AGDefaultPresentTrasition.m; sourceTree = "<group>"; };
-		FE6CB1D64E53DE1F8C7FB730BC601EBF /* AGPopoverController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = AGPopoverController.m; sourceTree = "<group>"; };
 		FEE4F003FB3823D8526A5B681329D75A /* Pods-AGFlowRouter_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-AGFlowRouter_Tests-umbrella.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		186E710324C02FD65F543288E5373C8B /* Frameworks */ = {
+		22EF708ED04502A05C8E77A20325C948 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9C06971B57F000943898DBEC7F53FF9B /* Foundation.framework in Frameworks */,
-				09DE98DAD0A60C6EF8D87530201DF506 /* PureLayout.framework in Frameworks */,
-				7B3F580DEC74CE02407010981AB91638 /* UIKit.framework in Frameworks */,
+				5BC65D71A6420177EA5C92C7BF756A8F /* Foundation.framework in Frameworks */,
+				B96C449138066021D5B8579C43206A5E /* PureLayout.framework in Frameworks */,
+				65EB3C3084094521051E136047712957 /* UIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -175,19 +181,19 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		5F3AF283A6664C7EA63A3944F413BD0E /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				855C6722B660EE7F66C0365E2CEBA5F0 /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		7A75638B0A9134574126090DA9321416 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				9BD31093AD445E31A433B6559F503586 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A5126587BEA67647C07329D1DBF29040 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7556487C6F3B12695DA9D33FDF2BDD7A /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -222,6 +228,22 @@
 			path = ../..;
 			sourceTree = "<group>";
 		};
+		21F492FDEE813A744DDE6314F4510238 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				DCF1CDA9D3040F1BAD69F29A59438CFB /* AGFlowRouter.h */,
+				8AE15C6AC105E4A581C0756C84EDB149 /* AGFlowRouter.m */,
+				7B4D33D81A34130CD478D05C9049A0C1 /* AGFlowTransitionManager.h */,
+				17A5BF527A88F77FA02BA5D04F6CB9A8 /* AGFlowTransitionManager.m */,
+				CBBA22BF402E3DFC2AEBADD7B5FF0319 /* AGPopoverController.h */,
+				88094CA89108DB3EE7B751B3ACA1E887 /* AGPopoverController.m */,
+				ED2A45EB3F21F4B680143C2AF30957B3 /* Categories */,
+				E283C00C75F9F10FDAF51538A1B464DE /* Protocols */,
+				E20DC58F109071AD4CE20EB53A0EF597 /* Transitions */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
 		2F7CB2F8AA04108B4168449AFCA94214 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -251,36 +273,6 @@
 				269E684E2A098B81FC437326735AAC83 /* UIKit.framework */,
 			);
 			name = iOS;
-			sourceTree = "<group>";
-		};
-		4350C64D6941ABBDF0E05D89D9070557 /* Transitions */ = {
-			isa = PBXGroup;
-			children = (
-				DE44A0EE0E4D01CCF88F0A4F98553416 /* AGDefaultDismissTransition.h */,
-				E763DA9A889A0EFA4681E7AE5C8D7CF2 /* AGDefaultDismissTransition.m */,
-				ADF88869394D7DECEFDCE90AA798D1BC /* AGDefaultPopTransition.h */,
-				4C13A35B96FB43AFE5347025066C8D58 /* AGDefaultPopTransition.m */,
-				0ABDD2D6248B62747D3893D41B4F866B /* AGDefaultPresentTrasition.h */,
-				FE2548EF2CF79FDD80FEDA092B0DCE12 /* AGDefaultPresentTrasition.m */,
-				9B1E5C1E0334190F50CE8927ACA53CB8 /* AGDefaultPushTransition.h */,
-				154165EB33C6CA9F43FD803EF3475D9A /* AGDefaultPushTransition.m */,
-				EB24B971C609AED92B3181AB0F3FE4E3 /* AGFlowTransition.h */,
-				F238377699E87DD1F2964CDCF0CB89C5 /* AGPopoverDismissTransition.h */,
-				2FED7AF4B40BE7621C5B55A64561658A /* AGPopoverDismissTransition.m */,
-				5812F4778D0A1D7338D5B5DDA0757E67 /* AGPopoverPresentTransition.h */,
-				7E10BC7A597AA4843ED9B7E58E3286C2 /* AGPopoverPresentTransition.m */,
-			);
-			path = Transitions;
-			sourceTree = "<group>";
-		};
-		4E071809B79A7E90829B80B8A43C3AD9 /* Protocols */ = {
-			isa = PBXGroup;
-			children = (
-				35ED9C9A6537F0742A77E7F8DC8AF7F9 /* AGFlowBar.h */,
-				C6111F0570DBFDAC15A7F6004573846E /* AGFlowController.h */,
-				FCC1E6E286033C968E9A550B14D48021 /* AGPopoverContent.h */,
-			);
-			path = Protocols;
 			sourceTree = "<group>";
 		};
 		680FFFCFC6589BBC84228682E3710957 /* Pods-AGFlowRouter_Example */ = {
@@ -336,7 +328,7 @@
 		91AFF3BEAA34218D1756D75B548FCC4C /* AGFlowRouter */ = {
 			isa = PBXGroup;
 			children = (
-				B063D40DA9D64D4A0B97BE39FB40A06E /* Classes */,
+				21F492FDEE813A744DDE6314F4510238 /* Classes */,
 			);
 			path = AGFlowRouter;
 			sourceTree = "<group>";
@@ -366,31 +358,6 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		B063D40DA9D64D4A0B97BE39FB40A06E /* Classes */ = {
-			isa = PBXGroup;
-			children = (
-				C50C1D02CB047BFAF25CDCE84C83861B /* AGFlowRouter.h */,
-				40145E889F3F8AA21F50D402C52FEE6C /* AGFlowRouter.m */,
-				9F81E8E15312AC6F7AE9FB188FD0B8E5 /* AGFlowTransitionManager.h */,
-				A26D6329F6F64448FC76C7B3E2F1FDF2 /* AGFlowTransitionManager.m */,
-				FA232C8F56D797110CF76A54A252E8A7 /* AGPopoverController.h */,
-				FE6CB1D64E53DE1F8C7FB730BC601EBF /* AGPopoverController.m */,
-				CA6B013BAB286D68FF6A1BFF07F208D9 /* Categories */,
-				4E071809B79A7E90829B80B8A43C3AD9 /* Protocols */,
-				4350C64D6941ABBDF0E05D89D9070557 /* Transitions */,
-			);
-			path = Classes;
-			sourceTree = "<group>";
-		};
-		CA6B013BAB286D68FF6A1BFF07F208D9 /* Categories */ = {
-			isa = PBXGroup;
-			children = (
-				7B888AD90899EB93A32DB1AD674A2ED8 /* UIView+AGSnaphot.h */,
-				2A98987BC209CAB76A2EA3C5202D0FDC /* UIView+AGSnaphot.m */,
-			);
-			path = Categories;
-			sourceTree = "<group>";
-		};
 		D46C6D471596BEC757C1A995B3A0A35E /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -405,6 +372,39 @@
 			path = "Example/Pods/Target Support Files/AGFlowRouter";
 			sourceTree = "<group>";
 		};
+		E20DC58F109071AD4CE20EB53A0EF597 /* Transitions */ = {
+			isa = PBXGroup;
+			children = (
+				78E7B60584FEA5B381C49AC6DE2815E8 /* AGDefaultDismissTransition.h */,
+				EBA3794CC75B4BA48E29A1430C355B96 /* AGDefaultDismissTransition.m */,
+				50544499AD2455836E57B1A2FEA48FD3 /* AGDefaultPopTransition.h */,
+				A05F523D88FA451D90E97B60479BE664 /* AGDefaultPopTransition.m */,
+				BF519F785A458DBAE6D42D2DC0DFA6FB /* AGDefaultPresentTrasition.h */,
+				B9246836A85BB8B5681A724FE1F5689A /* AGDefaultPresentTrasition.m */,
+				E3CB35E8F1D426C872FD5B939D93F4E5 /* AGDefaultPushTransition.h */,
+				04E293A0BC08A4581A3FAF8F6079B331 /* AGDefaultPushTransition.m */,
+				A251BD1A0466127C8F7DA13B92A450B5 /* AGFlowTransition.h */,
+				1BBFD771E8427C70190330E943D9F103 /* AGPopoverDismissTransition.h */,
+				D15A51DA66016D2FE6DEE1B69668ECF1 /* AGPopoverDismissTransition.m */,
+				937178B13C9AB0A9963577BB31434968 /* AGPopoverPresentTransition.h */,
+				7132DA47D76E50F1520B1CAFBA5A05EB /* AGPopoverPresentTransition.m */,
+				574D200D2D4B5276046B631FCDF1BD39 /* AGPopoverReplacementAnimation.h */,
+				0E5FA91051816046650AB60D75727C36 /* AGPopoverToPopoverTransition.h */,
+				7F8D94D33BA4160F5EE5EB7F3D0EA579 /* AGPopoverToPopoverTransition.m */,
+			);
+			path = Transitions;
+			sourceTree = "<group>";
+		};
+		E283C00C75F9F10FDAF51538A1B464DE /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				39D8695039A5CA5624EBC681A6928AFD /* AGFlowBar.h */,
+				3150C90CDAC6A075CEAD9A6FD7AB96DD /* AGFlowController.h */,
+				AE5E7B2E435F498FBA6303C266526B19 /* AGPopoverContent.h */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
 		EA8E3CD7DF9E775C19376FAFD7DBFE1E /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -412,6 +412,15 @@
 				01A5712B39F08DB436DF39F826DF31BD /* Pods-AGFlowRouter_Tests */,
 			);
 			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		ED2A45EB3F21F4B680143C2AF30957B3 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				69541F8A1435CA5BF81209D740EF0218 /* UIView+AGSnaphot.h */,
+				AAFC906239124ED8CB7A4ABCDADF80FD /* UIView+AGSnaphot.m */,
+			);
+			path = Categories;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -425,17 +434,41 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		A57DA6D1D0105DE3808B3EF636D21ED2 /* Headers */ = {
+		9BB51B2F2FB8FDC86759EE2705B7E508 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A6292DF223581946CECA887F6B279556 /* ALView+PureLayout.h in Headers */,
-				98E94C6D9B2DFA1843E5FF65072AB45F /* NSArray+PureLayout.h in Headers */,
-				143731F4571827C315F60150441795BF /* NSLayoutConstraint+PureLayout.h in Headers */,
-				0DDABCCF1F3613445666F069C0A83788 /* PureLayout+Internal.h in Headers */,
-				BCC38084E4DF1F6A7510304ED6057899 /* PureLayout-umbrella.h in Headers */,
-				3D392F4E5EFD0867CA0BD32E182727D9 /* PureLayout.h in Headers */,
-				D62E7216A3EAD8A9186B92D91E8FA5FB /* PureLayoutDefines.h in Headers */,
+				0E2C3DC00FA8E96ACBF3337AF8CC6EC1 /* AGDefaultDismissTransition.h in Headers */,
+				0B36752837410F72EDEE5184DE604E17 /* AGDefaultPopTransition.h in Headers */,
+				FD73A709937CA79E3D710900FC52A3DE /* AGDefaultPresentTrasition.h in Headers */,
+				C5E5C7CE9BC7F7FDAE183A27E0C390D0 /* AGDefaultPushTransition.h in Headers */,
+				797EB0CF8271C050B1A17DA57B3728BE /* AGFlowBar.h in Headers */,
+				B21FF7D829C5AC4A971BEA3541A3CFF1 /* AGFlowController.h in Headers */,
+				922B450497B0D4AE78F3C0B5292674B7 /* AGFlowRouter-umbrella.h in Headers */,
+				57B169A153FE656EE9E0CAA4BF2D4F61 /* AGFlowRouter.h in Headers */,
+				AA4022FA4FA4DFA72156DFA94CD3FC08 /* AGFlowTransition.h in Headers */,
+				686FE7F136720DDA43B868662284E5F6 /* AGFlowTransitionManager.h in Headers */,
+				BF3810194DD988432D774AFC0AAE3790 /* AGPopoverContent.h in Headers */,
+				963739840A695209C51B4F8FA280F7F1 /* AGPopoverController.h in Headers */,
+				097808B19DF3C725F929F2EB47FE0398 /* AGPopoverDismissTransition.h in Headers */,
+				FA7C8E5C3464BEA52431C94680320B44 /* AGPopoverPresentTransition.h in Headers */,
+				B60ECDE694D8B3971801BC7F84011B38 /* AGPopoverReplacementAnimation.h in Headers */,
+				967B298AF5BC51D18FB719472DBC3109 /* AGPopoverToPopoverTransition.h in Headers */,
+				73DB7A522CE129AF22B6A1B94F424078 /* UIView+AGSnaphot.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BF00433228B24F8734EADB7A9E15D6D3 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ACF158205E4C075E8BE61711F2619CB4 /* ALView+PureLayout.h in Headers */,
+				974DE4F2A596253C7495D7C39A9037AD /* NSArray+PureLayout.h in Headers */,
+				865515D2D5770259D3FA532B26C4754D /* NSLayoutConstraint+PureLayout.h in Headers */,
+				4F889BD824B625E1E78100F893F4BDC0 /* PureLayout+Internal.h in Headers */,
+				418A98E1995193BACC962EDC8FA9F9C9 /* PureLayout-umbrella.h in Headers */,
+				A634389E869E19F1E8F8736065C90D38 /* PureLayout.h in Headers */,
+				F884F1A13FD22E6B51E567C00B270688 /* PureLayoutDefines.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -447,46 +480,25 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E7926842BF4784A06A11F9C10F4812B6 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				B518BBC50074C5F25CD69EAE0C879473 /* AGDefaultDismissTransition.h in Headers */,
-				A65B159CB5CB0BF77C853AAA9819411E /* AGDefaultPopTransition.h in Headers */,
-				42406EFF1FDBDAACC534341E496D7017 /* AGDefaultPresentTrasition.h in Headers */,
-				77EECF91246E39F7A58CB5930A7CB2A5 /* AGDefaultPushTransition.h in Headers */,
-				760E9277182BCDC9ECFED63D87B0BF9D /* AGFlowBar.h in Headers */,
-				61EE3996A56E28E7E2B65487CEE6E8FF /* AGFlowController.h in Headers */,
-				28E1CBC33A0306621951867A35AA1831 /* AGFlowRouter-umbrella.h in Headers */,
-				080C630A1E5FB32566087C6DCCE824C3 /* AGFlowRouter.h in Headers */,
-				339376CA897C08CAADBDA38CA41DE40A /* AGFlowTransition.h in Headers */,
-				13C630855DC15EA99749B66E1D0CF8A3 /* AGFlowTransitionManager.h in Headers */,
-				8611F1ACC41292EA39D493AAFCD0FEB3 /* AGPopoverContent.h in Headers */,
-				6C2AAD6F67A5B296DCC4C749EC9E15DE /* AGPopoverController.h in Headers */,
-				BA1998AECA3AE92FBBBA04045EF56DEF /* AGPopoverDismissTransition.h in Headers */,
-				63109C642294A23F28C7E2F80C9C2BA0 /* AGPopoverPresentTransition.h in Headers */,
-				B576659B3E275055CDD7DA7E461E2FED /* UIView+AGSnaphot.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		4697118C6DD5E73BF860AE0C103AE2E0 /* PureLayout */ = {
+		2FFD62AB28392084B9E9C0A942349D8E /* AGFlowRouter */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F8ADC0F7CA9FF530E8D94DEDCD165B8A /* Build configuration list for PBXNativeTarget "PureLayout" */;
+			buildConfigurationList = 5C508E673080F27A4164FBF3BE2EEC16 /* Build configuration list for PBXNativeTarget "AGFlowRouter" */;
 			buildPhases = (
-				F5FB25BAECAD65D214BCA006C9394D58 /* Sources */,
-				5F3AF283A6664C7EA63A3944F413BD0E /* Frameworks */,
-				A57DA6D1D0105DE3808B3EF636D21ED2 /* Headers */,
+				EB99CA09CEA91EC04D81A026ABCAFB9B /* Sources */,
+				22EF708ED04502A05C8E77A20325C948 /* Frameworks */,
+				9BB51B2F2FB8FDC86759EE2705B7E508 /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				9E8048CE2052F5A694DC6A065068E28E /* PBXTargetDependency */,
 			);
-			name = PureLayout;
-			productName = PureLayout;
-			productReference = F8D03CDA2521430838C449F81A219FC5 /* PureLayout.framework */;
+			name = AGFlowRouter;
+			productName = AGFlowRouter;
+			productReference = 6323E423E8659D30F1395F7CF1179146 /* AGFlowRouter.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		6EEFABE2E7EBD3AC9F446C49F7A22ADD /* Pods-AGFlowRouter_Tests */ = {
@@ -525,22 +537,21 @@
 			productReference = 6F06EF925E4A7426C1FA60D885167D34 /* Pods_AGFlowRouter_Example.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		BA062B2E37122A7FCEC1B2A861E5310D /* AGFlowRouter */ = {
+		989349171A0EDC7574690BA79B64945D /* PureLayout */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 6321B27A95E45A6D7BD9BD1A090B4E1E /* Build configuration list for PBXNativeTarget "AGFlowRouter" */;
+			buildConfigurationList = EFFB7747019EB63D2F174D6B02902672 /* Build configuration list for PBXNativeTarget "PureLayout" */;
 			buildPhases = (
-				95D06B9BAF35D3C35A033D0D5DFFDC85 /* Sources */,
-				186E710324C02FD65F543288E5373C8B /* Frameworks */,
-				E7926842BF4784A06A11F9C10F4812B6 /* Headers */,
+				AE511121433B39B9868C65A5B94E6E55 /* Sources */,
+				A5126587BEA67647C07329D1DBF29040 /* Frameworks */,
+				BF00433228B24F8734EADB7A9E15D6D3 /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				E9D2BA19BAB298C680C433E535535522 /* PBXTargetDependency */,
 			);
-			name = AGFlowRouter;
-			productName = AGFlowRouter;
-			productReference = 6323E423E8659D30F1395F7CF1179146 /* AGFlowRouter.framework */;
+			name = PureLayout;
+			productName = PureLayout;
+			productReference = F8D03CDA2521430838C449F81A219FC5 /* PureLayout.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -564,30 +575,23 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				BA062B2E37122A7FCEC1B2A861E5310D /* AGFlowRouter */,
+				2FFD62AB28392084B9E9C0A942349D8E /* AGFlowRouter */,
 				8F5B87FD52707A19B0F4420743F8BAC5 /* Pods-AGFlowRouter_Example */,
 				6EEFABE2E7EBD3AC9F446C49F7A22ADD /* Pods-AGFlowRouter_Tests */,
-				4697118C6DD5E73BF860AE0C103AE2E0 /* PureLayout */,
+				989349171A0EDC7574690BA79B64945D /* PureLayout */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		95D06B9BAF35D3C35A033D0D5DFFDC85 /* Sources */ = {
+		AE511121433B39B9868C65A5B94E6E55 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				49E7141038C04F84E8EAD71331465669 /* AGDefaultDismissTransition.m in Sources */,
-				653C2848EEC14DA12BAF52C4EBBC9D8A /* AGDefaultPopTransition.m in Sources */,
-				40E076082FF8590BCC2CAE4105A90FFD /* AGDefaultPresentTrasition.m in Sources */,
-				C0DEE3CE42A0A52838D1087863DEA3FB /* AGDefaultPushTransition.m in Sources */,
-				EF4C034F4B13CCC153073C2244BD6DFD /* AGFlowRouter-dummy.m in Sources */,
-				AA543010B0C17ED245BA4391FBBC4DFE /* AGFlowRouter.m in Sources */,
-				374F769E527FEBBEB25B27F9B1502582 /* AGFlowTransitionManager.m in Sources */,
-				6994F1DEFA23220E6A0FD59F43C1B99C /* AGPopoverController.m in Sources */,
-				46DAACFA78AC9E6444A6B0170B27CF62 /* AGPopoverDismissTransition.m in Sources */,
-				E256740EE83892F0E7AE0BCF1D1A295D /* AGPopoverPresentTransition.m in Sources */,
-				4C046AB2546A6BD7CE9C5B710C155C52 /* UIView+AGSnaphot.m in Sources */,
+				C992E6AB2D3E424C45E69C3264683483 /* ALView+PureLayout.m in Sources */,
+				6073F9853963D495A18A5DE08E264DF8 /* NSArray+PureLayout.m in Sources */,
+				3CD8B7D2B89F28016BBD735B62A67E7D /* NSLayoutConstraint+PureLayout.m in Sources */,
+				29BEB179D68936BFEE39A62400A32F5C /* PureLayout-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -599,14 +603,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F5FB25BAECAD65D214BCA006C9394D58 /* Sources */ = {
+		EB99CA09CEA91EC04D81A026ABCAFB9B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F604E2612C3BCBDD89819D00FFD79905 /* ALView+PureLayout.m in Sources */,
-				63DAA6ED9D383CE4F600EC6C683B6241 /* NSArray+PureLayout.m in Sources */,
-				9DF99B7A2F42CCEBC7C206A7C7DD8BB0 /* NSLayoutConstraint+PureLayout.m in Sources */,
-				921BF7FA67876BEFF831738BD0E6DB6C /* PureLayout-dummy.m in Sources */,
+				0BD80128687863068747DD3F3286D7BA /* AGDefaultDismissTransition.m in Sources */,
+				EFEFBCF4F4AAD1446BE96308DFCB6F61 /* AGDefaultPopTransition.m in Sources */,
+				DA4FDD071CEC35BB0B2E3C9FB4ACA6A5 /* AGDefaultPresentTrasition.m in Sources */,
+				65DEDB58C2CC7F5A47473BC0AFB70A0B /* AGDefaultPushTransition.m in Sources */,
+				2912D67F87B8ECC0614844AC39D4548F /* AGFlowRouter-dummy.m in Sources */,
+				90F22B393CBE02A4BE1C29582F199BA6 /* AGFlowRouter.m in Sources */,
+				0E3E8FD7EE96345888F11ED3BFDE4CDD /* AGFlowTransitionManager.m in Sources */,
+				11B7474B06072F5AC5BF9E3F23289547 /* AGPopoverController.m in Sources */,
+				7BA5AD69BC76465FAB286E1EB5E8DCEE /* AGPopoverDismissTransition.m in Sources */,
+				A84900F22E883136645BFD33C470A7A8 /* AGPopoverPresentTransition.m in Sources */,
+				CB23FAC6E315C8D388A74A22176DD180 /* AGPopoverToPopoverTransition.m in Sources */,
+				E8471D187200F4761EB6B7402B808417 /* UIView+AGSnaphot.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -624,24 +636,86 @@
 		323D6A93C41B11F168BD0AFA67B04C05 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = AGFlowRouter;
-			target = BA062B2E37122A7FCEC1B2A861E5310D /* AGFlowRouter */;
+			target = 2FFD62AB28392084B9E9C0A942349D8E /* AGFlowRouter */;
 			targetProxy = 1688882EA68C042CE48B2AEDB190BB8F /* PBXContainerItemProxy */;
+		};
+		9E8048CE2052F5A694DC6A065068E28E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = PureLayout;
+			target = 989349171A0EDC7574690BA79B64945D /* PureLayout */;
+			targetProxy = 1CF07CB753483BDD831B111D28B7D21E /* PBXContainerItemProxy */;
 		};
 		B61F7BC0ADBEAE17F9C257A0EEB8EFDB /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = PureLayout;
-			target = 4697118C6DD5E73BF860AE0C103AE2E0 /* PureLayout */;
+			target = 989349171A0EDC7574690BA79B64945D /* PureLayout */;
 			targetProxy = F71215D22A1F054BF17BB09B46900C83 /* PBXContainerItemProxy */;
-		};
-		E9D2BA19BAB298C680C433E535535522 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = PureLayout;
-			target = 4697118C6DD5E73BF860AE0C103AE2E0 /* PureLayout */;
-			targetProxy = 1EA5DC659C692849201C7A90A47136CA /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		0D7B272D5401FD8530D3C2E4BEEEA384 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 01B056FE48A821CA3D3818E32A4CFEDF /* PureLayout.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/PureLayout/PureLayout-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/PureLayout/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/PureLayout/PureLayout.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = PureLayout;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		36052364325ADB1F834DF4A84CEE3817 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EB9FE64AF53340B312933FA6C7EBD6F3 /* AGFlowRouter.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/AGFlowRouter/AGFlowRouter-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/AGFlowRouter/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/AGFlowRouter/AGFlowRouter.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = AGFlowRouter;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
 		59B042A655B7C20CBAB90E385BF4E4C7 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -686,6 +760,37 @@
 			};
 			name = Debug;
 		};
+		7F6E2D03364D0CE0511B7F97BA6C412F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EB9FE64AF53340B312933FA6C7EBD6F3 /* AGFlowRouter.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/AGFlowRouter/AGFlowRouter-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/AGFlowRouter/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/AGFlowRouter/AGFlowRouter.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = AGFlowRouter;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 		85E09376ACE26D2CE40A9F35DC92B892 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = EAE15973412A976F7A1651D14BC4A371 /* Pods-AGFlowRouter_Example.debug.xcconfig */;
@@ -721,36 +826,36 @@
 			};
 			name = Debug;
 		};
-		95176B5700F3FCB90136E14C0A4A1D9B /* Debug */ = {
+		862C0E707326313A632D2223DF3AAF3D /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = EB9FE64AF53340B312933FA6C7EBD6F3 /* AGFlowRouter.xcconfig */;
+			baseConfigurationReference = 01B056FE48A821CA3D3818E32A4CFEDF /* PureLayout.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
 				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/AGFlowRouter/AGFlowRouter-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/AGFlowRouter/Info.plist";
+				GCC_PREFIX_HEADER = "Target Support Files/PureLayout/PureLayout-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/PureLayout/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/AGFlowRouter/AGFlowRouter.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = AGFlowRouter;
+				MODULEMAP_FILE = "Target Support Files/PureLayout/PureLayout.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = PureLayout;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Debug;
+			name = Release;
 		};
 		97C175984E1A5B41F276A62C9DE7ED38 /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -822,68 +927,6 @@
 			};
 			name = Release;
 		};
-		AF19DEF29204CD0A48656D7E3128FEBE /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 01B056FE48A821CA3D3818E32A4CFEDF /* PureLayout.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/PureLayout/PureLayout-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/PureLayout/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/PureLayout/PureLayout.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = PureLayout;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		B292EBE3A81FE3F5D60EB4991CFE874A /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = EB9FE64AF53340B312933FA6C7EBD6F3 /* AGFlowRouter.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/AGFlowRouter/AGFlowRouter-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/AGFlowRouter/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/AGFlowRouter/AGFlowRouter.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = AGFlowRouter;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
 		B7324857C38B065FEB1EEE3105C2367A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -921,37 +964,6 @@
 				STRIP_INSTALLED_PRODUCT = NO;
 				SYMROOT = "${SRCROOT}/../build";
 				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		C0CA70235C747D3CB688925B1DF56FF1 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 01B056FE48A821CA3D3818E32A4CFEDF /* PureLayout.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/PureLayout/PureLayout-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/PureLayout/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/PureLayout/PureLayout.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = PureLayout;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
 		};
@@ -1002,11 +1014,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		6321B27A95E45A6D7BD9BD1A090B4E1E /* Build configuration list for PBXNativeTarget "AGFlowRouter" */ = {
+		5C508E673080F27A4164FBF3BE2EEC16 /* Build configuration list for PBXNativeTarget "AGFlowRouter" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				95176B5700F3FCB90136E14C0A4A1D9B /* Debug */,
-				B292EBE3A81FE3F5D60EB4991CFE874A /* Release */,
+				36052364325ADB1F834DF4A84CEE3817 /* Debug */,
+				7F6E2D03364D0CE0511B7F97BA6C412F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1029,11 +1041,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F8ADC0F7CA9FF530E8D94DEDCD165B8A /* Build configuration list for PBXNativeTarget "PureLayout" */ = {
+		EFFB7747019EB63D2F174D6B02902672 /* Build configuration list for PBXNativeTarget "PureLayout" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				AF19DEF29204CD0A48656D7E3128FEBE /* Debug */,
-				C0CA70235C747D3CB688925B1DF56FF1 /* Release */,
+				0D7B272D5401FD8530D3C2E4BEEEA384 /* Debug */,
+				862C0E707326313A632D2223DF3AAF3D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

@@ -13,6 +13,7 @@
 #import "AGDefaultPresentTrasition.h"
 #import "AGDefaultDismissTransition.h"
 #import "AGPopoverDismissTransition.h"
+#import "AGPopoverToPopoverTransition.h"
 
 @interface AGTaskViewController ()
 
@@ -35,7 +36,12 @@
 }
 - (IBAction)closePressed:(UIButton *)sender {
   [[AGFlowRouter sharedRouter] dismissCurrentPopoverController];
-//  [[AGFlowRouter sharedRouter] presentControllerId:@"TreeController" userInfo:nil transition:[AGPopoverDismissTransition new]];
+}
+
+- (IBAction)showPopoverPressed:(UIButton *)sender {
+  [[AGFlowRouter sharedRouter] presentInPopoverControllerId:@"TaskController"
+                                                   userInfo:nil
+                              replacingCurrentWithAnimation:arc4random() % 4];
 }
 
 #pragma mark - AGFlowController

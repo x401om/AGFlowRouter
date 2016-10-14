@@ -10,6 +10,8 @@
 #import "AGFlowTransition.h"
 #import "AGFlowController.h"
 
+#import "AGPopoverReplacementAnimation.h"
+
 typedef  UIViewController<AGFlowController> * _Nonnull (^AGFlowRouterRootCreationBlock)();
 typedef UIViewController<AGFlowController> * _Nullable (^AGFlowRouterCreationBlock)( NSString * _Nonnull identifier, id _Nullable userInfo);
 
@@ -36,6 +38,13 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (void)presentInPopoverControllerId:(NSString *)identifier
                             userInfo:(nullable id)userInfo;
+
+- (void)presentInPopoverController:(UIViewController<AGFlowController, AGPopoverContent> *)controller
+     replacingCurrentWithAnimation:(AGPopoverReplacementAnimation)animation;
+
+- (void)presentInPopoverControllerId:(NSString *)identifier
+                            userInfo:(nullable id)userInfo
+       replacingCurrentWithAnimation:(AGPopoverReplacementAnimation)animation;
 
 - (void)dismissCurrentPopoverController;
 

@@ -12,6 +12,8 @@
 #import "AGPopoverController.h"
 #import "UIView+AGSnaphot.h"
 
+#import "AGPopoverToPopoverTransition.h"
+
 @interface AGFlowRouter ()
 
 @property (nonatomic, strong) AGFlowTransitionManager *transitionManager;
@@ -93,7 +95,7 @@
 
 - (void)presentInPopoverController:(UIViewController<AGFlowController, AGPopoverContent> *)controller {
   self.underlyingController = self.transitionManager.rootViewController;
-
+  
   AGPopoverController *popoverController = [AGPopoverController new];
   popoverController.contentController = controller;
   popoverController.visualEffect = [UIBlurEffect effectWithStyle:UIBlurEffectStyleDark];
@@ -111,6 +113,37 @@
     UIViewController<AGFlowController, AGPopoverContent> *vc = (UIViewController<AGFlowController, AGPopoverContent> *)creationBlock(identifier, userInfo);
     if (vc) {
       [self presentInPopoverController:vc];
+    }
+  }
+}
+
+- (void)presentInPopoverController:(UIViewController<AGFlowController, AGPopoverContent> *)controller
+     replacingCurrentWithAnimation:(AGPopoverReplacementAnimation)animation {
+  if (!self.currentPopover) {
+    return;
+  }
+  
+  AGPopoverController *popoverController = [AGPopoverController new];
+  popoverController.contentController = controller;
+  popoverController.visualEffect = self.currentPopover.visualEffect;
+  popoverController.windowSnapshot = self.currentPopover.windowSnapshot;
+  
+  AGPopoverToPopoverTransition *transition = [[AGPopoverToPopoverTransition alloc] initWithVisualEffect:self.currentPopover.visualEffect
+                                                                                          snapshotImage:self.currentPopover.windowSnapshot
+                                                                                              animation:animation];
+  [self.transitionManager presentViewController:popoverController
+                                     transition:transition];
+  self.currentPopover = popoverController;
+}
+
+- (void)presentInPopoverControllerId:(NSString *)identifier
+                            userInfo:(nullable id)userInfo
+       replacingCurrentWithAnimation:(AGPopoverReplacementAnimation)animation {
+  AGFlowRouterCreationBlock creationBlock = self.creationBlocks[identifier];
+  if (creationBlock) {
+    UIViewController<AGFlowController, AGPopoverContent> *vc = (UIViewController<AGFlowController, AGPopoverContent> *)creationBlock(identifier, userInfo);
+    if (vc) {
+      [self presentInPopoverController:vc replacingCurrentWithAnimation:animation];
     }
   }
 }

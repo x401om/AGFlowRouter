@@ -14,6 +14,8 @@
 #import "AGFlowTransition.h"
 #import "AGPopoverDismissTransition.h"
 #import "AGPopoverPresentTransition.h"
+#import "AGPopoverReplacementAnimation.h"
+#import "AGPopoverToPopoverTransition.h"
 
 FOUNDATION_EXPORT double AGFlowRouterVersionNumber;
 FOUNDATION_EXPORT const unsigned char AGFlowRouterVersionString[];
