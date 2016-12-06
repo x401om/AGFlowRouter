@@ -8,13 +8,17 @@
 
 @import UIKit;
 
+NS_ASSUME_NONNULL_BEGIN
+
 @protocol AGFlowTransition <NSObject>
 
 - (NSString *)transitionIdentifier;
 
-- (void)performTrasitionForController:( UIViewController * _Nonnull )viewController
-                   previousController:( UIViewController * _Nonnull )previousController
-                               window:( UIWindow * _Nonnull )window
-                       withCompletion:(void (^ __nonnull)(BOOL finished))completion;
+- (void)performTrasitionForController:( UIViewController * )viewController
+                   previousController:( UIViewController * )previousController
+                               window:( UIWindow * )window
+                       withCompletion:(void (^)(BOOL finished))completion;
 
 @end
+
+NS_ASSUME_NONNULL_END

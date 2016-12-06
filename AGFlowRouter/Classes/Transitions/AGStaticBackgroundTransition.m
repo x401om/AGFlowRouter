@@ -26,6 +26,10 @@
   return self;
 }
 
+- (NSString *)transitionIdentifier {
+  return @"AGStaticBackgroundTransition";
+}
+
 - (void)performTrasitionForController:(UIViewController *)viewController
                    previousController:(UIViewController *)previousController
                                window:(UIWindow *)window

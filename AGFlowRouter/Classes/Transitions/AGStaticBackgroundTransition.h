@@ -10,4 +10,6 @@
 
 @interface AGStaticBackgroundTransition : NSObject<AGFlowTransition>
 
+- (instancetype)initWithStaticView:(UIView *)staticView;
+
 @end
