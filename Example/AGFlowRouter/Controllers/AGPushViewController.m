@@ -14,6 +14,10 @@
 
 @implementation AGPushViewController
 
+- (void)viewDidLoad {
+  [super viewDidLoad];
+  
+}
 - (BOOL)prefersStatusBarHidden {
   return YES;
 }
@@ -24,7 +28,11 @@
 
 #pragma mark - AGFlowController
 
-- (void)prepareForFlowTransition:(id<AGFlowTransition>)transition {
+- (void)willPresentWithTransition:(id<AGFlowTransition>)transition {
+  
+}
+
+- (void)willDismissWithTransition:(id<AGFlowTransition>)transition {
   
 }
 

@@ -14,7 +14,8 @@
 @protocol AGFlowController <NSObject>
 
 @optional
-- (void)prepareForFlowTransition:(id<AGFlowTransition>)transition;
+- (void)willPresentWithTransition:(id<AGFlowTransition>)transition;
+- (void)willDismissWithTransition:(id<AGFlowTransition>)transition;
 
 - (void)flowViewDidAppear:(BOOL)animated;
 - (void)flowViewWillDisappear:(BOOL)animated;
