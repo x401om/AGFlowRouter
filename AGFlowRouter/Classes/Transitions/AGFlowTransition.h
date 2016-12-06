@@ -10,6 +10,8 @@
 
 @protocol AGFlowTransition <NSObject>
 
+- (NSString *)transitionIdentifier;
+
 - (void)performTrasitionForController:( UIViewController * _Nonnull )viewController
                    previousController:( UIViewController * _Nonnull )previousController
                                window:( UIWindow * _Nonnull )window

@@ -57,6 +57,10 @@
 - (void)presentViewController:(UIViewController<AGFlowController> *)viewController
                 transition:(id<AGFlowTransition>)transition {
 
+  if ([viewController respondsToSelector:@selector(prepareForFlowTransition:)]) {
+    [viewController prepareForFlowTransition:transition];
+  }
+  
   if ([self.rootViewController respondsToSelector:@selector(flowViewWillDisappear:)]) {
     [self.rootViewController flowViewWillDisappear:YES];
   }

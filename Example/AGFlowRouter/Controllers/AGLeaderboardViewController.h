@@ -6,8 +6,8 @@
 //  Copyright © 2016 Easy Ten LLC. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+@import AGFlowRouter;
 
-@interface AGLeaderboardViewController : UIViewController
+@interface AGLeaderboardViewController : UIViewController<AGFlowController>
 
 @end

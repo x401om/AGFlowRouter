@@ -10,6 +10,10 @@
 
 @implementation AGDefaultDismissTransition
 
+- (NSString *)transitionIdentifier {
+  return @"AGDefaultDismissTransition";
+}
+
 - (void)performTrasitionForController:(UIViewController *)viewController
                    previousController:(UIViewController *)previousController
                                window:(UIWindow *)window

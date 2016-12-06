@@ -724,7 +724,7 @@
 				6003F5BE195388D20070C39A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 		6003F5BF195388D20070C39A /* Build configuration list for PBXNativeTarget "AGFlowRouter_Example" */ = {
 			isa = XCConfigurationList;
@@ -733,7 +733,7 @@
 				6003F5C1195388D20070C39A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 		6003F5C2195388D20070C39A /* Build configuration list for PBXNativeTarget "AGFlowRouter_Tests" */ = {
 			isa = XCConfigurationList;
@@ -742,7 +742,7 @@
 				6003F5C4195388D20070C39A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 /* End XCConfigurationList section */
 	};

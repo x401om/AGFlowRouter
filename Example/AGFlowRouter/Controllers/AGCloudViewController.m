@@ -52,4 +52,14 @@
   return YES;
 }
 
+#pragma mark - AGPopoverContent
+
+- (CGSize)sizeForContentInPopoverController:(AGPopoverController *)popoverController {
+  return CGSizeMake(300.0f, 300.0f);
+}
+
+- (void)popoverControllerDidTapBackground:(AGPopoverController *)popoverController {
+  [[AGFlowRouter sharedRouter] dismissCurrentPopoverController];
+}
+
 @end

@@ -24,6 +24,10 @@
 
 #pragma mark - AGFlowController
 
+- (void)prepareForFlowTransition:(id<AGFlowTransition>)transition {
+  
+}
+
 - (void)flowViewDidAppear:(BOOL)animated {
   
 }

@@ -24,6 +24,10 @@
   return self;
 }
 
+- (NSString *)transitionIdentifier {
+  return @"AGPopoverDismissTransition";
+}
+
 - (void)performTrasitionForController:(UIViewController *)viewController
                    previousController:(UIViewController *)previousController
                                window:(UIWindow *)window

@@ -10,6 +10,10 @@
 
 @implementation AGDefaultPresentTrasition
 
+- (NSString *)transitionIdentifier {
+  return @"AGDefaultPresentTrasition";
+}
+
 - (void)performTrasitionForController:(UIViewController *)viewController
                    previousController:(UIViewController *)previousController
                                window:(UIWindow *)window

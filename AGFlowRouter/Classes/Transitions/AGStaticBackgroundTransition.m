@@ -1,47 +1,63 @@
 //
-//  AGDefaultPushTransition.m
+//  AGStaticBackgroundTransition.m
 //  Pods
 //
-//  Created by Aleksey Goncharov on 28.09.16.
+//  Created by Aleksey Goncharov on 06.12.16.
 //
 //
 
-#import "AGDefaultPushTransition.h"
+#import "UIView+AGSnapshot.h"
 
-@implementation AGDefaultPushTransition
+#import "AGStaticBackgroundTransition.h"
 
-- (NSString *)transitionIdentifier {
-  return @"AGDefaultPushTransition";
+@interface AGStaticBackgroundTransition ()
+
+@property (nonatomic, strong) UIImage *backgroundImage;
+
+@end
+
+@implementation AGStaticBackgroundTransition
+
+- (instancetype)initWithStaticView:(UIView *)staticView {
+  self = [super init];
+  if (self) {
+    _backgroundImage = [staticView snapshotImage];
+  }
+  return self;
 }
 
 - (void)performTrasitionForController:(UIViewController *)viewController
                    previousController:(UIViewController *)previousController
                                window:(UIWindow *)window
                        withCompletion:(void (^)(BOOL))completion {
+  
+  UIImageView *backgroundView = [[UIImageView alloc] initWithImage:self.backgroundImage];
+  [window insertSubview:backgroundView atIndex:0];
+  backgroundView.frame = window.bounds;
+  
   CGRect frame = window.bounds;
   frame.origin.x = CGRectGetWidth(frame);
   viewController.view.frame = frame;
   viewController.view.layer.zPosition = 0.5f;
-  
-  viewController.view.layer.shadowRadius = 5.0f;
-  viewController.view.layer.shadowColor = [[UIColor blackColor] CGColor];
-  viewController.view.layer.shadowOpacity = 0.5f;
+  viewController.view.backgroundColor = [UIColor clearColor];
   
   [window addSubview:viewController.view];
   
   [UIView animateWithDuration:0.4f
+                        delay:0.0f
+       usingSpringWithDamping:0.8f
+        initialSpringVelocity:0.0f
+                      options:kNilOptions
                    animations:^{
                      viewController.view.frame = window.bounds;
                      
                      CGRect previousFrame = window.bounds;
-                     previousFrame.origin.x = -previousFrame.size.width/2.0f;
+                     previousFrame.origin.x = -previousFrame.size.width;
                      previousController.view.frame = previousFrame;
                      
                    } completion:^(BOOL finished) {
+                     [backgroundView removeFromSuperview];
                      [viewController.view removeFromSuperview];
-                     viewController.view.layer.shadowRadius = 0.0f;
-                     viewController.view.layer.shadowColor = [[UIColor clearColor] CGColor];
-                     viewController.view.layer.shadowOpacity = 0.0f;
                      completion(finished);
                    }];
 }

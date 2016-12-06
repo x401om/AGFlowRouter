@@ -6,7 +6,7 @@
 //
 //
 
-#import "UIView+AGSnaphot.h"
+#import "UIView+AGSnapshot.h"
 
 @implementation UIView (AGSnaphot)
 

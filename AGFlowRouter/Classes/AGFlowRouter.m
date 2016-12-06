@@ -10,7 +10,7 @@
 #import "AGFlowTransitionManager.h"
 
 #import "AGPopoverController.h"
-#import "UIView+AGSnaphot.h"
+#import "UIView+AGSnapshot.h"
 
 #import "AGPopoverToPopoverTransition.h"
 
