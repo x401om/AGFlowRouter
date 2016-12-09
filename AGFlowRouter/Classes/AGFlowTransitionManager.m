@@ -43,6 +43,11 @@
     _rootViewController = rootViewController;
     _window = window;
     _window.rootViewController = rootViewController;
+    
+    [rootViewController loadViewIfNeeded];
+    if ([rootViewController respondsToSelector:@selector(flowViewDidAppear:)]) {
+      [rootViewController flowViewDidAppear:NO];
+    }
   }
   return self;
 }

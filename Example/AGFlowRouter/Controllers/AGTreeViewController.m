@@ -17,6 +17,16 @@
 
 @implementation AGTreeViewController
 
+- (void)viewDidLoad {
+  [super viewDidLoad];
+  
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+  [super viewDidAppear:animated];
+  
+}
+
 - (BOOL)prefersStatusBarHidden {
   return YES;
 }
