@@ -20,8 +20,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong) UIImage *windowSnapshot;
 @property (nonatomic, strong) UIVisualEffect *visualEffect;
 
-@property (nonatomic, readonly) UIView *headerView;
-@property (nonatomic, readonly) UIView *footerView;
+@property (weak, nonatomic) UIView *headerView;
+@property (weak, nonatomic) UIView *footerView;
 
 - (id<AGFlowTransition>)presentTransition;
 - (id<AGFlowTransition>)dismissTransition;

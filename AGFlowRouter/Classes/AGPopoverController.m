@@ -17,9 +17,6 @@
 @property (weak, nonatomic) UIImageView *backgroundView;
 @property (weak, nonatomic) UIVisualEffectView *blurView;
 
-@property (strong, nonatomic) UIView *headerView;
-@property (strong, nonatomic) UIView *footerView;
-
 @end
 
 @implementation AGPopoverController
