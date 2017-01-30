@@ -34,10 +34,16 @@ NS_ASSUME_NONNULL_BEGIN
                    userInfo:(nullable id)userInfo
                  transition:(nullable id<AGFlowTransition>)transition;
 
-- (void)presentInPopoverController:(UIViewController<AGFlowController, AGPopoverContent> *)controller;
+#pragma mark - Popovers
 
+- (void)presentInPopoverController:(UIViewController<AGFlowController, AGPopoverContent> *)controller;
+- (void)presentInPopoverController:(UIViewController<AGFlowController, AGPopoverContent> *)controller
+                        transition:(nullable id<AGFlowTransition>)transition;
 - (void)presentInPopoverControllerId:(NSString *)identifier
                             userInfo:(nullable id)userInfo;
+- (void)presentInPopoverControllerId:(NSString *)identifier
+                            userInfo:(nullable id)userInfo
+                          transition:(nullable id<AGFlowTransition>)transition;
 
 - (void)presentInPopoverController:(UIViewController<AGFlowController, AGPopoverContent> *)controller
      replacingCurrentWithAnimation:(AGPopoverReplacementAnimation)animation;

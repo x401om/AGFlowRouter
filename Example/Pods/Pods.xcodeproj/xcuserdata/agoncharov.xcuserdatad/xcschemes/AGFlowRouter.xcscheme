@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = 'E999C0ACE77669C03C45F3F4CDC0B74C'
+               BlueprintIdentifier = 'AE34BAC649682AC11A608B23D6A3D309'
                BlueprintName = 'AGFlowRouter'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'AGFlowRouter.framework'>

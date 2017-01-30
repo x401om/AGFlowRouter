@@ -27,7 +27,7 @@
   [[AGFlowRouter sharedRouter] presentControllerId:@"TreeController" userInfo:nil transition:[AGDefaultDismissTransition new]];
 }
 - (IBAction)cloudPressed:(UIButton *)sender {
-  [[AGFlowRouter sharedRouter] presentInPopoverControllerId:@"TaskController" userInfo:nil];
+  [[AGFlowRouter sharedRouter] presentInPopoverControllerId:@"TaskController" userInfo:nil ];
 }
 
 #pragma mark - AGFlowController
