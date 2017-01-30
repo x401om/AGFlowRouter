@@ -17,6 +17,9 @@
 @property (weak, nonatomic) UIImageView *backgroundView;
 @property (weak, nonatomic) UIVisualEffectView *blurView;
 
+@property (weak, nonatomic) UIView *headerView;
+@property (weak, nonatomic) UIView *footerView;
+
 @end
 
 @implementation AGPopoverController
@@ -106,6 +109,7 @@
                      ofView:self.contentController.view
                  withOffset:overlay];
     
+    self.headerView = headerView;
   }
   
 }
@@ -137,7 +141,7 @@
                      toEdge:ALEdgeBottom
                      ofView:self.contentController.view
                  withOffset:-overlay];
-    
+    self.footerView = footerView;
   }
   
 }
