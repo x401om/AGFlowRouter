@@ -22,12 +22,8 @@
 //  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 //  SOFTWARE.
 
-@import UIKit;
-#import "AGAppDelegate.h"
+@import AGFlowRouter;
 
-int main(int argc, char * argv[])
-{
-    @autoreleasepool {
-        return UIApplicationMain(argc, argv, nil, NSStringFromClass([AGAppDelegate class]));
-    }
-}
+@interface MainViewController : UIViewController<AGFlowController>
+
+@end

@@ -22,12 +22,41 @@
 //  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 //  SOFTWARE.
 
-@import UIKit;
-#import "AGAppDelegate.h"
+#import "PushViewController.h"
 
-int main(int argc, char * argv[])
-{
-    @autoreleasepool {
-        return UIApplicationMain(argc, argv, nil, NSStringFromClass([AGAppDelegate class]));
-    }
+
+@implementation PushViewController
+
+- (BOOL)prefersStatusBarHidden {
+  return YES;
 }
+
+- (IBAction)popButtonPressed:(id)sender {
+  [[AGFlowRouter sharedRouter] presentControllerId:@"MainViewController"
+                                          userInfo:nil
+                                        transition:[AGDefaultPopTransition new]];
+}
+
+#pragma mark - AGFlowController
+
+- (void)willPresentWithTransition:(id<AGFlowTransition>)transition {
+  
+}
+
+- (void)willDismissWithTransition:(id<AGFlowTransition>)transition {
+  
+}
+
+- (void)flowViewDidAppear:(BOOL)animated {
+  
+}
+
+- (void)flowViewWillDisappear:(BOOL)animated {
+  
+}
+
+- (BOOL)prefersHideFlowBarWithIdentifier:(NSString *)identifier {
+  return NO;
+}
+
+@end

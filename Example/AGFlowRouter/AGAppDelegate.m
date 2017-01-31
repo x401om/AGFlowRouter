@@ -1,21 +1,37 @@
+//  https://github.com/x401om/AGFlowRouter
 //
-//  AGAppDelegate.m
-//  AGFlowRouter
+//  MIT License
 //
-//  Created by Aleksey Goncharov on 09/27/2016.
-//  Copyright (c) 2016 Aleksey Goncharov. All rights reserved.
+//  Copyright (c) 2017 Alexey Goncharov
 //
-
+//  Permission is hereby granted, free of charge, to any person obtaining a copy
+//  of this software and associated documentation files (the "Software"), to deal
+//  in the Software without restriction, including without limitation the rights
+//  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+//  copies of the Software, and to permit persons to whom the Software is
+//  furnished to do so, subject to the following conditions:
+//
+//  The above copyright notice and this permission notice shall be included in all
+//  copies or substantial portions of the Software.
+//
+//  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+//  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+//  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+//  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+//  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+//  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+//  SOFTWARE.
 #import "AGAppDelegate.h"
 
 #import "AGFlowRouter.h"
-#import "AGControllersFabric.h"
 #import "AGInfoBar.h"
 #import "AGTabBar.h"
 
+#import "ControllersFabric.h"
+
 @interface AGAppDelegate ()<AGTabBarDelegate>
 
-@property (nonatomic, strong) AGControllersFabric *fabric;
+@property (nonatomic, strong) ControllersFabric *fabric;
 
 @end
 
@@ -26,7 +42,7 @@
   self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
   [self.window makeKeyAndVisible];
   
-  self.fabric = [AGControllersFabric new];
+  self.fabric = [ControllersFabric new];
   [self.fabric registerControllersCreation];
   
   AGTabBar *tabBar = [AGTabBar instantiateFromXib];
@@ -46,13 +62,13 @@
   NSUInteger index = [tabBar.items indexOfObject:item];
   switch (index) {
     case 0:
-      [[AGFlowRouter sharedRouter] presentControllerId:@"ProfileController" userInfo:nil transition:nil];
+      [[AGFlowRouter sharedRouter] presentControllerId:@"LeftViewController" userInfo:nil transition:nil];
       break;
     case 1:
-      [[AGFlowRouter sharedRouter] presentControllerId:@"TreeController" userInfo:nil transition:nil];
+      [[AGFlowRouter sharedRouter] presentControllerId:@"MainViewController" userInfo:nil transition:nil];
       break;
     case 2:
-      [[AGFlowRouter sharedRouter] presentControllerId:@"LeaderboardController" userInfo:nil transition:nil];
+      [[AGFlowRouter sharedRouter] presentControllerId:@"RightViewController" userInfo:nil transition:nil];
       break;
     default:
       break;

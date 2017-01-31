@@ -25,17 +25,16 @@
 		7407C36C1D9ABFD300E2D486 /* AGTabBarItemBounceAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = 7407C3481D9ABFD300E2D486 /* AGTabBarItemBounceAnimator.m */; };
 		7407C36D1D9ABFD300E2D486 /* AGTabBarItemFlipAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = 7407C34A1D9ABFD300E2D486 /* AGTabBarItemFlipAnimator.m */; };
 		7407C36E1D9ABFD300E2D486 /* AGTabBarItemRotationAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = 7407C34C1D9ABFD300E2D486 /* AGTabBarItemRotationAnimator.m */; };
-		7407C36F1D9ABFD300E2D486 /* AGCloudViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7407C34F1D9ABFD300E2D486 /* AGCloudViewController.m */; };
-		7407C3701D9ABFD300E2D486 /* AGControllersFabric.m in Sources */ = {isa = PBXBuildFile; fileRef = 7407C3511D9ABFD300E2D486 /* AGControllersFabric.m */; };
-		7407C3711D9ABFD300E2D486 /* AGFeedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7407C3531D9ABFD300E2D486 /* AGFeedViewController.m */; };
-		7407C3721D9ABFD300E2D486 /* AGLeaderboardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7407C3551D9ABFD300E2D486 /* AGLeaderboardViewController.m */; };
-		7407C3731D9ABFD300E2D486 /* AGProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7407C3571D9ABFD300E2D486 /* AGProfileViewController.m */; };
-		7407C3741D9ABFD300E2D486 /* AGTaskViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7407C3591D9ABFD300E2D486 /* AGTaskViewController.m */; };
-		7407C3751D9ABFD300E2D486 /* AGTreeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7407C35B1D9ABFD300E2D486 /* AGTreeViewController.m */; };
+		7407C3701D9ABFD300E2D486 /* ControllersFabric.m in Sources */ = {isa = PBXBuildFile; fileRef = 7407C3511D9ABFD300E2D486 /* ControllersFabric.m */; };
+		7407C3711D9ABFD300E2D486 /* ModalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7407C3531D9ABFD300E2D486 /* ModalViewController.m */; };
+		7407C3721D9ABFD300E2D486 /* RightViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7407C3551D9ABFD300E2D486 /* RightViewController.m */; };
+		7407C3731D9ABFD300E2D486 /* LeftViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7407C3571D9ABFD300E2D486 /* LeftViewController.m */; };
+		7407C3741D9ABFD300E2D486 /* PopoverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7407C3591D9ABFD300E2D486 /* PopoverViewController.m */; };
+		7407C3751D9ABFD300E2D486 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7407C35B1D9ABFD300E2D486 /* MainViewController.m */; };
 		7407C3761D9ABFD300E2D486 /* AGInfoBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 7407C35E1D9ABFD300E2D486 /* AGInfoBar.m */; };
 		7407C3771D9ABFD300E2D486 /* AGInfoBar.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7407C35F1D9ABFD300E2D486 /* AGInfoBar.xib */; };
 		7407C37D1D9AC12C00E2D486 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7407C37C1D9AC12C00E2D486 /* LaunchScreen.storyboard */; };
-		7459BCD61D9BE76F00854152 /* AGPushViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7459BCD51D9BE76F00854152 /* AGPushViewController.m */; };
+		7459BCD61D9BE76F00854152 /* PushViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7459BCD51D9BE76F00854152 /* PushViewController.m */; };
 		873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 873B8AEA1B1F5CCA007FD442 /* Main.storyboard */; };
 		984C1522929A3A249BCBA9C8 /* Pods_AGFlowRouter_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A824204B2F3310A91CDCAD8 /* Pods_AGFlowRouter_Example.framework */; };
 		EAF286A8391F5C917407EA6E /* Pods_AGFlowRouter_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1557468BAE10EB60A0A57798 /* Pods_AGFlowRouter_Tests.framework */; };
@@ -86,26 +85,24 @@
 		7407C34A1D9ABFD300E2D486 /* AGTabBarItemFlipAnimator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGTabBarItemFlipAnimator.m; sourceTree = "<group>"; };
 		7407C34B1D9ABFD300E2D486 /* AGTabBarItemRotationAnimator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGTabBarItemRotationAnimator.h; sourceTree = "<group>"; };
 		7407C34C1D9ABFD300E2D486 /* AGTabBarItemRotationAnimator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGTabBarItemRotationAnimator.m; sourceTree = "<group>"; };
-		7407C34E1D9ABFD300E2D486 /* AGCloudViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGCloudViewController.h; sourceTree = "<group>"; };
-		7407C34F1D9ABFD300E2D486 /* AGCloudViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGCloudViewController.m; sourceTree = "<group>"; };
-		7407C3501D9ABFD300E2D486 /* AGControllersFabric.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGControllersFabric.h; sourceTree = "<group>"; };
-		7407C3511D9ABFD300E2D486 /* AGControllersFabric.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGControllersFabric.m; sourceTree = "<group>"; };
-		7407C3521D9ABFD300E2D486 /* AGFeedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGFeedViewController.h; sourceTree = "<group>"; };
-		7407C3531D9ABFD300E2D486 /* AGFeedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGFeedViewController.m; sourceTree = "<group>"; };
-		7407C3541D9ABFD300E2D486 /* AGLeaderboardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGLeaderboardViewController.h; sourceTree = "<group>"; };
-		7407C3551D9ABFD300E2D486 /* AGLeaderboardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGLeaderboardViewController.m; sourceTree = "<group>"; };
-		7407C3561D9ABFD300E2D486 /* AGProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGProfileViewController.h; sourceTree = "<group>"; };
-		7407C3571D9ABFD300E2D486 /* AGProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGProfileViewController.m; sourceTree = "<group>"; };
-		7407C3581D9ABFD300E2D486 /* AGTaskViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGTaskViewController.h; sourceTree = "<group>"; };
-		7407C3591D9ABFD300E2D486 /* AGTaskViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGTaskViewController.m; sourceTree = "<group>"; };
-		7407C35A1D9ABFD300E2D486 /* AGTreeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGTreeViewController.h; sourceTree = "<group>"; };
-		7407C35B1D9ABFD300E2D486 /* AGTreeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGTreeViewController.m; sourceTree = "<group>"; };
+		7407C3501D9ABFD300E2D486 /* ControllersFabric.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ControllersFabric.h; sourceTree = "<group>"; };
+		7407C3511D9ABFD300E2D486 /* ControllersFabric.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ControllersFabric.m; sourceTree = "<group>"; };
+		7407C3521D9ABFD300E2D486 /* ModalViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModalViewController.h; sourceTree = "<group>"; };
+		7407C3531D9ABFD300E2D486 /* ModalViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModalViewController.m; sourceTree = "<group>"; };
+		7407C3541D9ABFD300E2D486 /* RightViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RightViewController.h; sourceTree = "<group>"; };
+		7407C3551D9ABFD300E2D486 /* RightViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RightViewController.m; sourceTree = "<group>"; };
+		7407C3561D9ABFD300E2D486 /* LeftViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeftViewController.h; sourceTree = "<group>"; };
+		7407C3571D9ABFD300E2D486 /* LeftViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeftViewController.m; sourceTree = "<group>"; };
+		7407C3581D9ABFD300E2D486 /* PopoverViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PopoverViewController.h; sourceTree = "<group>"; };
+		7407C3591D9ABFD300E2D486 /* PopoverViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PopoverViewController.m; sourceTree = "<group>"; };
+		7407C35A1D9ABFD300E2D486 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		7407C35B1D9ABFD300E2D486 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
 		7407C35D1D9ABFD300E2D486 /* AGInfoBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGInfoBar.h; sourceTree = "<group>"; };
 		7407C35E1D9ABFD300E2D486 /* AGInfoBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGInfoBar.m; sourceTree = "<group>"; };
 		7407C35F1D9ABFD300E2D486 /* AGInfoBar.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AGInfoBar.xib; sourceTree = "<group>"; };
 		7407C37C1D9AC12C00E2D486 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
-		7459BCD41D9BE76F00854152 /* AGPushViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGPushViewController.h; sourceTree = "<group>"; };
-		7459BCD51D9BE76F00854152 /* AGPushViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGPushViewController.m; sourceTree = "<group>"; };
+		7459BCD41D9BE76F00854152 /* PushViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PushViewController.h; sourceTree = "<group>"; };
+		7459BCD51D9BE76F00854152 /* PushViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PushViewController.m; sourceTree = "<group>"; };
 		873B8AEA1B1F5CCA007FD442 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		990B0F7272F07953E0E10B14 /* Pods-AGFlowRouter_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AGFlowRouter_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-AGFlowRouter_Example/Pods-AGFlowRouter_Example.release.xcconfig"; sourceTree = "<group>"; };
 		A3CBD4BF65A4799D7F95D2E8 /* Pods-AGFlowRouter_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AGFlowRouter_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AGFlowRouter_Example/Pods-AGFlowRouter_Example.debug.xcconfig"; sourceTree = "<group>"; };
@@ -260,22 +257,10 @@
 		7407C34D1D9ABFD300E2D486 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				7407C34E1D9ABFD300E2D486 /* AGCloudViewController.h */,
-				7407C34F1D9ABFD300E2D486 /* AGCloudViewController.m */,
-				7407C3501D9ABFD300E2D486 /* AGControllersFabric.h */,
-				7407C3511D9ABFD300E2D486 /* AGControllersFabric.m */,
-				7407C3521D9ABFD300E2D486 /* AGFeedViewController.h */,
-				7407C3531D9ABFD300E2D486 /* AGFeedViewController.m */,
-				7407C3541D9ABFD300E2D486 /* AGLeaderboardViewController.h */,
-				7407C3551D9ABFD300E2D486 /* AGLeaderboardViewController.m */,
-				7407C3561D9ABFD300E2D486 /* AGProfileViewController.h */,
-				7407C3571D9ABFD300E2D486 /* AGProfileViewController.m */,
-				7407C3581D9ABFD300E2D486 /* AGTaskViewController.h */,
-				7407C3591D9ABFD300E2D486 /* AGTaskViewController.m */,
-				7407C35A1D9ABFD300E2D486 /* AGTreeViewController.h */,
-				7407C35B1D9ABFD300E2D486 /* AGTreeViewController.m */,
-				7459BCD41D9BE76F00854152 /* AGPushViewController.h */,
-				7459BCD51D9BE76F00854152 /* AGPushViewController.m */,
+				7407C3501D9ABFD300E2D486 /* ControllersFabric.h */,
+				7407C3511D9ABFD300E2D486 /* ControllersFabric.m */,
+				74D33CCB1E40A38D00F1B4D8 /* TabBarControllers */,
+				74D33CCC1E40A39E00F1B4D8 /* CustomControllers */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -288,6 +273,32 @@
 				7407C35F1D9ABFD300E2D486 /* AGInfoBar.xib */,
 			);
 			path = PermanentViews;
+			sourceTree = "<group>";
+		};
+		74D33CCB1E40A38D00F1B4D8 /* TabBarControllers */ = {
+			isa = PBXGroup;
+			children = (
+				7407C3561D9ABFD300E2D486 /* LeftViewController.h */,
+				7407C3571D9ABFD300E2D486 /* LeftViewController.m */,
+				7407C3541D9ABFD300E2D486 /* RightViewController.h */,
+				7407C3551D9ABFD300E2D486 /* RightViewController.m */,
+				7407C35A1D9ABFD300E2D486 /* MainViewController.h */,
+				7407C35B1D9ABFD300E2D486 /* MainViewController.m */,
+			);
+			name = TabBarControllers;
+			sourceTree = "<group>";
+		};
+		74D33CCC1E40A39E00F1B4D8 /* CustomControllers */ = {
+			isa = PBXGroup;
+			children = (
+				7407C3521D9ABFD300E2D486 /* ModalViewController.h */,
+				7407C3531D9ABFD300E2D486 /* ModalViewController.m */,
+				7407C3581D9ABFD300E2D486 /* PopoverViewController.h */,
+				7407C3591D9ABFD300E2D486 /* PopoverViewController.m */,
+				7459BCD41D9BE76F00854152 /* PushViewController.h */,
+				7459BCD51D9BE76F00854152 /* PushViewController.m */,
+			);
+			name = CustomControllers;
 			sourceTree = "<group>";
 		};
 		7A7D148BFFE17618C99D370B /* Pods */ = {
@@ -504,18 +515,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7459BCD61D9BE76F00854152 /* AGPushViewController.m in Sources */,
-				7407C3731D9ABFD300E2D486 /* AGProfileViewController.m in Sources */,
-				7407C3711D9ABFD300E2D486 /* AGFeedViewController.m in Sources */,
-				7407C3751D9ABFD300E2D486 /* AGTreeViewController.m in Sources */,
-				7407C36F1D9ABFD300E2D486 /* AGCloudViewController.m in Sources */,
-				7407C3741D9ABFD300E2D486 /* AGTaskViewController.m in Sources */,
+				7459BCD61D9BE76F00854152 /* PushViewController.m in Sources */,
+				7407C3731D9ABFD300E2D486 /* LeftViewController.m in Sources */,
+				7407C3711D9ABFD300E2D486 /* ModalViewController.m in Sources */,
+				7407C3751D9ABFD300E2D486 /* MainViewController.m in Sources */,
+				7407C3741D9ABFD300E2D486 /* PopoverViewController.m in Sources */,
 				7407C36C1D9ABFD300E2D486 /* AGTabBarItemBounceAnimator.m in Sources */,
 				7407C36B1D9ABFD300E2D486 /* AGTabBarItem.m in Sources */,
 				7407C36E1D9ABFD300E2D486 /* AGTabBarItemRotationAnimator.m in Sources */,
 				6003F59E195388D20070C39A /* AGAppDelegate.m in Sources */,
-				7407C3721D9ABFD300E2D486 /* AGLeaderboardViewController.m in Sources */,
-				7407C3701D9ABFD300E2D486 /* AGControllersFabric.m in Sources */,
+				7407C3721D9ABFD300E2D486 /* RightViewController.m in Sources */,
+				7407C3701D9ABFD300E2D486 /* ControllersFabric.m in Sources */,
 				7407C3691D9ABFD300E2D486 /* AGTabBar.m in Sources */,
 				7407C3761D9ABFD300E2D486 /* AGInfoBar.m in Sources */,
 				7407C36D1D9ABFD300E2D486 /* AGTabBarItemFlipAnimator.m in Sources */,

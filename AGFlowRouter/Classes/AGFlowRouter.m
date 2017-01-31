@@ -1,16 +1,35 @@
+//  https://github.com/x401om/AGFlowRouter
 //
-//  AGFlowRouter.m
-//  AGFlowController
+//  MIT License
 //
-//  Created by Aleksey Goncharov on 26.09.16.
-//  Copyright © 2016 Easy Ten LLC. All rights reserved.
+//  Copyright (c) 2017 Alexey Goncharov
 //
+//  Permission is hereby granted, free of charge, to any person obtaining a copy
+//  of this software and associated documentation files (the "Software"), to deal
+//  in the Software without restriction, including without limitation the rights
+//  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+//  copies of the Software, and to permit persons to whom the Software is
+//  furnished to do so, subject to the following conditions:
+//
+//  The above copyright notice and this permission notice shall be included in all
+//  copies or substantial portions of the Software.
+//
+//  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+//  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+//  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+//  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+//  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+//  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+//  SOFTWARE.
 
 #import "AGPopoverController.h"
 #import "UIView+AGSnapshot.h"
-#import "AGPopoverToPopoverTransition.h"
 #import "AGFlowRouter.h"
 #import "AGFlowTransitionManager.h"
+
+#import "AGPopoverPresentTransition.h"
+#import "AGPopoverDismissTransition.h"
+#import "AGPopoverToPopoverTransition.h"
 
 @interface AGFlowRouter ()
 
@@ -69,12 +88,25 @@
 }
 
 - (void)presentControllerId:(NSString *)identifier userInfo:(id)userInfo transition:(id<AGFlowTransition>)transition {
+  UIViewController<AGFlowController> *vc = [self instantiateControllerId:identifier userInfo:userInfo];
+  AGFlowRouterCreationBlock creationBlock = self.creationBlocks[identifier];
+  if (vc) {
+    [self presentController:vc transition:transition];
+  }
+}
+
+- (UIViewController<AGFlowController> *)rootViewController {
+  return self.transitionManager.rootViewController;
+}
+
+- (nullable UIViewController<AGFlowController> *)instantiateControllerId:(NSString *)identifier
+                                                       userInfo:(nullable id)userInfo {
   AGFlowRouterCreationBlock creationBlock = self.creationBlocks[identifier];
   if (creationBlock) {
     UIViewController<AGFlowController> *vc = creationBlock(identifier, userInfo);
-    if (vc) {
-      [self presentController:vc transition:transition];
-    }
+    return vc;
+  } else {
+    return nil;
   }
 }
 
@@ -94,40 +126,58 @@
 
 #pragma mark - Popovers
 
-- (void)presentInPopoverController:(UIViewController<AGFlowController, AGPopoverContent> *)controller {
-  [self presentInPopoverController:controller transition:nil];
-}
-
 - (void)presentInPopoverController:(UIViewController<AGFlowController, AGPopoverContent> *)controller
-                        transition:(nullable id<AGFlowTransition>)transition {
+                 presentTransition:(nullable id<AGFlowTransition>)presentTransition
+                 dismissTransition:(nullable id<AGFlowTransition>)dismissTransition {
   AGPopoverController *popoverController =
   [[AGPopoverController alloc] initWithContentCotroller:controller
                                          baseController:self.transitionManager.rootViewController
-                                      presentTransition:transition
-                                      dismissTransition:nil
+                                      presentTransition:presentTransition ?: [AGPopoverPresentTransition new]
+                                      dismissTransition:dismissTransition ?: [AGPopoverDismissTransition new]
                                          windowSnapshot:[self.transitionManager.window snapshotImage]];
   
-  [self.transitionManager presentViewController:popoverController
-                                     transition:popoverController.presentTransition];
+  [self presentController:popoverController transition:popoverController.presentTransition];
+}
+
+- (void)presentInPopoverControllerId:(NSString *)identifier
+                            userInfo:(nullable id)userInfo
+                   presentTransition:(nullable id<AGFlowTransition>)presentTransition
+                   dismissTransition:(nullable id<AGFlowTransition>)dismissTransition {
+  UIViewController<AGFlowController> *vc = [self instantiateControllerId:identifier userInfo:userInfo];
+  if (vc) {
+    [self presentInPopoverController:vc
+                   presentTransition:presentTransition
+                   dismissTransition:dismissTransition];
+  }
+}
+
+- (void)presentInPopoverController:(UIViewController<AGFlowController, AGPopoverContent> *)controller {
+  [self presentInPopoverController:controller
+                 presentTransition:nil
+                 dismissTransition:nil];
 }
 
 - (void)presentInPopoverControllerId:(NSString *)identifier
                             userInfo:(nullable id)userInfo {
   [self presentInPopoverControllerId:identifier
                             userInfo:userInfo
-                          transition:nil];
+                   presentTransition:nil
+                   dismissTransition:nil];
 }
+
+//// DEPRECATED !!!!!
+
+- (void)presentInPopoverController:(UIViewController<AGFlowController, AGPopoverContent> *)controller
+                        transition:(nullable id<AGFlowTransition>)transition {
+  [self presentInPopoverController:controller presentTransition:transition dismissTransition:nil];
+}
+
+
 
 - (void)presentInPopoverControllerId:(NSString *)identifier
                             userInfo:(nullable id)userInfo
                           transition:(nullable id<AGFlowTransition>)transition {
-  AGFlowRouterCreationBlock creationBlock = self.creationBlocks[identifier];
-  if (creationBlock) {
-    UIViewController<AGFlowController, AGPopoverContent> *vc = (UIViewController<AGFlowController, AGPopoverContent> *)creationBlock(identifier, userInfo);
-    if (vc) {
-      [self presentInPopoverController:vc transition:transition];
-    }
-  }
+  [self presentInPopoverControllerId:identifier userInfo:userInfo presentTransition:transition dismissTransition:nil];
 }
 
 - (void)presentInPopoverController:(UIViewController<AGFlowController, AGPopoverContent> *)controller
@@ -139,6 +189,7 @@
   } else {
     return;
   }
+
   
   AGPopoverToPopoverTransition *transition =
   [[AGPopoverToPopoverTransition alloc] initWithVisualEffect:currentPopoverController.visualEffect
@@ -147,24 +198,19 @@
   
   AGPopoverController *popoverController =
   [[AGPopoverController alloc] initWithContentCotroller:controller
-                                         baseController:self.transitionManager.rootViewController
+                                         baseController:currentPopoverController.baseController
                                       presentTransition:transition
                                       dismissTransition:currentPopoverController.dismissTransition
                                          windowSnapshot:currentPopoverController.windowSnapshot];
-
-  [self.transitionManager presentViewController:popoverController
-                                     transition:transition];
+  [[AGFlowRouter sharedRouter] presentController:popoverController transition:transition];
 }
 
 - (void)presentInPopoverControllerId:(NSString *)identifier
                             userInfo:(nullable id)userInfo
        replacingCurrentWithAnimation:(AGPopoverReplacementAnimation)animation {
-  AGFlowRouterCreationBlock creationBlock = self.creationBlocks[identifier];
-  if (creationBlock) {
-    UIViewController<AGFlowController, AGPopoverContent> *vc = (UIViewController<AGFlowController, AGPopoverContent> *)creationBlock(identifier, userInfo);
-    if (vc) {
-      [self presentInPopoverController:vc replacingCurrentWithAnimation:animation];
-    }
+  UIViewController<AGFlowController, AGPopoverContent> *vc = [self instantiateControllerId:identifier userInfo:userInfo];
+  if (vc) {
+    [self presentInPopoverController:vc replacingCurrentWithAnimation:animation];
   }
 }
 

@@ -1,10 +1,26 @@
+//  https://github.com/x401om/AGFlowRouter
 //
-//  AGFlowRouter.h
-//  AGFlowController
+//  MIT License
 //
-//  Created by Aleksey Goncharov on 26.09.16.
-//  Copyright © 2016 Easy Ten LLC. All rights reserved.
+//  Copyright (c) 2017 Alexey Goncharov
 //
+//  Permission is hereby granted, free of charge, to any person obtaining a copy
+//  of this software and associated documentation files (the "Software"), to deal
+//  in the Software without restriction, including without limitation the rights
+//  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+//  copies of the Software, and to permit persons to whom the Software is
+//  furnished to do so, subject to the following conditions:
+//
+//  The above copyright notice and this permission notice shall be included in all
+//  copies or substantial portions of the Software.
+//
+//  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+//  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+//  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+//  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+//  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+//  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+//  SOFTWARE.
 
 #import "AGPopoverContent.h"
 #import "AGFlowTransition.h"
@@ -34,6 +50,9 @@ NS_ASSUME_NONNULL_BEGIN
                    userInfo:(nullable id)userInfo
                  transition:(nullable id<AGFlowTransition>)transition;
 
+- (UIViewController<AGFlowController> *)rootViewController;
+- (nullable UIViewController<AGFlowController> *)instantiateControllerId:(NSString *)identifier
+                                                       userInfo:(nullable id)userInfo;
 #pragma mark - FlowBars
 
 - (void)registerFlowBar:(UIView<AGFlowBar> *)flowBar;
@@ -41,12 +60,25 @@ NS_ASSUME_NONNULL_BEGIN
 
 #pragma mark - Popovers
 
-- (void)presentInPopoverController:(UIViewController<AGFlowController, AGPopoverContent> *)controller DEPRECATED_ATTRIBUTE;
+- (void)presentInPopoverController:(UIViewController<AGFlowController, AGPopoverContent> *)controller
+                 presentTransition:(nullable id<AGFlowTransition>)presentTransition
+                 dismissTransition:(nullable id<AGFlowTransition>)dismissTransition;
+
+- (void)presentInPopoverControllerId:(NSString *)identifier
+                            userInfo:(nullable id)userInfo
+                   presentTransition:(nullable id<AGFlowTransition>)presentTransition
+                   dismissTransition:(nullable id<AGFlowTransition>)dismissTransition;
+
+- (void)presentInPopoverController:(UIViewController<AGFlowController, AGPopoverContent> *)controller;
+
+- (void)presentInPopoverControllerId:(NSString *)identifier
+                            userInfo:(nullable id)userInfo;
+
+
 - (void)presentInPopoverController:(UIViewController<AGFlowController, AGPopoverContent> *)controller
                         transition:(nullable id<AGFlowTransition>)transition DEPRECATED_ATTRIBUTE;
 
-- (void)presentInPopoverControllerId:(NSString *)identifier
-                            userInfo:(nullable id)userInfo DEPRECATED_ATTRIBUTE;
+
 
 - (void)presentInPopoverControllerId:(NSString *)identifier
                             userInfo:(nullable id)userInfo

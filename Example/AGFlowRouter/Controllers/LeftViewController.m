@@ -22,12 +22,38 @@
 //  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 //  SOFTWARE.
 
-@import UIKit;
-#import "AGAppDelegate.h"
+#import "LeftViewController.h"
 
-int main(int argc, char * argv[])
-{
-    @autoreleasepool {
-        return UIApplicationMain(argc, argv, nil, NSStringFromClass([AGAppDelegate class]));
-    }
+@interface LeftViewController ()
+
+@end
+
+@implementation LeftViewController
+
+- (BOOL)prefersStatusBarHidden {
+  return YES;
 }
+
+#pragma mark - AGFlowController
+
+- (void)willPresentWithTransition:(id<AGFlowTransition>)transition {
+  
+}
+
+- (void)willDismissWithTransition:(id<AGFlowTransition>)transition {
+  
+}
+
+- (void)flowViewDidAppear:(BOOL)animated {
+  
+}
+
+- (void)flowViewWillDisappear:(BOOL)animated {
+  
+}
+
+- (BOOL)prefersHideFlowBarWithIdentifier:(NSString *)identifier {
+  return NO;
+}
+
+@end

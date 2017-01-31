@@ -22,12 +22,17 @@
 //  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 //  SOFTWARE.
 
-@import UIKit;
-#import "AGAppDelegate.h"
+#import "UIView+AGSnapshot.h"
+#import "UIWindow+AGSnapshot.h"
 
-int main(int argc, char * argv[])
-{
-    @autoreleasepool {
-        return UIApplicationMain(argc, argv, nil, NSStringFromClass([AGAppDelegate class]));
-    }
+@implementation UIWindow (AGSnapshot)
+
++ (instancetype)currentWindow {
+  return [[[UIApplication sharedApplication] windows] firstObject];
 }
+
++ (UIView *)currentWindowSnapshotImage {
+  return [[self currentWindow] snapshotImage];
+}
+
+@end

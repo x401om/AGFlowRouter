@@ -22,12 +22,51 @@
 //  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 //  SOFTWARE.
 
-@import UIKit;
-#import "AGAppDelegate.h"
+#import "ModalViewController.h"
 
-int main(int argc, char * argv[])
-{
-    @autoreleasepool {
-        return UIApplicationMain(argc, argv, nil, NSStringFromClass([AGAppDelegate class]));
-    }
+@interface ModalViewController ()
+
+@end
+
+@implementation ModalViewController
+
+- (BOOL)prefersStatusBarHidden {
+  return YES;
 }
+
+#pragma mark - Actions
+
+- (IBAction)closePressed:(UIButton *)sender {
+  [[AGFlowRouter sharedRouter] presentControllerId:@"MainViewController"
+                                          userInfo:nil
+                                        transition:[AGDefaultDismissTransition new]];
+}
+
+- (IBAction)showPopoverPressed:(UIButton *)sender {
+  [[AGFlowRouter sharedRouter] presentInPopoverControllerId:@"PopoverViewController"
+                                                   userInfo:nil ];
+}
+
+#pragma mark - AGFlowController
+
+- (void)willPresentWithTransition:(id<AGFlowTransition>)transition {
+  
+}
+
+- (void)willDismissWithTransition:(id<AGFlowTransition>)transition {
+  
+}
+
+- (void)flowViewDidAppear:(BOOL)animated {
+  
+}
+
+- (void)flowViewWillDisappear:(BOOL)animated {
+  
+}
+
+- (BOOL)prefersHideFlowBarWithIdentifier:(NSString *)identifier {
+  return [identifier isEqual:@"tab"];
+}
+
+@end

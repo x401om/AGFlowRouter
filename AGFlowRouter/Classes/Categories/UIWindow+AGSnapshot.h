@@ -23,11 +23,10 @@
 //  SOFTWARE.
 
 @import UIKit;
-#import "AGAppDelegate.h"
 
-int main(int argc, char * argv[])
-{
-    @autoreleasepool {
-        return UIApplicationMain(argc, argv, nil, NSStringFromClass([AGAppDelegate class]));
-    }
-}
+@interface UIWindow (AGSnapshot)
+
++ (instancetype)currentWindow;
++ (UIImage *)currentWindowSnapshotImage;
+
+@end
