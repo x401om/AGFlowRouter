@@ -89,7 +89,6 @@
 
 - (void)presentControllerId:(NSString *)identifier userInfo:(id)userInfo transition:(id<AGFlowTransition>)transition {
   UIViewController<AGFlowController> *vc = [self instantiateControllerId:identifier userInfo:userInfo];
-  AGFlowRouterCreationBlock creationBlock = self.creationBlocks[identifier];
   if (vc) {
     [self presentController:vc transition:transition];
   }
@@ -143,7 +142,7 @@
                             userInfo:(nullable id)userInfo
                    presentTransition:(nullable id<AGFlowTransition>)presentTransition
                    dismissTransition:(nullable id<AGFlowTransition>)dismissTransition {
-  UIViewController<AGFlowController> *vc = [self instantiateControllerId:identifier userInfo:userInfo];
+  UIViewController<AGFlowController, AGPopoverContent> *vc = (UIViewController<AGFlowController, AGPopoverContent> *)[self instantiateControllerId:identifier userInfo:userInfo];
   if (vc) {
     [self presentInPopoverController:vc
                    presentTransition:presentTransition
@@ -208,7 +207,7 @@
 - (void)presentInPopoverControllerId:(NSString *)identifier
                             userInfo:(nullable id)userInfo
        replacingCurrentWithAnimation:(AGPopoverReplacementAnimation)animation {
-  UIViewController<AGFlowController, AGPopoverContent> *vc = [self instantiateControllerId:identifier userInfo:userInfo];
+  UIViewController<AGFlowController, AGPopoverContent> *vc = (UIViewController<AGFlowController, AGPopoverContent> *)[self instantiateControllerId:identifier userInfo:userInfo];
   if (vc) {
     [self presentInPopoverController:vc replacingCurrentWithAnimation:animation];
   }
