@@ -9,6 +9,7 @@
 *.mode2v3
 
 *.xcodeproj/xcuserdata/*.xcuserdatad
+*.xcworkspace/xcuserdata/*.xcuserdatad
 
 *.xccheckout
 *.xcuserdatad

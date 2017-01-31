@@ -47,8 +47,7 @@
 }
 
 - (IBAction)closePressed:(UIButton *)sender {
-  [[AGFlowRouter sharedRouter] presentController:self.popoverController.baseController
-                                      transition:self.popoverController.dismissTransition];
+  [[AGFlowRouter sharedRouter] dismissCurrentPopoverController];
 }
 
 - (IBAction)showPopoverPressed:(UIButton *)sender {

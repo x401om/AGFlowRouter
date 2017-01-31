@@ -164,55 +164,6 @@
                    dismissTransition:nil];
 }
 
-//// DEPRECATED !!!!!
-
-- (void)presentInPopoverController:(UIViewController<AGFlowController, AGPopoverContent> *)controller
-                        transition:(nullable id<AGFlowTransition>)transition {
-  [self presentInPopoverController:controller presentTransition:transition dismissTransition:nil];
-}
-
-
-
-- (void)presentInPopoverControllerId:(NSString *)identifier
-                            userInfo:(nullable id)userInfo
-                          transition:(nullable id<AGFlowTransition>)transition {
-  [self presentInPopoverControllerId:identifier userInfo:userInfo presentTransition:transition dismissTransition:nil];
-}
-
-- (void)presentInPopoverController:(UIViewController<AGFlowController, AGPopoverContent> *)controller
-     replacingCurrentWithAnimation:(AGPopoverReplacementAnimation)animation {
-  AGPopoverController *currentPopoverController = nil;
-  
-  if ([self.transitionManager.rootViewController isKindOfClass:[AGPopoverController class]]) {
-    currentPopoverController = (AGPopoverController *)self.transitionManager.rootViewController;
-  } else {
-    return;
-  }
-
-  
-  AGPopoverToPopoverTransition *transition =
-  [[AGPopoverToPopoverTransition alloc] initWithVisualEffect:currentPopoverController.visualEffect
-                                               snapshotImage:currentPopoverController.windowSnapshot
-                                                   animation:animation];
-  
-  AGPopoverController *popoverController =
-  [[AGPopoverController alloc] initWithContentCotroller:controller
-                                         baseController:currentPopoverController.baseController
-                                      presentTransition:transition
-                                      dismissTransition:currentPopoverController.dismissTransition
-                                         windowSnapshot:currentPopoverController.windowSnapshot];
-  [[AGFlowRouter sharedRouter] presentController:popoverController transition:transition];
-}
-
-- (void)presentInPopoverControllerId:(NSString *)identifier
-                            userInfo:(nullable id)userInfo
-       replacingCurrentWithAnimation:(AGPopoverReplacementAnimation)animation {
-  UIViewController<AGFlowController, AGPopoverContent> *vc = (UIViewController<AGFlowController, AGPopoverContent> *)[self instantiateControllerId:identifier userInfo:userInfo];
-  if (vc) {
-    [self presentInPopoverController:vc replacingCurrentWithAnimation:animation];
-  }
-}
-
 - (void)dismissCurrentPopoverController {
   if ([self.transitionManager.rootViewController isKindOfClass:[AGPopoverController class]]) {
     AGPopoverController *currentPopoverController = (AGPopoverController *)self.transitionManager.rootViewController;
@@ -222,4 +173,5 @@
     }
   }
 }
+
 @end

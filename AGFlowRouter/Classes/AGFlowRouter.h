@@ -74,24 +74,7 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)presentInPopoverControllerId:(NSString *)identifier
                             userInfo:(nullable id)userInfo;
 
-
-- (void)presentInPopoverController:(UIViewController<AGFlowController, AGPopoverContent> *)controller
-                        transition:(nullable id<AGFlowTransition>)transition DEPRECATED_ATTRIBUTE;
-
-
-
-- (void)presentInPopoverControllerId:(NSString *)identifier
-                            userInfo:(nullable id)userInfo
-                          transition:(nullable id<AGFlowTransition>)transition DEPRECATED_ATTRIBUTE;
-
-- (void)presentInPopoverController:(UIViewController<AGFlowController, AGPopoverContent> *)controller
-     replacingCurrentWithAnimation:(AGPopoverReplacementAnimation)animation DEPRECATED_ATTRIBUTE;
-
-- (void)presentInPopoverControllerId:(NSString *)identifier
-                            userInfo:(nullable id)userInfo
-       replacingCurrentWithAnimation:(AGPopoverReplacementAnimation)animation DEPRECATED_ATTRIBUTE;
-
-- (void)dismissCurrentPopoverController DEPRECATED_ATTRIBUTE;
+- (void)dismissCurrentPopoverController;
 
 @end
 
