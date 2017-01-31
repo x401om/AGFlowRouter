@@ -31,7 +31,7 @@
   return [[[UIApplication sharedApplication] windows] firstObject];
 }
 
-+ (UIView *)currentWindowSnapshotImage {
++ (UIImage *)currentWindowSnapshotImage {
   return [[self currentWindow] snapshotImage];
 }
 

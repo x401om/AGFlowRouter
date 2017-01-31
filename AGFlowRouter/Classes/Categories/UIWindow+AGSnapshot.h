@@ -27,6 +27,6 @@
 @interface UIWindow (AGSnapshot)
 
 + (instancetype)currentWindow;
-+ (UIView *)currentWindowSnapshotImage;
++ (UIImage *)currentWindowSnapshotImage;
 
 @end
