@@ -15,9 +15,13 @@ NS_ASSUME_NONNULL_BEGIN
 @protocol AGPopoverContent <NSObject>
 
 @required
+
 - (CGSize)sizeForContentInPopoverController:(AGPopoverController *)popoverController;
 
 @optional
+
+- (void)registerParentPopoverController:(AGPopoverController *)popoverController;
+
 - (CGPoint)offsetForContentInPopoverController:(AGPopoverController *)popoverController;
 
 - (CGSize)sizeForHeaderInPopoverController:(AGPopoverController *)popoverController;

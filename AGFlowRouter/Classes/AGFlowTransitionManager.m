@@ -59,6 +59,15 @@
   [self relayoutPermanentViews];
 }
 
+- (nullable UIView<AGFlowBar> *)flowBarWithIdentifier:(NSString *)identifier {
+  for (UIView<AGFlowBar> *flowBar in self.flowBars) {
+    if ([[flowBar flowBarIdentifier] isEqual:identifier]) {
+      return flowBar;
+    }
+  }
+  return nil;
+}
+
 - (void)presentViewController:(UIViewController<AGFlowController> *)viewController
                 transition:(id<AGFlowTransition>)transition {
 

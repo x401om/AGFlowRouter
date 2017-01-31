@@ -17,16 +17,51 @@
 @property (weak, nonatomic) UIImageView *backgroundView;
 @property (weak, nonatomic) UIVisualEffectView *blurView;
 
+@property (strong, nonatomic) UIView *headerView;
+@property (strong, nonatomic) UIView *footerView;
+
 @end
 
 @implementation AGPopoverController
 
+- (UIVisualEffect *)visualEffect {
+  if (!_visualEffect) {
+    _visualEffect = [UIBlurEffect effectWithStyle:UIBlurEffectStyleDark];
+  }
+  return _visualEffect;
+}
+
 - (id<AGFlowTransition>)presentTransition {
-  return [[AGPopoverPresentTransition alloc] initWithVisualEffect:self.visualEffect];
+  if (!_presentTransition) {
+    _presentTransition = [[AGPopoverPresentTransition alloc] initWithVisualEffect:self.visualEffect];
+  }
+  return _presentTransition;
 }
 
 - (id<AGFlowTransition>)dismissTransition {
-  return [[AGPopoverDismissTransition alloc] initWithVisualEffect:self.visualEffect];
+  if (!_dismissTransition) {
+    _dismissTransition = [[AGPopoverDismissTransition alloc] initWithVisualEffect:self.visualEffect];
+  }
+  return _dismissTransition;
+}
+
+- (instancetype)initWithContentCotroller:(UIViewController<AGPopoverContent, AGFlowController> *)contentController
+                          baseController:(UIViewController<AGFlowController> *)baseController
+                       presentTransition:(nullable id<AGFlowTransition>)presentTransition
+                       dismissTransition:(nullable id<AGFlowTransition>)dismissTransition
+                          windowSnapshot:(UIImage *)windowSnapshot {
+  self = [super init];
+  if (self) {
+    _contentController = contentController;
+    if ([_contentController respondsToSelector:@selector(registerParentPopoverController:)]) {
+      [_contentController registerParentPopoverController:self];
+    }    
+    _baseController = baseController;
+    _presentTransition = presentTransition;
+    _dismissTransition = dismissTransition;
+    _windowSnapshot = windowSnapshot;
+  }
+  return self;
 }
 
 - (BOOL)prefersStatusBarHidden {

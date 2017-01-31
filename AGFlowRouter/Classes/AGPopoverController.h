@@ -16,15 +16,23 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface AGPopoverController : UIViewController<AGFlowController>
 
+@property (nonatomic, strong) UIViewController<AGFlowController> *baseController;
+
 @property (nonatomic, strong) UIViewController<AGPopoverContent, AGFlowController> *contentController;
 @property (nonatomic, strong) UIImage *windowSnapshot;
 @property (nonatomic, strong) UIVisualEffect *visualEffect;
 
-@property (nonatomic, strong) UIView *headerView;
-@property (nonatomic, strong) UIView *footerView;
+@property (nonatomic, readonly) UIView *headerView;
+@property (nonatomic, readonly) UIView *footerView;
 
-- (id<AGFlowTransition>)presentTransition;
-- (id<AGFlowTransition>)dismissTransition;
+@property (nonatomic, strong) id<AGFlowTransition> presentTransition;
+@property (nonatomic, strong) id<AGFlowTransition> dismissTransition;
+
+- (instancetype)initWithContentCotroller:(UIViewController<AGPopoverContent, AGFlowController> *)contentController
+                          baseController:(UIViewController<AGFlowController> *)baseController
+                       presentTransition:(nullable id<AGFlowTransition>)presentTransition
+                       dismissTransition:(nullable id<AGFlowTransition>)dismissTransition
+                          windowSnapshot:(UIImage *)windowSnapshot;
 
 @end
 

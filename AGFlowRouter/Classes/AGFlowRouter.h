@@ -23,7 +23,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions;
 
-- (void)registerFlowBar:(UIView<AGFlowBar> *)flowBar;
+
 - (void)registerRootControllerCreationBlock:(AGFlowRouterRootCreationBlock)creationBlock;
 - (void)registerControllerCreationBlock:(AGFlowRouterCreationBlock)creationBlock
                           forIdentifier:(NSString *)identifier;
@@ -34,25 +34,32 @@ NS_ASSUME_NONNULL_BEGIN
                    userInfo:(nullable id)userInfo
                  transition:(nullable id<AGFlowTransition>)transition;
 
+#pragma mark - FlowBars
+
+- (void)registerFlowBar:(UIView<AGFlowBar> *)flowBar;
+- (nullable UIView<AGFlowBar> *)flowBarWithIdentifier:(NSString *)identifier;
+
 #pragma mark - Popovers
 
-- (void)presentInPopoverController:(UIViewController<AGFlowController, AGPopoverContent> *)controller;
+- (void)presentInPopoverController:(UIViewController<AGFlowController, AGPopoverContent> *)controller DEPRECATED_ATTRIBUTE;
 - (void)presentInPopoverController:(UIViewController<AGFlowController, AGPopoverContent> *)controller
-                        transition:(nullable id<AGFlowTransition>)transition;
-- (void)presentInPopoverControllerId:(NSString *)identifier
-                            userInfo:(nullable id)userInfo;
-- (void)presentInPopoverControllerId:(NSString *)identifier
-                            userInfo:(nullable id)userInfo
-                          transition:(nullable id<AGFlowTransition>)transition;
+                        transition:(nullable id<AGFlowTransition>)transition DEPRECATED_ATTRIBUTE;
 
-- (void)presentInPopoverController:(UIViewController<AGFlowController, AGPopoverContent> *)controller
-     replacingCurrentWithAnimation:(AGPopoverReplacementAnimation)animation;
+- (void)presentInPopoverControllerId:(NSString *)identifier
+                            userInfo:(nullable id)userInfo DEPRECATED_ATTRIBUTE;
 
 - (void)presentInPopoverControllerId:(NSString *)identifier
                             userInfo:(nullable id)userInfo
-       replacingCurrentWithAnimation:(AGPopoverReplacementAnimation)animation;
+                          transition:(nullable id<AGFlowTransition>)transition DEPRECATED_ATTRIBUTE;
 
-- (void)dismissCurrentPopoverController;
+- (void)presentInPopoverController:(UIViewController<AGFlowController, AGPopoverContent> *)controller
+     replacingCurrentWithAnimation:(AGPopoverReplacementAnimation)animation DEPRECATED_ATTRIBUTE;
+
+- (void)presentInPopoverControllerId:(NSString *)identifier
+                            userInfo:(nullable id)userInfo
+       replacingCurrentWithAnimation:(AGPopoverReplacementAnimation)animation DEPRECATED_ATTRIBUTE;
+
+- (void)dismissCurrentPopoverController DEPRECATED_ATTRIBUTE;
 
 @end
 

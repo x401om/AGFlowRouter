@@ -22,6 +22,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (void)registerFlowBar:(UIView<AGFlowBar> *)flowBar;
 
+- (nullable UIView<AGFlowBar> *)flowBarWithIdentifier:(NSString *)identifier;
+
 - (void)presentViewController:(UIViewController<AGFlowController> *)viewController
                    transition:(nullable id<AGFlowTransition>)transition;
 
