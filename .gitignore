@@ -9,6 +9,10 @@
 *.mode2v3
 
 *.xcodeproj/xcuserdata/*.xcuserdatad
+*.xcworkspace/xcuserdata/*.xcuserdatad
+
+Example/*.xcodeproj/xcuserdata/*.xcuserdatad
+Example/*.xcworkspace/xcuserdata/*.xcuserdatad
 
 *.xccheckout
 *.xcuserdatad
@@ -28,3 +32,4 @@ fastlane/test_output/report.html
 fastlane/test_output/report.junit
 fastlane/test_output
 fastlane/gym_output
+
