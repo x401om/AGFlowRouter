@@ -119,8 +119,17 @@
   }
 }
 
-- (UIView<AGFlowBar> *)flowBarWithIdentifier:(NSString *)identifier {
-  return [self.transitionManager flowBarWithIdentifier:identifier];
+- (nullable UIView<AGFlowBar> *)flowBarWithIdentifier:(NSString *)identifier {
+  if (self.transitionManager) {
+    return [self.transitionManager flowBarWithIdentifier:identifier];
+  } else {
+    for (UIView<AGFlowBar> *flowBar in self.flowBars) {
+      if ([flowBar.flowBarIdentifier isEqualToString:identifier]) {
+        return flowBar;
+      }
+    }
+  }
+  return nil;
 }
 
 #pragma mark - Popovers
