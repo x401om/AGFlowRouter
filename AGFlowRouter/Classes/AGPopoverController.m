@@ -205,13 +205,18 @@
 #pragma mark - AGFlowController
 
 - (void)willPresentWithTransition:(id<AGFlowTransition>)transition {
-  
+  if ([self.contentController respondsToSelector:@selector(willPresentWithTransition:)]) {
+    [self.contentController willPresentWithTransition:transition];
+  }
 }
 
 - (void)willDismissWithTransition:(id<AGFlowTransition>)transition {
   if ([[transition transitionIdentifier] isEqual:@"AGPopoverDismissTransition"]) {
     self.backgroundView.hidden = YES;
     self.blurView.hidden = YES;
+  }
+  if ([self.contentController respondsToSelector:@selector(willDismissWithTransition:)]) {
+    [self.contentController willDismissWithTransition:transition];
   }
 }
 
