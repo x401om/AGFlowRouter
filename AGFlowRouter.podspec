@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'AGFlowRouter'
-  s.version          = '0.4.4'
+  s.version          = '0.4.5'
   s.summary          = 'Library, that allows you to manage you screens without any pain =)'
 
 # This description is used to generate tags and improve search results.

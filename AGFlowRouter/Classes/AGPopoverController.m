@@ -40,6 +40,14 @@
 
 @implementation AGPopoverController
 
+- (void)setWindowSnapshot:(UIImage *)windowSnapshot {
+  _windowSnapshot = windowSnapshot;
+  
+  if (self.backgroundView) {
+    self.backgroundView.image = windowSnapshot;
+  }
+}
+
 - (UIVisualEffect *)visualEffect {
   if (!_visualEffect) {
     _visualEffect = [UIBlurEffect effectWithStyle:UIBlurEffectStyleDark];
@@ -106,9 +114,6 @@
   
   UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tap:)];
   [self.blurView addGestureRecognizer:tap];
-  
-  self.backgroundView.hidden = YES;
-  self.blurView.hidden = YES;
 }
 
 - (void)layoutContent {
@@ -205,6 +210,10 @@
 #pragma mark - AGFlowController
 
 - (void)willPresentWithTransition:(id<AGFlowTransition>)transition {
+  if ([[transition transitionIdentifier] isEqual:@"AGPopoverDismissTransition"]) {
+    self.backgroundView.hidden = YES;
+    self.blurView.hidden = YES;
+  }
   if ([self.contentController respondsToSelector:@selector(willPresentWithTransition:)]) {
     [self.contentController willPresentWithTransition:transition];
   }
