@@ -1,5 +1,5 @@
 PODS:
-  - AGFlowRouter (0.4.0):
+  - AGFlowRouter (0.4.5):
     - PureLayout (= 3.0.2)
   - PureLayout (3.0.2)
 
@@ -11,9 +11,9 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  AGFlowRouter: a0b1dcae62da0fb61b33b5bd438a27639a38a7ed
+  AGFlowRouter: 3a3b298ece549135a0987391e39b3f436d152009
   PureLayout: 4d550abe49a94f24c2808b9b95db9131685fe4cd
 
 PODFILE CHECKSUM: 38c40c0702e0e7ab67579cb69af80a0c8e51860d
 
-COCOAPODS: 1.1.1
+COCOAPODS: 1.2.0

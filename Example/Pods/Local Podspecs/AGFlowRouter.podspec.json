@@ -1,6 +1,6 @@
 {
   "name": "AGFlowRouter",
-  "version": "0.4.0",
+  "version": "0.4.5",
   "summary": "Library, that allows you to manage you screens without any pain =)",
   "description": "Library, that allows you to manage you screens without any pain =)\nTry it using\npod 'AGFlowRouter'",
   "homepage": "https://github.com/x401om/AGFlowRouter",
@@ -13,7 +13,7 @@
   },
   "source": {
     "git": "https://github.com/x401om/AGFlowRouter.git",
-    "tag": "0.4.0"
+    "tag": "0.4.5"
   },
   "platforms": {
     "ios": "8.0"
