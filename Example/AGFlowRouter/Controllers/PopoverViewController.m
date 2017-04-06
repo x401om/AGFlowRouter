@@ -63,8 +63,6 @@
   AGPopoverController *popoverController =
   [[AGPopoverController alloc] initWithContentCotroller:controller
                                          baseController:self.popoverController.baseController
-                                      presentTransition:transition
-                                      dismissTransition:self.popoverController.dismissTransition
                                          windowSnapshot:self.popoverController.windowSnapshot];
   [[AGFlowRouter sharedRouter] presentController:popoverController transition:transition];
 }

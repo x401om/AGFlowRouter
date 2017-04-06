@@ -25,6 +25,7 @@
 @import UIKit;
 
 @class AGPopoverController;
+@protocol AGFlowTransition;
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -50,6 +51,9 @@ NS_ASSUME_NONNULL_BEGIN
 - (nullable UIView *)viewForFooterInPopoverController:(AGPopoverController *)popoverController;
 
 - (void)popoverControllerDidTapBackground:(AGPopoverController *)popoverController;
+
+- (id<AGFlowTransition>)presentTransition;
+- (id<AGFlowTransition>)dismissTransition;
 
 @end
 

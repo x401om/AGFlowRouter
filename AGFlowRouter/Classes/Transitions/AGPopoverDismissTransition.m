@@ -22,6 +22,8 @@
 //  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 //  SOFTWARE.
 
+#import "AGPopoverController.h"
+
 #import "AGPopoverDismissTransition.h"
 
 @interface AGPopoverDismissTransition ()
@@ -52,10 +54,15 @@
 }
 
 - (void)performTrasitionForController:(UIViewController *)viewController
-                   previousController:(UIViewController *)previousController
+                   previousController:(AGPopoverController *)previousController
                                window:(UIWindow *)window
                        withCompletion:(void (^)(BOOL))completion {
+  NSAssert([previousController isKindOfClass:[AGPopoverController class]],
+           @"Dismissing ViewController must be a AGPopoverController class");
+  
   previousController.view.layer.zPosition = 0.5f;
+  previousController.blurView.alpha = 0.0f;
+  previousController.backgroundView.alpha = 0.0f;
   
   CGRect frame = previousController.view.bounds;
   viewController.view.frame = frame;

@@ -30,9 +30,6 @@
 
 @interface AGPopoverController ()
 
-@property (weak, nonatomic) UIImageView *backgroundView;
-@property (weak, nonatomic) UIVisualEffectView *blurView;
-
 @property (strong, nonatomic) UIView *headerView;
 @property (strong, nonatomic) UIView *footerView;
 
@@ -56,23 +53,23 @@
 }
 
 - (id<AGFlowTransition>)presentTransition {
-  if (!_presentTransition) {
-    _presentTransition = [[AGPopoverPresentTransition alloc] initWithVisualEffect:self.visualEffect];
+  if ([self.contentController respondsToSelector:@selector(presentTransition)]) {
+    return [self.contentController presentTransition];
+  } else {
+    return [[AGPopoverPresentTransition alloc] initWithVisualEffect:self.visualEffect];
   }
-  return _presentTransition;
 }
 
 - (id<AGFlowTransition>)dismissTransition {
-  if (!_dismissTransition) {
-    _dismissTransition = [[AGPopoverDismissTransition alloc] initWithVisualEffect:self.visualEffect];
+  if ([self.contentController respondsToSelector:@selector(dismissTransition)]) {
+    return [self.contentController dismissTransition];
+  } else {
+    return [[AGPopoverDismissTransition alloc] initWithVisualEffect:self.visualEffect];
   }
-  return _dismissTransition;
 }
 
 - (instancetype)initWithContentCotroller:(UIViewController<AGPopoverContent, AGFlowController> *)contentController
                           baseController:(UIViewController<AGFlowController> *)baseController
-                       presentTransition:(nullable id<AGFlowTransition>)presentTransition
-                       dismissTransition:(nullable id<AGFlowTransition>)dismissTransition
                           windowSnapshot:(UIImage *)windowSnapshot {
   self = [super init];
   if (self) {
@@ -81,8 +78,6 @@
       [_contentController registerParentPopoverController:self];
     }    
     _baseController = baseController;
-    _presentTransition = presentTransition;
-    _dismissTransition = dismissTransition;
     _windowSnapshot = windowSnapshot;
   }
   return self;
@@ -210,20 +205,12 @@
 #pragma mark - AGFlowController
 
 - (void)willPresentWithTransition:(id<AGFlowTransition>)transition {
-  if ([[transition transitionIdentifier] isEqual:@"AGPopoverDismissTransition"]) {
-    self.backgroundView.hidden = YES;
-    self.blurView.hidden = YES;
-  }
   if ([self.contentController respondsToSelector:@selector(willPresentWithTransition:)]) {
     [self.contentController willPresentWithTransition:transition];
   }
 }
 
 - (void)willDismissWithTransition:(id<AGFlowTransition>)transition {
-  if ([[transition transitionIdentifier] isEqual:@"AGPopoverDismissTransition"]) {
-    self.backgroundView.hidden = YES;
-    self.blurView.hidden = YES;
-  }
   if ([self.contentController respondsToSelector:@selector(willDismissWithTransition:)]) {
     [self.contentController willDismissWithTransition:transition];
   }

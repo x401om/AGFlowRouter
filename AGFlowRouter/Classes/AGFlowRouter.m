@@ -140,8 +140,6 @@
   AGPopoverController *popoverController =
   [[AGPopoverController alloc] initWithContentCotroller:controller
                                          baseController:self.transitionManager.rootViewController
-                                      presentTransition:presentTransition ?: [AGPopoverPresentTransition new]
-                                      dismissTransition:dismissTransition ?: [AGPopoverDismissTransition new]
                                          windowSnapshot:[self.transitionManager.window snapshotImage]];
   
   [self presentController:popoverController transition:popoverController.presentTransition];
