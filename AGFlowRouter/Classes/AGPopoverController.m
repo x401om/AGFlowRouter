@@ -224,7 +224,7 @@
     [shieldView autoPinEdge:ALEdgeTop
                      toEdge:ALEdgeTop
                      ofView:self.headerView
-                 withOffset:-overlay];
+                 withOffset:-shieldSize.height / 2 + overlay];
     self.shieldView = shieldView;
   }
 }
