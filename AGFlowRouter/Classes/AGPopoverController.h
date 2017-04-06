@@ -38,16 +38,17 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong) UIImage *windowSnapshot;
 @property (nonatomic, strong) UIVisualEffect *visualEffect;
 
-@property (nonatomic, readonly) UIView *headerView;
-@property (nonatomic, readonly) UIView *footerView;
-
-@property (weak, nonatomic) UIImageView *backgroundView;
-@property (weak, nonatomic) UIVisualEffectView *blurView;
-
 
 - (instancetype)initWithContentCotroller:(UIViewController<AGPopoverContent, AGFlowController> *)contentController
                           baseController:(UIViewController<AGFlowController> *)baseController
                           windowSnapshot:(UIImage *)windowSnapshot;
+
+- (nullable UIImageView *)backgroundView;
+- (nullable UIVisualEffectView *)blurView;
+
+- (nullable UIView *)headerView;
+- (nullable UIView *)footerView;
+- (nullable UIView *)shieldView;
 
 - (id<AGFlowTransition>)presentTransition;
 - (id<AGFlowTransition>)dismissTransition;

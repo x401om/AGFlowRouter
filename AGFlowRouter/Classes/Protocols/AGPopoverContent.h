@@ -43,12 +43,15 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (CGSize)sizeForHeaderInPopoverController:(AGPopoverController *)popoverController;
 - (CGSize)sizeForFooterInPopoverController:(AGPopoverController *)popoverController;
+- (CGSize)sizeForShieldInPopoverController:(AGPopoverController *)popoverController;
 
 - (CGFloat)overlayForHeaderInPopoverController:(AGPopoverController *)popoverController;
 - (CGFloat)overlayForFooterInPopoverController:(AGPopoverController *)popoverController;
+- (CGFloat)overlayForShieldInPopoverController:(AGPopoverController *)popoverController;
 
 - (nullable UIView *)viewForHeaderInPopoverController:(AGPopoverController *)popoverController;
 - (nullable UIView *)viewForFooterInPopoverController:(AGPopoverController *)popoverController;
+- (nullable UIView *)viewForShieldInPopoverController:(AGPopoverController *)popoverController;
 
 - (void)popoverControllerDidTapBackground:(AGPopoverController *)popoverController;
 

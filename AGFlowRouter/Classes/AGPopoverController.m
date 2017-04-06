@@ -30,8 +30,12 @@
 
 @interface AGPopoverController ()
 
-@property (strong, nonatomic) UIView *headerView;
-@property (strong, nonatomic) UIView *footerView;
+@property (weak, nonatomic) UIImageView *backgroundView;
+@property (weak, nonatomic) UIVisualEffectView *blurView;
+
+@property (weak, nonatomic) UIView *headerView;
+@property (weak, nonatomic) UIView *footerView;
+@property (weak, nonatomic) UIView *shieldView;
 
 @end
 
@@ -94,6 +98,7 @@
   [self layoutContent];
   [self layoutHeader];
   [self layoutFooter];
+  [self layoutShield];
 }
 
 - (void)layoutBackground {
@@ -192,6 +197,36 @@
     self.footerView = footerView;
   }
   
+}
+
+- (void)layoutShield {
+  CGSize shieldSize = CGSizeZero;
+  if ([self.contentController respondsToSelector:@selector(sizeForShieldInPopoverController:)]) {
+    shieldSize = [self.contentController sizeForShieldInPopoverController:self];
+  }
+  
+  CGFloat overlay = 0.0f;
+  if ([self.contentController respondsToSelector:@selector(overlayForShieldInPopoverController:)]) {
+    overlay = [self.contentController overlayForShieldInPopoverController:self];
+  }
+  
+  UIView *shieldView = nil;
+  if ([self.contentController respondsToSelector:@selector(viewForShieldInPopoverController:)]) {
+    shieldView = [self.contentController viewForShieldInPopoverController:self];
+  }
+  
+  if (shieldView && CGSizeEqualToSize(shieldSize, CGSizeZero) == NO) {
+    
+    [self.view addSubview:shieldView];
+    
+    [shieldView autoSetDimensionsToSize:shieldSize];
+    [shieldView autoAlignAxis:ALAxisVertical toSameAxisOfView:self.contentController.view];
+    [shieldView autoPinEdge:ALEdgeTop
+                     toEdge:ALEdgeTop
+                     ofView:self.headerView
+                 withOffset:-overlay];
+    self.shieldView = shieldView;
+  }
 }
 
 #pragma mark - Actions
