@@ -22,6 +22,8 @@
 //  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 //  SOFTWARE.
 
+#import "AGPopoverController.h"
+
 #import "AGPopoverToPopoverTransition.h"
 
 @interface AGPopoverToPopoverTransition ()
@@ -50,10 +52,15 @@
   return @"AGPopoverToPopoverTransition";
 }
 
-- (void)performTrasitionForController:(UIViewController *)viewController
-                   previousController:(UIViewController *)previousController
+- (void)performTrasitionForController:(AGPopoverController *)viewController
+                   previousController:(AGPopoverController *)previousController
                                window:(UIWindow *)window
                        withCompletion:(void (^)(BOOL))completion {
+  NSAssert([viewController isKindOfClass:[AGPopoverController class]],
+           @"Presenting ViewController must be a AGPopoverController class");
+  NSAssert([previousController isKindOfClass:[AGPopoverController class]],
+           @"Dismissing ViewController must be a AGPopoverController class");
+  
   previousController.view.layer.zPosition = 0.6f;
   
   CGRect frame = window.bounds;
@@ -67,6 +74,12 @@
   blurView.frame = frame;
   blurView.layer.zPosition = 0.5f;
   [window addSubview:blurView];
+  
+  viewController.blurView.alpha = 0.0f;
+  viewController.backgroundView.alpha = 0.0f;
+  
+  previousController.blurView.alpha = 0.0f;
+  previousController.backgroundView.alpha = 0.0f;
   
   switch (self.animation) {
     case AGPopoverReplacementAnimationLeft:
@@ -118,6 +131,9 @@
                      
                      viewController.view.frame = window.bounds;
                    } completion:^(BOOL finished) {
+                     viewController.blurView.alpha = 1.0f;
+                     viewController.backgroundView.alpha = 1.0f;
+                     
                      [snapshotView removeFromSuperview];
                      [blurView removeFromSuperview];
                      [viewController.view removeFromSuperview];

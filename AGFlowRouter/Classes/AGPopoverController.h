@@ -41,14 +41,16 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, readonly) UIView *headerView;
 @property (nonatomic, readonly) UIView *footerView;
 
-@property (nonatomic, strong) id<AGFlowTransition> presentTransition;
-@property (nonatomic, strong) id<AGFlowTransition> dismissTransition;
+@property (weak, nonatomic) UIImageView *backgroundView;
+@property (weak, nonatomic) UIVisualEffectView *blurView;
+
 
 - (instancetype)initWithContentCotroller:(UIViewController<AGPopoverContent, AGFlowController> *)contentController
                           baseController:(UIViewController<AGFlowController> *)baseController
-                       presentTransition:(nullable id<AGFlowTransition>)presentTransition
-                       dismissTransition:(nullable id<AGFlowTransition>)dismissTransition
                           windowSnapshot:(UIImage *)windowSnapshot;
+
+- (id<AGFlowTransition>)presentTransition;
+- (id<AGFlowTransition>)dismissTransition;
 
 @end
 

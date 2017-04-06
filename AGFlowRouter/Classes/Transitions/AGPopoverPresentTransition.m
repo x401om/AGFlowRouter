@@ -22,6 +22,8 @@
 //  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 //  SOFTWARE.
 
+#import "AGPopoverController.h"
+
 #import "AGPopoverPresentTransition.h"
 
 @interface AGPopoverPresentTransition ()
@@ -51,10 +53,13 @@
   return @"AGPopoverPresentTransition";
 }
 
-- (void)performTrasitionForController:(UIViewController *)viewController
+- (void)performTrasitionForController:(AGPopoverController *)viewController
                    previousController:(UIViewController *)previousController
                                window:(UIWindow *)window
                        withCompletion:(void (^)(BOOL))completion {
+  NSAssert([viewController isKindOfClass:[AGPopoverController class]],
+           @"Presenting ViewController must be a AGPopoverController class");
+  
   CGRect frame = window.bounds;
 
   UIVisualEffectView *blurView = [[UIVisualEffectView alloc] initWithEffect:nil];
@@ -63,6 +68,9 @@
   [window addSubview:blurView];
   
   viewController.view.frame = frame;
+  
+  viewController.blurView.alpha = 0.0f;
+  viewController.backgroundView.alpha = 0.0f;
   
   viewController.view.alpha = 0.0f;
   viewController.view.transform = CGAffineTransformMakeScale(0.7f, 0.7f);
@@ -83,6 +91,9 @@
                      viewController.view.alpha = 1.0f;
                      viewController.view.transform = CGAffineTransformMakeScale(1.0f, 1.0f);
                    } completion:^(BOOL finished) {
+                     viewController.blurView.alpha = 1.0f;
+                     viewController.backgroundView.alpha = 1.0f;
+                     
                      [blurView removeFromSuperview];
                      [viewController.view removeFromSuperview];
                      completion(finished);
