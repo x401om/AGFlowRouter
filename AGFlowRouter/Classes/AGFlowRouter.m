@@ -135,40 +135,34 @@
 #pragma mark - Popovers
 
 - (void)presentInPopoverController:(UIViewController<AGFlowController, AGPopoverContent> *)controller
-                 presentTransition:(nullable id<AGFlowTransition>)presentTransition
-                 dismissTransition:(nullable id<AGFlowTransition>)dismissTransition {
+                 presentTransition:(nullable id<AGFlowTransition>)presentTransition {
   AGPopoverController *popoverController =
   [[AGPopoverController alloc] initWithContentCotroller:controller
                                          baseController:self.transitionManager.rootViewController
                                          windowSnapshot:[self.transitionManager.window snapshotImage]];
   
-  [self presentController:popoverController transition:popoverController.presentTransition];
+  [self presentController:popoverController transition:presentTransition ?: popoverController.presentTransition];
 }
 
 - (void)presentInPopoverControllerId:(NSString *)identifier
                             userInfo:(nullable id)userInfo
-                   presentTransition:(nullable id<AGFlowTransition>)presentTransition
-                   dismissTransition:(nullable id<AGFlowTransition>)dismissTransition {
+                   presentTransition:(nullable id<AGFlowTransition>)presentTransition {
   UIViewController<AGFlowController, AGPopoverContent> *vc = (UIViewController<AGFlowController, AGPopoverContent> *)[self instantiateControllerId:identifier userInfo:userInfo];
   if (vc) {
-    [self presentInPopoverController:vc
-                   presentTransition:presentTransition
-                   dismissTransition:dismissTransition];
+    [self presentInPopoverController:vc presentTransition:presentTransition];
   }
 }
 
 - (void)presentInPopoverController:(UIViewController<AGFlowController, AGPopoverContent> *)controller {
   [self presentInPopoverController:controller
-                 presentTransition:nil
-                 dismissTransition:nil];
+                 presentTransition:nil];
 }
 
 - (void)presentInPopoverControllerId:(NSString *)identifier
                             userInfo:(nullable id)userInfo {
   [self presentInPopoverControllerId:identifier
                             userInfo:userInfo
-                   presentTransition:nil
-                   dismissTransition:nil];
+                   presentTransition:nil];
 }
 
 - (void)dismissCurrentPopoverController {
