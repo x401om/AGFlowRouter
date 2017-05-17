@@ -135,13 +135,21 @@
 #pragma mark - Popovers
 
 - (void)presentInPopoverController:(UIViewController<AGFlowController, AGPopoverContent> *)controller
-                 presentTransition:(nullable id<AGFlowTransition>)presentTransition {
+                 presentTransition:(nullable id<AGFlowTransition>)presentTransition
+                     snapshotImage:(nullable UIImage *)snapshotImage {
+  
   AGPopoverController *popoverController =
   [[AGPopoverController alloc] initWithContentCotroller:controller
                                          baseController:self.transitionManager.rootViewController
-                                         windowSnapshot:[self.transitionManager.window snapshotImage]];
+                                         windowSnapshot:snapshotImage ?: [self.transitionManager.window snapshotImage]];
   
   [self presentController:popoverController transition:presentTransition ?: popoverController.presentTransition];
+}
+
+
+- (void)presentInPopoverController:(UIViewController<AGFlowController, AGPopoverContent> *)controller
+                 presentTransition:(nullable id<AGFlowTransition>)presentTransition {
+  [self presentInPopoverController:controller presentTransition:presentTransition snapshotImage:nil];
 }
 
 - (void)presentInPopoverControllerId:(NSString *)identifier

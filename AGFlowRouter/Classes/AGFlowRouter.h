@@ -61,6 +61,10 @@ NS_ASSUME_NONNULL_BEGIN
 #pragma mark - Popovers
 
 - (void)presentInPopoverController:(UIViewController<AGFlowController, AGPopoverContent> *)controller
+                 presentTransition:(nullable id<AGFlowTransition>)presentTransition
+                     snapshotImage:(nullable UIImage *)snapshotImage;
+
+- (void)presentInPopoverController:(UIViewController<AGFlowController, AGPopoverContent> *)controller
                  presentTransition:(nullable id<AGFlowTransition>)presentTransition;
 
 - (void)presentInPopoverControllerId:(NSString *)identifier
