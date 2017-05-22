@@ -56,6 +56,14 @@
   return [[AGFlowRouter sharedRouter] application:application didFinishLaunchingWithOptions:launchOptions];
 }
 
+- (void)applicationDidBecomeActive:(UIApplication *)application {
+  [[AGFlowRouter sharedRouter] applicationDidBecomeActive:application];
+}
+
+- (void)applicationDidEnterBackground:(UIApplication *)application {
+  [[AGFlowRouter sharedRouter] applicationDidEnterBackground:application];
+}
+
 #pragma mark - AGTabBarDelegate
 
 - (void)tabBar:(AGTabBar *)tabBar didSelectItem:(AGTabBarItem *)item {

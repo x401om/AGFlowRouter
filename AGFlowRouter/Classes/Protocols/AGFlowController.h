@@ -43,6 +43,9 @@
 - (void)flowViewDidAppear:(BOOL)animated;
 - (void)flowViewWillDisappear:(BOOL)animated;
 
+- (void)flowApplicationDidBecomeActive;
+- (void)flowApplicationEnterBackground;
+
 - (BOOL)prefersHideFlowBarWithIdentifier:(NSString *)identifier;
 
 - (NSString *)flowIdentifier;

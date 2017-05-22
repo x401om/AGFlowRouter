@@ -74,6 +74,18 @@
   return YES;
 }
 
+- (void)applicationDidBecomeActive:(UIApplication *)application {
+  if ([self.transitionManager.rootViewController respondsToSelector:@selector(flowApplicationDidBecomeActive)]) {
+    [self.transitionManager.rootViewController flowApplicationDidBecomeActive];
+  }
+}
+
+- (void)applicationDidEnterBackground:(UIApplication *)application {
+  if ([self.transitionManager.rootViewController respondsToSelector:@selector(flowApplicationEnterBackground)]) {
+    [self.transitionManager.rootViewController flowApplicationEnterBackground];
+  }
+}
+
 - (void)reloadRootController {
   UIViewController<AGFlowController> *vc = self.rootControllerCreation();
   if (vc) {
