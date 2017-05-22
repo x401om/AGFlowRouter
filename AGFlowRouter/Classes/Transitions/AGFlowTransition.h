@@ -35,10 +35,6 @@ NS_ASSUME_NONNULL_BEGIN
                                window:(UIWindow *)window
                        withCompletion:(void (^)(BOOL finished))completion;
 
-@optional
-
-- (void)setTransitionIdentifier:(NSString *)identifier;
-
 @end
 
 NS_ASSUME_NONNULL_END

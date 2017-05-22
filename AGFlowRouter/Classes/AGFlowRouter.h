@@ -40,6 +40,8 @@ NS_ASSUME_NONNULL_BEGIN
 + (instancetype)sharedRouter;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions;
+- (void)applicationDidBecomeActive:(UIApplication *)application;
+- (void)applicationDidEnterBackground:(UIApplication *)application;
 
 - (void)reloadRootController;
 
