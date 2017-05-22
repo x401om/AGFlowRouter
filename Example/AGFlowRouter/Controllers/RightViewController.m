@@ -36,11 +36,13 @@
 
 #pragma mark - AGFlowController
 
-- (void)willPresentWithTransition:(id<AGFlowTransition>)transition {
+- (void)willPresentWithTransition:(id<AGFlowTransition>)transition
+             previousControllerId:(NSString *)previousControllerId {
   
 }
 
-- (void)willDismissWithTransition:(id<AGFlowTransition>)transition {
+- (void)willDismissWithTransition:(id<AGFlowTransition>)transition
+                 nextControllerId:(NSString *)nextControllerId {
   
 }
 

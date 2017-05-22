@@ -74,6 +74,13 @@
   return YES;
 }
 
+- (void)reloadRootController {
+  UIViewController<AGFlowController> *vc = self.rootControllerCreation();
+  if (vc) {
+    [self presentController:vc transition:nil];
+  }
+}
+
 - (void)registerRootControllerCreationBlock:(AGFlowRouterRootCreationBlock)creationBlock {
   self.rootControllerCreation = creationBlock;
 }
@@ -146,6 +153,19 @@
   [self presentController:popoverController transition:presentTransition ?: popoverController.presentTransition];
 }
 
+- (void)presentInPopoverControllerId:(NSString *)identifier
+                            userInfo:(nullable id)userInfo
+                   presentTransition:(nullable id<AGFlowTransition>)presentTransition
+                       snapshotImage:(nullable UIImage *)snapshotImage {
+  UIViewController<AGFlowController, AGPopoverContent> *vc = (UIViewController<AGFlowController, AGPopoverContent> *)[self instantiateControllerId:identifier userInfo:userInfo];
+  
+  if (vc) {
+    [self presentInPopoverController:vc
+                   presentTransition:presentTransition
+                       snapshotImage:snapshotImage];
+  }
+}
+
 
 - (void)presentInPopoverController:(UIViewController<AGFlowController, AGPopoverContent> *)controller
                  presentTransition:(nullable id<AGFlowTransition>)presentTransition {
@@ -160,6 +180,9 @@
     [self presentInPopoverController:vc presentTransition:presentTransition];
   }
 }
+
+
+
 
 - (void)presentInPopoverController:(UIViewController<AGFlowController, AGPopoverContent> *)controller {
   [self presentInPopoverController:controller

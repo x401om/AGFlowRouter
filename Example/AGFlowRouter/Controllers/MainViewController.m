@@ -46,10 +46,7 @@
 }
 
 - (IBAction)showPopoverPressed:(UIButton *)sender {
-  [[AGFlowRouter sharedRouter] presentInPopoverControllerId:@"PopoverViewController"
-                                                   userInfo:nil
-                                          presentTransition:nil
-                                          dismissTransition:nil];
+  [[AGFlowRouter sharedRouter] presentInPopoverControllerId:@"PopoverViewController" userInfo:nil];
 }
 
 - (IBAction)showPushPressed:(UIButton *)sender {
@@ -62,11 +59,13 @@
 
 #pragma mark - AGFlowController
 
-- (void)willPresentWithTransition:(id<AGFlowTransition>)transition {
+- (void)willPresentWithTransition:(id<AGFlowTransition>)transition
+             previousControllerId:(NSString *)previousControllerId {
   
 }
 
-- (void)willDismissWithTransition:(id<AGFlowTransition>)transition {
+- (void)willDismissWithTransition:(id<AGFlowTransition>)transition
+                 nextControllerId:(NSString *)nextControllerId {
   
 }
 

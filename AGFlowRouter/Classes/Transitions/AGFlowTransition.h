@@ -30,9 +30,11 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (NSString *)transitionIdentifier;
 
-- (void)performTrasitionForController:( UIViewController * )viewController
-                   previousController:( UIViewController * )previousController
-                               window:( UIWindow * )window
+- (void)setTransitionIdentifier:(NSString *)identifier;
+
+- (void)performTrasitionForController:(UIViewController *)viewController
+                   previousController:(UIViewController *)previousController
+                               window:(UIWindow *)window
                        withCompletion:(void (^)(BOOL finished))completion;
 
 @end

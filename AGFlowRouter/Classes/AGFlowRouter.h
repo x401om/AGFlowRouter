@@ -35,10 +35,13 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface AGFlowRouter : NSObject
 
+- (UIViewController<AGFlowController> *)rootViewController;
+
 + (instancetype)sharedRouter;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions;
 
+- (void)reloadRootController;
 
 - (void)registerRootControllerCreationBlock:(AGFlowRouterRootCreationBlock)creationBlock;
 - (void)registerControllerCreationBlock:(AGFlowRouterCreationBlock)creationBlock
@@ -50,7 +53,7 @@ NS_ASSUME_NONNULL_BEGIN
                    userInfo:(nullable id)userInfo
                  transition:(nullable id<AGFlowTransition>)transition;
 
-- (UIViewController<AGFlowController> *)rootViewController;
+
 - (nullable UIViewController<AGFlowController> *)instantiateControllerId:(NSString *)identifier
                                                        userInfo:(nullable id)userInfo;
 #pragma mark - FlowBars
@@ -70,6 +73,11 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)presentInPopoverControllerId:(NSString *)identifier
                             userInfo:(nullable id)userInfo
                    presentTransition:(nullable id<AGFlowTransition>)presentTransition;
+
+- (void)presentInPopoverControllerId:(NSString *)identifier
+                            userInfo:(nullable id)userInfo
+                   presentTransition:(nullable id<AGFlowTransition>)presentTransition
+                       snapshotImage:(nullable UIImage *)snapshotImage;
 
 - (void)presentInPopoverController:(UIViewController<AGFlowController, AGPopoverContent> *)controller;
 

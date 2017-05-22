@@ -239,15 +239,19 @@
 
 #pragma mark - AGFlowController
 
-- (void)willPresentWithTransition:(id<AGFlowTransition>)transition {
-  if ([self.contentController respondsToSelector:@selector(willPresentWithTransition:)]) {
-    [self.contentController willPresentWithTransition:transition];
+- (void)willPresentWithTransition:(id<AGFlowTransition>)transition
+             previousControllerId:(NSString *)previousControllerId {
+  if ([self.contentController respondsToSelector:@selector(willPresentWithTransition:previousControllerId:)]) {
+    [self.contentController willPresentWithTransition:transition
+                                 previousControllerId:previousControllerId];
   }
 }
 
-- (void)willDismissWithTransition:(id<AGFlowTransition>)transition {
-  if ([self.contentController respondsToSelector:@selector(willDismissWithTransition:)]) {
-    [self.contentController willDismissWithTransition:transition];
+- (void)willDismissWithTransition:(id<AGFlowTransition>)transition
+                 nextControllerId:(NSString *)nextControllerId {
+  if ([self.contentController respondsToSelector:@selector(willDismissWithTransition:nextControllerId:)]) {
+    [self.contentController willDismissWithTransition:transition
+                                     nextControllerId:nextControllerId];
   }
 }
 

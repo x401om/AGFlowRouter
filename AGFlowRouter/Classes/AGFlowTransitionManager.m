@@ -87,12 +87,29 @@
 - (void)presentViewController:(UIViewController<AGFlowController> *)viewController
                 transition:(id<AGFlowTransition>)transition {
 
-  if ([self.rootViewController respondsToSelector:@selector(willDismissWithTransition:)]) {
-    [self.rootViewController willDismissWithTransition:transition];
+  if ([self.rootViewController respondsToSelector:@selector(willDismissWithTransition:nextControllerId:)]) {
+    NSString *nextId = nil;
+    if ([viewController respondsToSelector:@selector(flowIdentifier)]) {
+      nextId = [viewController flowIdentifier];
+    } else {
+      nextId = NSStringFromClass([viewController class]);
+    }
+    [self.rootViewController willDismissWithTransition:transition nextControllerId:nextId];
   }
-  if ([viewController respondsToSelector:@selector(willPresentWithTransition:)]) {
-    [viewController loadViewIfNeeded];
-    [viewController willPresentWithTransition:transition];
+  
+  [viewController loadViewIfNeeded];
+  if ([viewController respondsToSelector:@selector(flowViewDidLoad)]) {
+    [viewController flowViewDidLoad];
+  }
+  
+  if ([viewController respondsToSelector:@selector(willPresentWithTransition:previousControllerId:)]) {
+    NSString *prevId = nil;
+    if ([self.rootViewController respondsToSelector:@selector(flowIdentifier)]) {
+      prevId = [self.rootViewController flowIdentifier];
+    } else {
+      prevId = NSStringFromClass([self.rootViewController class]);
+    }
+    [viewController willPresentWithTransition:transition previousControllerId:prevId];
   }
   
   if ([self.rootViewController respondsToSelector:@selector(flowViewWillDisappear:)]) {
@@ -108,8 +125,22 @@
   }
   
   if (transition) {
+    UIViewController<AGFlowController> *previousController =
+    (UIViewController<AGFlowController> *)self.window.rootViewController;
+    
     __weak typeof(self) weakSelf = self;
-    [transition performTrasitionForController:viewController previousController:self.window.rootViewController window:self.window withCompletion:^(BOOL finished) {
+    [transition performTrasitionForController:viewController
+                           previousController:self.window.rootViewController
+                                       window:self.window
+                               withCompletion:^(BOOL finished) {
+                
+     if ([viewController respondsToSelector:@selector(didPresentWithTransition:)]) {
+       [viewController didPresentWithTransition:transition];
+     }
+     if ([previousController respondsToSelector:@selector(didDismissWithTransition:)]) {
+       [previousController didDismissWithTransition:transition];
+     }
+                                 
       viewController.view.layer.zPosition = 0.0f;
       weakSelf.window.rootViewController = viewController;
       weakSelf.rootViewController = viewController;
@@ -126,7 +157,7 @@
     [self relayoutPermanentViews];
     
     if ([viewController respondsToSelector:@selector(flowViewDidAppear:)]) {
-      [viewController flowViewDidAppear:YES];
+      [viewController flowViewDidAppear:NO];
     }
   }
 }

@@ -30,12 +30,21 @@
 @protocol AGFlowController <NSObject>
 
 @optional
-- (void)willPresentWithTransition:(id<AGFlowTransition>)transition;
-- (void)willDismissWithTransition:(id<AGFlowTransition>)transition;
+- (void)willPresentWithTransition:(id<AGFlowTransition>)transition
+             previousControllerId:(NSString *)previousControllerId;
+- (void)willDismissWithTransition:(id<AGFlowTransition>)transition
+                 nextControllerId:(NSString *)nextControllerId;
+
+- (void)didPresentWithTransition:(id<AGFlowTransition>)transition;
+- (void)didDismissWithTransition:(id<AGFlowTransition>)transition;
+
+- (void)flowViewDidLoad;
 
 - (void)flowViewDidAppear:(BOOL)animated;
 - (void)flowViewWillDisappear:(BOOL)animated;
 
 - (BOOL)prefersHideFlowBarWithIdentifier:(NSString *)identifier;
+
+- (NSString *)flowIdentifier;
 
 @end
