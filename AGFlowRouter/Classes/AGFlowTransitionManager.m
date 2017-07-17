@@ -30,6 +30,10 @@
 @property (nonatomic, strong) UIViewController<AGFlowController> *rootViewController;
 @property (nonatomic, strong) NSMutableArray<UIView<AGFlowBar> *> *flowBars;
 
+@property (nonatomic, strong) NSString *cancellationToken;
+@property (nonatomic, strong) UIViewController<AGFlowController> *pendingViewController;
+@property (nonatomic, strong) id<AGFlowTransition> currentTransition;
+
 @end
 
 @implementation AGFlowTransitionManager
@@ -68,6 +72,48 @@
   return self;
 }
 
+- (void)forceFinishCurrentTransition {
+  if (self.pendingViewController == nil) {
+    return;
+  }
+  
+  self.cancellationToken = [[NSUUID UUID] UUIDString];
+  if ([self.currentTransition respondsToSelector:@selector(cancelWithCancellationToken:)]) {
+    [self.currentTransition cancelWithCancellationToken:self.cancellationToken];
+  }
+  
+  if (self.pendingViewController) {
+    [self.rootViewController.view.layer removeAllAnimations];
+    [self.pendingViewController.view.layer removeAllAnimations];
+    
+    [self.rootViewController.view removeFromSuperview];
+    [self.pendingViewController.view removeFromSuperview];
+    
+    [self.window addSubview:self.pendingViewController.view];
+    
+    self.pendingViewController.view.layer.zPosition = 0.0f;
+    self.pendingViewController.view.alpha = 1.0f;
+    self.pendingViewController.view.frame = self.window.bounds;
+    
+    self.window.rootViewController = self.pendingViewController;
+    self.rootViewController = self.pendingViewController;
+    [self relayoutPermanentViews];
+    
+    self.pendingViewController = nil;
+  }
+}
+
+- (void)cancelCurrentTransition {
+  if (self.pendingViewController == nil) {
+    return;
+  }
+  
+  self.cancellationToken = [[NSUUID UUID] UUIDString];
+  if ([self.currentTransition respondsToSelector:@selector(cancelWithCancellationToken:)]) {
+    [self.currentTransition cancelWithCancellationToken:self.cancellationToken];
+  }
+}
+
 - (void)registerFlowBar:(UIView<AGFlowBar> *)flowBar {
   [self.flowBars addObject:flowBar];
   flowBar.frame = [flowBar prefferedFrame];
@@ -87,6 +133,9 @@
 - (void)presentViewController:(UIViewController<AGFlowController> *)viewController
                 transition:(id<AGFlowTransition>)transition {
 
+  self.cancellationToken = nil;
+  self.pendingViewController = viewController;
+  
   if ([self.rootViewController respondsToSelector:@selector(willDismissWithTransition:nextControllerId:)]) {
     NSString *nextId = nil;
     if ([viewController respondsToSelector:@selector(flowIdentifier)]) {
@@ -133,6 +182,11 @@
                            previousController:self.window.rootViewController
                                        window:self.window
                                withCompletion:^(BOOL finished) {
+                                 
+     if (weakSelf.cancellationToken || finished == NO) {
+       weakSelf.cancellationToken = nil;
+       return;
+     }
                 
      if ([viewController respondsToSelector:@selector(didPresentWithTransition:)]) {
        [viewController didPresentWithTransition:transition];
@@ -149,6 +203,8 @@
       if ([viewController respondsToSelector:@selector(flowViewDidAppear:)]) {
         [viewController flowViewDidAppear:YES];
       }
+                                 
+      weakSelf.pendingViewController = nil;
     }];
   } else {
     viewController.view.layer.zPosition = 0.0f;
@@ -159,6 +215,8 @@
     if ([viewController respondsToSelector:@selector(flowViewDidAppear:)]) {
       [viewController flowViewDidAppear:NO];
     }
+    
+    self.pendingViewController = nil;
   }
 }
 

@@ -43,6 +43,9 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)presentViewController:(UIViewController<AGFlowController> *)viewController
                    transition:(nullable id<AGFlowTransition>)transition;
 
+- (void)forceFinishCurrentTransition;
+- (void)cancelCurrentTransition;
+
 @end
 
 NS_ASSUME_NONNULL_END

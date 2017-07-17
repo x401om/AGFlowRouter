@@ -46,7 +46,7 @@
   viewController.view.frame = frame;
   [window insertSubview:viewController.view belowSubview:previousController.view];
   
-  [UIView animateWithDuration:0.4f
+  [UIView animateWithDuration:3.4f
                    animations:^{
                      CGRect frame = previousController.view.bounds;
                      frame.origin.x = CGRectGetWidth(frame);
@@ -54,10 +54,12 @@
                      
                      viewController.view.frame = window.bounds;
                    } completion:^(BOOL finished) {
-                     [viewController.view removeFromSuperview];
-                     previousController.view.layer.shadowRadius = 0.0f;
-                     previousController.view.layer.shadowColor = [[UIColor clearColor] CGColor];
-                     previousController.view.layer.shadowOpacity = 0.0f;
+                     [previousController.view removeFromSuperview];
+                     
+                     viewController.view.layer.shadowRadius = 0.0f;
+                     viewController.view.layer.shadowColor = [[UIColor clearColor] CGColor];
+                     viewController.view.layer.shadowOpacity = 0.0f;
+                     
                      completion(finished);
                    }];
 }

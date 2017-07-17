@@ -81,6 +81,8 @@
 }
 
 - (void)applicationDidEnterBackground:(UIApplication *)application {
+  [self.transitionManager forceFinishCurrentTransition];
+  
   if ([self.transitionManager.rootViewController respondsToSelector:@selector(flowApplicationEnterBackground)]) {
     [self.transitionManager.rootViewController flowApplicationEnterBackground];
   }
