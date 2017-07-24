@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'AGFlowRouter'
-  s.version          = '0.5.2'
+  s.version          = '0.5.3'
   s.summary          = 'Library, that allows you to manage you screens without any pain =)'
 
 # This description is used to generate tags and improve search results.
@@ -28,7 +28,7 @@ pod 'AGFlowRouter'
   s.homepage         = 'https://github.com/x401om/AGFlowRouter'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { 'Aleksey Goncharov' => 'x401om@gmail.com' }
+  s.author           = { 'Alex Goncharov' => 'x401om@gmail.com' }
   s.source           = { :git => 'https://github.com/x401om/AGFlowRouter.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 

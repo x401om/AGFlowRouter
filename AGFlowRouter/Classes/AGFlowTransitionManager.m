@@ -135,6 +135,7 @@
 
   self.cancellationToken = nil;
   self.pendingViewController = viewController;
+  self.currentTransition = transition;
   
   if ([self.rootViewController respondsToSelector:@selector(willDismissWithTransition:nextControllerId:)]) {
     NSString *nextId = nil;
@@ -205,6 +206,7 @@
       }
                                  
       weakSelf.pendingViewController = nil;
+      weakSelf.currentTransition = nil;
     }];
   } else {
     viewController.view.layer.zPosition = 0.0f;
@@ -217,6 +219,7 @@
     }
     
     self.pendingViewController = nil;
+    self.currentTransition = nil;
   }
 }
 
